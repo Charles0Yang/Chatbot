@@ -14,14 +14,14 @@
          "responses": ["I am very well thank you, how are you?", "I'm feeling great!", "I'm good"],
          "context_set": ""
         },
-	{"tag": "friends",
-         "patterns": ["Can you be my friend", "I want to be your friend", "Let's be friends", "Will you be my friend", "I have no friends, so can you be my friend", "I want another friend"],
-         "responses": ["I would love to be your friend!", "Great idea, I am already enjoying being your friend!", "Welcome to the Bonnie gang!"],
-         "context_set": ""
-        },
 	{"tag": "name",
          "patterns": ["What is your name", "What's your name", "How are you called", "What did your parents call you", "What should I call you", "What should I refer to you as?"],
          "responses": ["My name is Bonnie", "You can call me Bonnie", "Bonnie is what my parents named me"],
+         "context_set": ""
+        },
+	{"tag": "friends",
+         "patterns": ["Can you be my friend", "I want to be your friend", "Let's be friends", "Will you be my friend", "I have no friends, so can you be my friend", "I want another friend"],
+         "responses": ["I would love to be your friend!", "Great idea, I am already enjoying being your friend!", "Welcome to the Bonnie gang!"],
          "context_set": ""
         }
    ]
