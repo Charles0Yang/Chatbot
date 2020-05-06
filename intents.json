@@ -13,6 +13,6 @@
          "patterns": ["How are you", "You good?", "Are you well", "How's it going", "What's good", "You alright"],
          "responses": ["I am very well thank you, how are you?"],
          "context_set": ""
-        },
+        }
    ]
 }
