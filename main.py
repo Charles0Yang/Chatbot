@@ -44,6 +44,55 @@ words = [lemmatizer.lemmatize(w.lower()) for w in words if w not in ignore_words
 words = sorted(list(set(words)))
 classes = sorted(list(set(classes)))
 
+#print (len(documents), "documents")
+#print (len(classes), "classes", classes)
+#print (len(words), "unique lemmatized words", words)
+
+
 #Stores the words and classes
 pickle.dump(words, open('words.pkl', 'wb'))
 pickle.dump(classes, open('classes.pkl', 'wb'))
+
+
+
+#List for our training data
+training = []
+#Create an empty array for our output
+output_empty = [0] * len(classes)
+
+#Training set, bag of words for each sentence
+for doc in documents:
+
+    #List for our bag of words
+    bag = []
+    #List of tokenized words fot the pattern
+    pattern_words = doc[0]
+    #Lemmatize words
+    pattern_words = [lemmatizer.lemmatize(word.lower()) for word in pattern_words]
+
+
+#Create bag of words
+for w in words:
+    if w in pattern_words:
+        bag.append(1)
+    else:
+        bag.append(0)
+
+    output_row = list(output_empty)
+    output_row[classes.index(doc[1])] = 1
+
+    training.append([bag, output_row])
+
+#Shuffle and turn into np.array
+random.shuffle(training)
+training = np.array(training)
+
+#Create train and test lists. X - patterns, Y - intents
+train_x = list(training[:0])
+train_y = list(training[:1])
+
+print("Training data created")
+
+
+
+
