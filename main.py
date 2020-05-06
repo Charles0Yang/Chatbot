@@ -23,8 +23,8 @@ documents = []
 ignore_words = ['?', '!']
 
 #Creates a dictionary called intents
-with open("intents.json") as file:
-    intents = json.load(file)
+data_file = open('intents.json').read()
+intents = json.loads(data_file)
     
 #Pre-processing on text and intents via tokenisation
 for intent in intents['intents']:
@@ -109,7 +109,7 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
 #Fitting and saving the model
-hist = model.fit(np.array(train_x), np.array(train_y), epochs = 200, batch_size = 5, verbose = 1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs = 1000, batch_size = 5, verbose = 1)
 model.save("chatbot_model.h5", hist)
 
 print("Model created")
