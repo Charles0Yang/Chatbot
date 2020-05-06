@@ -2,8 +2,9 @@
 """
 Created on Wed May  6 19:32:38 2020
 
-@author: charl
+@author: teo hughes and charles yang
 """
+#TESTING out flask
 from flask import Flask, render_template
 import os
 
