@@ -88,8 +88,8 @@ random.shuffle(training)
 training = np.array(training)
 
 #Create train and test lists. X - patterns, Y - intents
-train_x = list(training[:0])
-train_y = list(training[:1])
+train_x = list(training[:,0])
+train_y = list(training[:,1])
 
 print("Training data created")
 
