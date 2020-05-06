@@ -23,6 +23,6 @@
          "patterns": ["What is your name", "What's your name", "How are you called", "What did your parents call you", "What should I call you", "What should I refer to you as?"],
          "responses": ["My name is Bonnie", "You can call me Bonnie", "Bonnie is what my parents named me"],
          "context_set": ""
-        },
+        }
    ]
 }
