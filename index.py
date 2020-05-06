@@ -4,12 +4,14 @@ Created on Wed May  6 19:32:38 2020
 
 @author: charl
 """
-from flask import Flask, render_template, request
+from flask import Flask, render_template
 import os
 
 app = Flask(__name__)
 
-@app.route('/home')
+@app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template("index.html")
 
+if __name__ == "__main__":
+    app.run(debug=True)
