@@ -55,7 +55,8 @@ def chatbot_response(input):
     print(response)
 
 def main():
-    text = input("Hi, how can I help you?")
-    chatbot_response(text)
+    for i in range(3):
+        text = input("Hi, how can I help you?")
+        chatbot_response(text)
 
 main()
