@@ -49,11 +49,11 @@ def get_response(ints, intents_json):
 def chatbot_response(input):
     intent_of_input = predict_class(input, model)
     response = get_response(intent_of_input, intents)
-    print(response)
+    print("Bonnie: {}".format(response))
 
 def main():
     inp = input("Hi, how can I help you (type quit or exit to leave)? ")
     while inp != "quit" or inp != "exit":
-        inp = chatbot_response(inp)
-
+        chatbot_response(inp)
+        inp = input("You: ")
 main()
