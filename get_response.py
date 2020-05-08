@@ -52,6 +52,7 @@ def chatbot_response(input):
     print("Bonnie: {}".format(response))
 
 def main():
+    print("Welcome to the chatbot called Bonnie Bot!\nAll you need to do is type what you want to know and just type quit or exit to leave.")
     inp = input("You: ")
     leave = False
     while leave == False:
