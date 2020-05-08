@@ -50,6 +50,7 @@ def chatbot_response(input):
     intent_of_input = predict_class(input, model)
     response = get_response(intent_of_input, intents)
     print("Bonnie: {}".format(response))
+    return("Bonnie: {}".format(response))
 
 def main():
     print("Welcome to the chatbot called Bonnie Bot!\nAll you need to do is type what you want to know and just type quit or exit to leave.")
@@ -61,5 +62,4 @@ def main():
         if inp == "quit" or inp == "exit":
             print("Sorry to see you go!")
             leave = True
-main()
 
