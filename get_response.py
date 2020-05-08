@@ -53,7 +53,7 @@ def chatbot_response(input):
 
 def main():
     inp = input("Hi, how can I help you (type quit or exit to leave)? ")
-    while inp.lower() != "quit" or inp.lower() != "exit":
+    while inp != "quit" or inp != "exit":
         inp = chatbot_response(inp)
 
 main()
