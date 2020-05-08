@@ -24,24 +24,22 @@ def create_bag_of_words(input, words):
         for i, w in enumerate(words):
             if w == s:
                 bag[i] = 1
-                print("found in bag: %s" % w)
     return(np.array(bag))
 
 def predict_class(input, model):
     p = create_bag_of_words(input, words)
     res = model.predict(np.array([p]))[0]
-    print(res)
     ERROR_THRESHOLD = 0.25
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
-    print(results)
     return_list = []
+    print(classes)
     for r in results:
         return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
-    print(return_list)
     return return_list
 
 def get_response(ints, intents_json):
     tag = ints[0]["intent"]
+    print(tag)
     list_of_intents = intents_json["intents"]
     for i in list_of_intents:
         if(i["tag"] == tag):
@@ -55,7 +53,7 @@ def chatbot_response(input):
     print(response)
 
 def main():
-    for i in range(3):
+    for i in range(10):
         text = input("Hi, how can I help you?")
         chatbot_response(text)
 
