@@ -1,9 +1,23 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed May  6 19:32:38 2020
+
+@author: teo hughes and charles yang
+"""
+from flask import Flask, render_template, request
+import os
 import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
+
 import pickle
 import numpy as np
 import tensorflow as tf
+from tensorflow.python.keras.backend import set_session
+
+sess = tf.Session()
+graph = tf.get_default_graph()
+set_session(sess)
 
 from keras.models import load_model
 model = load_model('chatbot_model.h5')
@@ -12,6 +26,10 @@ import random
 intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
+
+
+app = Flask(__name__)
+
 
 def pre_process_input(input):
     input_words = nltk.word_tokenize(input)
@@ -53,13 +71,21 @@ def chatbot_response(input):
     print("Bonnie: {}".format(response))
     return("Bonnie: {}".format(response))
 
-def main():
-    print("Welcome to the chatbot called Bonnie Bot!\nAll you need to do is type what you want to know and just type quit or exit to leave.")
-    inp = input("You: ")
-    leave = False
-    while leave == False:
-        chatbot_response(inp)
-        inp = input("You: ")
-        if inp == "quit" or inp == "exit":
-            print("Sorry to see you go!")
-            leave = True
+
+
+@app.route('/')
+def index():
+    return render_template("index.html")
+
+@app.route("/get")
+def get_bot_response():
+    global graph
+    global sess
+    with graph.as_default():
+        set_session(sess)
+        userText = request.args.get('msg')
+        print(chatbot_response("Hello"))
+        return str(chatbot_response(userText))
+
+if __name__ == "__main__":
+    app.run(debug=True)
