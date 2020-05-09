@@ -8,9 +8,7 @@ from flask import Flask, render_template, request
 import os
 import get_response
 
-
 app = Flask(__name__)
-print(__name__)
 
 @app.route('/')
 def index():
@@ -19,7 +17,8 @@ def index():
 @app.route("/get")
 def get_bot_response():
     userText = request.args.get('msg')
-    return str(get_response.chatbot_response(userText))
+    print(get_response.chatbot_response("Hello"))
+    #return str(get_response.chatbot_response(userText))
 
 if __name__ == "__main__":
     app.run(debug=True)
