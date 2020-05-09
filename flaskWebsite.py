@@ -15,6 +15,7 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.python.keras.backend import set_session
 
+#Setting the session for keras - must do this before loading the model
 sess = tf.Session()
 graph = tf.get_default_graph()
 set_session(sess)
@@ -32,60 +33,60 @@ app = Flask(__name__)
 
 
 def pre_process_input(input):
+    #Takes the input and pre-processes it via tokenization and lemmatization 
     input_words = nltk.word_tokenize(input)
     input_words = [lemmatizer.lemmatize(word.lower()) for word in input_words]
     return input_words
 
 def create_bag_of_words(input, words):
+    #Adds processed words to a bag of words
     input_words = pre_process_input(input)
     bag = [0] * len(words)
     for s in input_words:
         for i, w in enumerate(words):
-            if w == s:
+            if w == s: 
                 bag[i] = 1
     return(np.array(bag))
 
 def predict_class(input, model):
     p = create_bag_of_words(input, words)
     res = model.predict(np.array([p]))[0]
-    ERROR_THRESHOLD = 0.25
+    ERROR_THRESHOLD = 0.25 #Percentage above which will be registered as an intent to be responded to
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
+    results.sort(key=lambda x: x[1], reverse=True) #Sorts the results so that the highest probability intent will be responded to
     return_list = []
     for r in results:
-        return_list.append({"intent": classes[r[0]], "probability": str(r[1])})
+        return_list.append({"intent": classes[r[0]], "probability": str(r[1])}) #Adds the class of the intent and the probability to the return list from which a response will be generated
     return return_list
 
 def get_response(ints, intents_json):
-    tag = ints[0]["intent"]
-    print(tag)
-    list_of_intents = intents_json["intents"]
+    tag = ints[0]["intent"] #Gets the name of the tag of the intent which the user input belongs to
+    list_of_intents = intents_json["intents"] #List of all intents 
     for i in list_of_intents:
-        if(i["tag"] == tag):
-            result = random.choice(i["responses"])
+        if(i["tag"] == tag): #If the intent of the user input matches the intent
+            result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
             break
     return result
 
 def chatbot_response(input):
-    intent_of_input = predict_class(input, model)
-    response = get_response(intent_of_input, intents)
-    print("Bonnie: {}".format(response))
-    return("Bonnie: {}".format(response))
+    intent_of_input = predict_class(input, model) #Gets the intent of the user input
+    response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
+    return("Bonnie: {}".format(response)) #Returns in in the format "Bonnie: Message" so the user can clearly see that the message is from the bot
 
 
 
-@app.route('/')
+@app.route('/') #Home page
 def index():
-    return render_template("index.html")
+    return render_template("index.html") #Creates the page with the html from index.html
 
-@app.route("/get")
+@app.route("/get") #Way of getting bot response - no HTML and isn't viewed by the user 
 def get_bot_response():
     global graph
     global sess
-    with graph.as_default():
-        set_session(sess)
-        userText = request.args.get('msg')
-        print(chatbot_response("Hello"))
-        return str(chatbot_response(userText))
+    with graph.as_default(): #Important for the model to be generated and utilised correctly
+        set_session(sess) 
+        userText = request.args.get('msg') #Gets the user input from the textbox
+        return str(chatbot_response(userText)) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True) 
