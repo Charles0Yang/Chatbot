@@ -1,4 +1,0 @@
-Flask
-Tensorflow
-Keras
-nltk
