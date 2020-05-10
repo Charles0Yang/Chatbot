@@ -1,7 +1,7 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "Hullo", "Howdy", "Is anyone there", "Hello", "Good day", "Whats up", "Herrow", "Hey", "Sup", "How do you do"],
-         "responses": ["Hi!", "Hello there!", "Hi, my name is Bonnie"],
+         "patterns": ["Hi", "Hullo", "Howdy", "Is anyone there", "Hello", "Good day", "Whats up", "Herrow", "Hey", "Sup"],
+         "responses": ["Hi!", "Hello there!", "Hey!"],
          "context_set": [""]
         },
         {"tag": "goodbye",
@@ -16,7 +16,7 @@
         },
 	{"tag": "name",
          "patterns": ["What is your name", "What did your parents call you", "What should I call you", "What should I refer to you as?"],
-         "responses": ["My name is Bonnie", "You can call me Bonnie", "Bonnie is what my parents named me"],
+         "responses": ["My name is Bonnie!", "You can call me Bonnie!"],
          "context_set": [""]
         },
 	{"tag": "friends",
