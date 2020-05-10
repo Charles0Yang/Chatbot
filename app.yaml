@@ -1,13 +1,25 @@
 runtime: python27
 api_version: 1
-threadsafe: true
+threadsafe: false
 
 handlers:
-- url: /static
+- url: /
+  script: flaskWebsite.py
+- url: /stylesheets
   static_dir: static
-- url: /.*
-  script: main.app
+- url: /favicon.ico
+  static_files: favicon.ico
+  upload: favicon.ico
+- url: /get
+  script: flaskWebsite.py
   
 libraries:
   - name: ssl
     version: latest
+  - name: flask
+    version: latest
+  - name: tensorflow
+    version: 1.14.0
+  - name: keras
+    version: latest
+    

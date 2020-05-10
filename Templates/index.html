@@ -21,23 +21,25 @@
       </h1>
     </center>
   <div class="box"></div>
-    <div class="boxed">
-      <div>
-        <div id="chatbox">
-          <p class="botText">
-            <span>Hi I'm Bonnie your personal Chatbot!</span>
-          </p>
-        </div>
+  <div class="boxed">
+    <div>
+      <div id="chatbox">
+        <img src="https://image.freepik.com/free-vector/robot-icon-bot-sign-design-chatbot-symbol-concept-voice-support-service-bot-online-support-bot-vector-stock-illustration_100456-34.jpg" alt="Bonnie" style="width:90px;height:90px;"/>
+        <p class="botText">
+          <span>Hi I'm Bonnie your personal Chatbot!</span>
+        </p>
+      </div>
       <div id="userInput">
         <input id="textInput" type="text" name="msg" placeholder="Message" />
       </div>
-      <script>
-      $("#textInput").keypress(function(e) {
-        if (e.which == 13) {
-          getBotResponse();
-        }
-      });
-      </script>
+    </div>
+    <script>
+    $("#textInput").keypress(function(e) {
+      if (e.which == 13) {
+        getBotResponse();
+      }
+    });
+    </script>
     </div>
   </body>
 </html>
