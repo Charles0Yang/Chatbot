@@ -28,6 +28,11 @@
          "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist"],
          "responses": ["I am a chatbot"],
          "context_set": [""]
+        },
+	{"tag": "favourite football team",
+         "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team"],
+         "responses": ["Arsenal", "Chelsea"],
+         "context_set": [""]
         }
    ]
 }
