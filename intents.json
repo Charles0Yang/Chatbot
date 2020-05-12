@@ -26,7 +26,7 @@
         },
 	{"tag": "what do you do",
          "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist"],
-         "responses": ["I am a chatbot"],
+         "responses": ["I am a chatbot", "My purpose is to help you!!!", "I can provide you with information"],
          "context_set": [""]
         },
 	{"tag": "favourite football team",
