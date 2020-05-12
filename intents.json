@@ -31,7 +31,7 @@
         },
 	{"tag": "favourite football team",
          "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team"],
-         "responses": ["Arsenal", "Chelsea"],
+         "responses": ["Chelsea"],
          "context_set": [""]
         }
    ]

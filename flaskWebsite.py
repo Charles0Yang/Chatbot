@@ -62,10 +62,15 @@ def predict_class(input, model):
 def get_response(ints, intents_json):
     tag = ints[0]["intent"] #Gets the name of the tag of the intent which the user input belongs to
     list_of_intents = intents_json["intents"] #List of all intents 
+    min_accuracy = 0.9993 #Probability above which the response should be valid. If below this number then bot should reply "Sorry I don't understand what you said"
     for i in list_of_intents:
         if(i["tag"] == tag): #If the intent of the user input matches the intent
-            result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
-            break
+            print(float(ints[0]["probability"])) #Print statement to check the certainty of the model of the user's input. Use to error check
+            if float(ints[0]["probability"]) > min_accuracy: #The model's probability of the response being valid must be above the min_accuracy otherwise the response may be invalid
+                result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
+                break
+            else:
+                result = "Sorry I don't understand what you said" #Returns generic "I don't understand message instead of a listed response
     return result
 
 def chatbot_response(input):
