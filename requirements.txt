@@ -1,4 +1,4 @@
 nltk
-tensorflow=1.14.0
+tensorflow==1.14.0
 keras
 Flask
