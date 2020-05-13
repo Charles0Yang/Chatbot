@@ -82,7 +82,7 @@ def chatbot_response(input):
 
 @app.route('/') #Home page
 def index():
-    return render_template("index.html") #Creates the page with the html from index.html
+    return render_template("template.html") #Creates the page with the html from index.html
 
 @app.route("/get") #Way of getting bot response - no HTML and isn't viewed by the user 
 def get_bot_response():
