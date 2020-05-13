@@ -32,9 +32,6 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 app = Flask(__name__)
 
 
-app.logger.addHandler(logging.StreamHandler(sys.stdout))
-app.logger.setLevel(logging.ERROR)
-
 def pre_process_input(input):
     #Takes the input and pre-processes it via tokenization and lemmatization 
     input_words = nltk.word_tokenize(input)
