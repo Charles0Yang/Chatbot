@@ -8,7 +8,6 @@ from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
 import numpy as np #ADDED AS NP
-import tflearn
 import tensorflow
 import random
 import json 
