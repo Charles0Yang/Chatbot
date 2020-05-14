@@ -70,8 +70,8 @@ def get_response(ints, intents_json):
             if float(ints[0]["probability"]) > min_accuracy and "long" not in tag: #The model's probability of the response being valid must be above the min_accuracy otherwise the response may be invalid
                 result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
                 break
-            elif float(ints[0]["probability"]) > min_accuracy and "long" in tag:
-                result = i["responses"]
+            elif float(ints[0]["probability"]) > min_accuracy and "long" in tag: #For responses with long in the tag, the response will be several lines long so all responses need to be returned so all can be displayed on screen. These are usually very specific questions that have a long response
+                result = i["responses"] #Returns all the responses in the tag 
                 break
             else:
                 result = "Sorry I don't understand what you said" #Returns generic "I don't understand message instead of a listed response
@@ -82,13 +82,13 @@ def chatbot_response(input):
     response_list = []
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
-    if "long" not in intent_of_input[0]["intent"]:
-        formatted_response = str(("{}".format(response)))
+    if "long" not in intent_of_input[0]["intent"]: #If long is not in the intent of the input there is need to add several sentences
+        formatted_response = str(("{}".format(response))) 
         response_list.append(formatted_response)
     else:
         for sentence in response:
             response_list.append(sentence)
-    return str(response_list)
+    return str(response_list) #Since a list is not allowed to be returned, a string version is returned which can then be converted to a list in javascript
 
 
 

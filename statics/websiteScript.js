@@ -8,12 +8,19 @@ function getBotResponse() {
 
     $.get("/get", { msg: rawText }).done(function(data) { //Goes to the /get page which will return the bot's response as a string
         raw_data = data.toString().substring(2, data.length-2);
-        raw_data = raw_data.replace(/['"]+/g, '');
-        var responses = raw_data.split(",");
-        var sentences = responses.length;
-        for (i = 0; i < sentences; i++) {
+        var min_string_length = 0 //The minimum strength length after which the response should have a "long" in the tag
+        if (raw_data.length > 50){ //Checks if the response is long enough to display in multiple lines
+            raw_data = raw_data.replace(/['"]+/g, ''); //Removes all the " and ' which separate each sentence so they don't appear in the response
+            var responses = raw_data.split(","); //Splits the response based on the commas which represent new lines
+        }
+        else{ //If the length of the response is not that long, there is no need to remove commas or apostrophes
+            var responses = []
+            responses.push(raw_data) //Add the message to the responses array so that it can be accessed in the response
+        }
+        var sentences = responses.length; //Gets the number of sentences that should be displayed
+        for (i = 0; i < sentences; i++) { //For each sentence a new HTML line needs to be generated
             var botHtml = '<p class="botText" ><span> &#129302; ' + responses[i] + "</span></p>"; //Displays the response on the screen 
-            $("#chatbox").append(botHtml);
+            $("#chatbox").append(botHtml); //Adds the html to the appropriate identifier
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
         }
     });
