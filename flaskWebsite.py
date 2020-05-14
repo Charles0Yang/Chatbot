@@ -76,8 +76,8 @@ def get_response(ints, intents_json):
 def chatbot_response(input):
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
-    return("Bonnie: {}".format(response)) #Returns in in the format "Bonnie: Message" so the user can clearly see that the message is from the bot
-
+    
+    return("Bonnie: {}".format(response)
 
 
 @app.route('/') #Home page
@@ -91,7 +91,9 @@ def get_bot_response():
     with graph.as_default(): #Important for the model to be generated and utilised correctly
         set_session(sess) 
         userText = request.args.get('msg') #Gets the user input from the textbox
-        return str(chatbot_response(userText)) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
+        response = str(chatbot_response(userText)) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
+        return response
+
 
 if __name__ == "__main__":
     app.run(debug=True) 
