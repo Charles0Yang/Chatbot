@@ -77,7 +77,7 @@ def chatbot_response(input):
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
     
-    return("Bonnie: {}".format(response)
+    return("Bonnie: {}".format(response))
 
 
 @app.route('/') #Home page
