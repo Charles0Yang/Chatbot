@@ -9,11 +9,17 @@ Simply click [here](https://bonniebot.herokuapp.com/)!
 ## Current types of sentence Bonnie Bot will respond to
 
 Hello!
+
 How are you?
+
 Goodbye!
+
 What is your name?
+
 Can we be friends?  
+
 What do you do?
+
 What is your favourite football team?
 
 ## Contributing
