@@ -91,6 +91,7 @@ def chatbot_response(input):
     return str(response_list)
 
 
+
 @app.route('/') #Home page
 def index():
     return render_template("template.html") #Creates the page with the html from index.html

@@ -1,11 +1,11 @@
 body{
   font-family: monospace;
-  background-color: rgba(0, 0, 255, 0.178);
+  background-color: rgba(255, 0, 0, 0.486);
 }
 h1{
-  background-color: rgba(0, 0, 255, 0.486);
+  background-color: rgba(255, 0, 0, 0.486);
   display: inline-block;
-  font-size: 3em;
+  font-size: 4em;
   margin: 0;
   padding: 14px;
   border-radius: 15px;
@@ -25,31 +25,31 @@ h1{
 #textInput{
   width: 90%;
   border: none;
-  border-bottom: 3px solid black;
+  border-bottom: 3px solid blue;
   font-family: monospace;
   font-size: 17px;
 }
 .userText{
-  color: white;
+  color:yellowgreen;
   font-family: monospace;
   font-size: 17px;
   text-align: right;
   line-height: 30px;
 }
 .userText span{
-  background-color: #808080;
+  background-color: turquoise;
   padding: 10px;
   border-radius: 2px;
 }
 .botText {
-  color: white;
+  color: green;
   font-family: monospace;
   font-size: 17px;
   text-align: left;
   line-height: 30px;
 }
 .botText span{
-  background-color: #4169e1;
+  background-color: #ff0000;
   padding: 10px;
   border-radius: 2px;
 }
@@ -58,14 +58,14 @@ h1{
   margin-right: auto;
   width: 78%;
   margin-top: 60px;
-  border: 1px solid rgba(0, 0, 255, 0.486);
+  border: 1px solid rgba(0, 0, 0, 0.486);
   border-radius: 25px;
-  background-color: white;
+  background-color: orange;
 }
 .box{
-  border: 2px solid blueviolet;
+  border: 2px solid green;
 }
 
 center{
-  background-color: white;
+  background-color: red;
 }
