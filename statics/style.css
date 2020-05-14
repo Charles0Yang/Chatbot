@@ -26,46 +26,47 @@ h1{
   margin-top: 60px;
 }
 #textInput{
+  height: 25px;
   width: 90%;
   border: 10px;
   font-family: monospace;
   font-size: 17px;
 }
 .userText{
-  color:yellowgreen;
+  color: cyan;
   font-family: monospace;
   font-size: 17px;
   text-align: right;
   line-height: 30px;
 }
 .userText span{
-  background-color: turquoise;
+  background-color: brown;
   padding: 10px;
   border-radius: 2px;
 }
 .bonnieHeading {
-  color: green;
+  color: orange;
   font-family: monospace;
   font-size: 27px;
   text-align: center;
   line-height: 30px;
 }
 .bonnieHeading span{
-  background-color: #ff0000;
+  background-color: green;
   padding: 10px;
   border-radius: 2px;
 }
 .botText {
-  color: green;
+  color: orange;
   font-family: monospace;
   font-size: 17px;
   text-align: left;
   line-height: 30px;
 }
 .botText span{
-  background-color: #ff0000;
+  background-color: green;
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 .boxed {
   margin-left: auto;

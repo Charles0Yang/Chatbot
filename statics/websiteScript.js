@@ -12,7 +12,7 @@ function getBotResponse() {
         var responses = raw_data.split(",");
         var sentences = responses.length;
         for (i = 0; i < sentences; i++) {
-            var botHtml = '<p class="botText"><span>' + responses[i] + "</span></p>"; //Displays the response on the screen 
+            var botHtml = '<p class="botText" ><span> &#129302; ' + responses[i] + "</span></p>"; //Displays the response on the screen 
             $("#chatbox").append(botHtml);
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
         }
