@@ -1,10 +1,12 @@
 body{
   font-family: monospace;
-  background-color: rgb(72, 255, 0);
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 h1{
-  background-color: rgb(0, 47, 255);
-  display: inline-block;
+  display: block;
   font-size: 4em;
   margin: 0;
   padding: 15px;
@@ -17,6 +19,7 @@ h1{
   margin-top: 60px;
 }
 #userInput{
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 40%;
@@ -24,8 +27,7 @@ h1{
 }
 #textInput{
   width: 90%;
-  border: none;
-  border-bottom: 3px solid blue;
+  border: 10px;
   font-family: monospace;
   font-size: 17px;
 }
@@ -41,11 +43,23 @@ h1{
   padding: 10px;
   border-radius: 2px;
 }
+.bonnieHeading {
+  color: green;
+  font-family: monospace;
+  font-size: 27px;
+  text-align: center;
+  line-height: 30px;
+}
+.bonnieHeading span{
+  background-color: #ff0000;
+  padding: 10px;
+  border-radius: 2px;
+}
 .botText {
   color: green;
   font-family: monospace;
   font-size: 17px;
-  text-align: middle;
+  text-align: left;
   line-height: 30px;
 }
 .botText span{
@@ -60,12 +74,15 @@ h1{
   margin-top: 60px;
   border: 1px solid rgba(0, 0, 0, 0.486);
   border-radius: 25px;
-  background-color: orange;
-}
-.box{
-  border: 2px solid green;
+  background-image: url(https://www.sciencealert.com/images/2020-04/processed/earthmovement_1024.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
 }
 
-center{
-  background-color: red;
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }

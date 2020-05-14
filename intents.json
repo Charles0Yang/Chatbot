@@ -26,7 +26,7 @@
         },
 	{"tag": "what do you do",
          "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist"],
-         "responses": ["I am a chatbot", "My purpose is to help you!!!", "I can provide you with information"],
+         "responses": ["I am a chatbot", "My purpose is to help you!!!", "I can provide you with information about COVID-19!"],
          "context_set": [""]
         },
 	{"tag": "favourite football team",
@@ -36,7 +36,7 @@
         },
 	{"tag": "risk long",
          "patterns": ["Am I at risk", "Am I at risk if I get coronavirus", "Am I at risk if I get covid-19"],
-         "responses": ["People who already have severe medical conditions are known as being at risk", "Here are the people who are at risk:", "People who've received solid organ transplants"],
+         "responses": ["People who already have severe medical conditions are known as being at risk", "Here are the people who are at risk:", "People who have received solid organ transplants"],
          "context_set": [""]
         }
    ]

@@ -83,7 +83,7 @@ def chatbot_response(input):
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
     if "long" not in intent_of_input[0]["intent"]:
-        formatted_response = str(("Bonnie: {}".format(response)))
+        formatted_response = str(("{}".format(response)))
         response_list.append(formatted_response)
     else:
         for sentence in response:
