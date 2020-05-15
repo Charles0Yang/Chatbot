@@ -1,6 +1,6 @@
 # Bonnie Bot
 
-Bonnie Bot is a Chatbot we have created to help ...
+Bonnie Bot is a Chatbot we have created to help provide useful information about Coronavirus in a concise and interactable way
 
 ## How to access
 
