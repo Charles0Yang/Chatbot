@@ -1,9 +1,10 @@
 body{
   font-family: monospace;
-  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
+  /*background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_960_720.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% 100%;*/
+  background-color: black;
 }
 h1{
   display: block;
@@ -113,10 +114,11 @@ li a:hover {
   margin-top: 60px;
   border: 1px solid rgba(0, 0, 0, 0.486);
   border-radius: 25px;
-  background-image: url(https://www.sciencealert.com/images/2020-04/processed/earthmovement_1024.jpg);
+  /*background-image: url(https://www.sciencealert.com/images/2020-04/processed/earthmovement_1024.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: 100% 100%;*/
+  background-color: white;
 }
 
 .center {
