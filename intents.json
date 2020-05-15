@@ -34,9 +34,29 @@
          "responses": ["Arsenal"],
          "context_set": [""]
         },
-	{"tag": "risk long",
-         "patterns": ["Am I at risk", "Am I at risk if I get coronavirus", "Am I at risk if I get covid-19"],
-         "responses": ["People who already have severe medical conditions are known as being at risk", "Here are the people who are at risk:", "People who have received solid organ transplants"],
+        {"tag": "who is high risk long",
+         "patterns": ["Am I a high risk individual?", "Am I at high risk of Coronavirus?", "Am I classified as being at high risk?", "Is my grandparent at high risk?"],
+         "responses": ["If any of the following apply to you, you are at high risk", "Aged 70 and over", "Have a long term condition", "Pregnant"],
+         "context_set": [""]
+        },
+        {"tag": "what is coronavirus long",
+         "patterns": ["What is coronavirus", "What is covid-19", "What is corona", "Define coronavirus"],
+         "responses": ["Coronavirus (or Covid-19) is in a family of viruses including the common cold and other respitory illnesses", "It affects your airways and lungs", "The effects are mild for many however can be very severe"],
+         "context_set": [""]
+        },
+        {"tag": "how does coronavirus spread long",
+         "patterns": ["How does Coronavirus spread?", "How is Coronavirus transmitted", "How can I catch coronavirus", "In what way does coronavirus spread"],
+         "responses": ["There are two ways in which Coronavirus can be spread:", "A person can touch a surface that an infected person has touched", "A person gets close to (less than 1-2 metres) to an infectious person"],
+         "context_set": [""]
+        },
+        {"tag": "incubation",
+         "patterns": ["What is the average incubation period", "How long do symptoms take to develop", "How long does it take for symptoms to show", "After how much time would I develop Coronavirus after being infected"],
+         "responses": ["The average is 5 days, but it could be between 1 and 14 days"],
+         "context_set": [""]
+        },
+        {"tag": "self-isolate time long",
+         "patterns": ["How long should I self-isolate for", "How long should I be in self isolation for", "What is the recommended time for self isolation", "How long should I isolate if I am infected", "How long should I self isolate if a family member is infected"],
+         "responses": ["You should self-isolate for at least 7 days if you are infected", "If a household member has symptoms you should self-isolate for 14 days"],
          "context_set": [""]
         }
    ]
