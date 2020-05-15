@@ -24,11 +24,18 @@ h1{
   margin-right: auto;
   width: 40%;
   margin-top: 60px;
+  
 }
 #textInput{
   height: 25px;
   width: 90%;
-  border: 10px;
+  border-style: solid hidden dotted solid;
+  border-width: 3px 1px 3px 12px;
+  border-radius: 6px;
+  border-color: brown;
+  background-color: cyan;
+  margin: auto;
+  padding-left: 5px;
   font-family: monospace;
   font-size: 17px;
 }
