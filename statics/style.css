@@ -67,10 +67,16 @@ li a:hover {
   border-radius: 6px;
   border-color: #90BEDE;
   background-color: white;
+  background-image: url('https://image.flaticon.com/icons/svg/483/483356.svg');
+  background-repeat: no-repeat;
+  background-position: 5px 10px;
   margin: auto;
-  padding-left: 5px;
+  padding-left: 40px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 17px;
+}
+#textInput:focus{
+  background-color: lightblue;
 }
 .userText{
   color: black;
