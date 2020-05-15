@@ -105,6 +105,9 @@ def get_bot_response():
         userText = request.args.get('msg') #Gets the user input from the textbox
         return chatbot_response(userText) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
 
+@app.route("/about")
+def about():
+    return render_template("about.html")
             
 
 if __name__ == "__main__":
