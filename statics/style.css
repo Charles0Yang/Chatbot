@@ -4,7 +4,8 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;*/
-  background-color: black;
+  background-color: #90F3FF;
+  background: -webkit-linear-gradient(#90F3FF);
 }
 h1{
   display: block;
@@ -18,7 +19,8 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: green;
+  background-color: #90BEDE;
+  background: -webkit-linear-gradient(rgb(139, 168, 231), #90BEDE);
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
@@ -26,23 +28,23 @@ ul {
 
 li {
   float: left;
-  border-right: 1px solid yellow;
+  border-right: 1px solid #E5E1EE;
 }
 li:last-child {
   border-right: none;
-  border-left: 1px solid yellow;
+  border-left: 1px solid #E5E1EE;
 }
 
 li a {
   display: block;
-  color: violet;
+  color: rgb(189, 49, 189);
   text-align: center;
   padding: 18px 18px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #111;
+  background-color: #DFFDFF;
 }
 #chatbox {
   margin-left: auto;
