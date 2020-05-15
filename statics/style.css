@@ -12,6 +12,37 @@ h1{
   padding: 15px;
   border-radius: 20px;
 }
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: green;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+}
+
+li {
+  float: left;
+  border-right: 1px solid yellow;
+}
+li:last-child {
+  border-right: none;
+  border-left: 1px solid yellow;
+}
+
+li a {
+  display: block;
+  color: violet;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
 #chatbox {
   margin-left: auto;
   margin-right: auto;
