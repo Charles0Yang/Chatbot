@@ -99,9 +99,10 @@ li a:hover {
   line-height: 30px;
 }
 .bonnieHeading span{
+  display: inline-block;
   background-color: rgb(160, 42, 115);
   background: -webkit-linear-gradient(rgb(201, 50, 176), rgb(238, 100, 196));
-  padding: 20px 140px 20px 140px;
+  padding: 20px 70px 20px 70px;
   border-radius: 10px;
 }
 .botText {
