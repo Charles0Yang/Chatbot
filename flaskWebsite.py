@@ -86,8 +86,11 @@ def chatbot_response(input):
         formatted_response = str(("{}".format(response))) 
         response_list.append(formatted_response)
     else:
-        for sentence in response:
-            response_list.append(sentence)
+        if response == "Sorry I don't understand what you said":
+            response_list.append(response)
+        else:
+            for sentence in response:
+                response_list.append(sentence)
     return str(response_list) #Since a list is not allowed to be returned, a string version is returned which can then be converted to a list in javascript
 
 

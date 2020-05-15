@@ -70,10 +70,10 @@ li a:hover {
   margin: auto;
   padding-left: 5px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 17px;
+  font-size: 20px;
 }
 #textInput:focus{
-  background-color: lightblue;
+  background-color: rgba(173, 216, 230, 0.774);
 }
 .userText{
   color: black;
@@ -83,6 +83,7 @@ li a:hover {
   line-height: 30px;
 }
 .userText span{
+  display: inline-block;
   background-color: white;
   border-style: solid;
   border-color: #90BEDE;
@@ -92,19 +93,20 @@ li a:hover {
 }
 .bonnieHeading {
   color: white;
-  font-family: monospace;
-  font-size: 27px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
   text-align: center;
   line-height: 30px;
 }
 .bonnieHeading span{
-  background-color: #9F84BD;
-  padding: 10px;
+  background-color: rgb(160, 42, 115);
+  background: -webkit-linear-gradient(rgb(201, 50, 176), rgb(238, 100, 196));
+  padding: 20px 140px 20px 140px;
   border-radius: 10px;
 }
 .botText {
   color: black;
-  font-family: monospace;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 25px;
   text-align: left;
   line-height: 30px;

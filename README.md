@@ -32,6 +32,20 @@ What is the Incubation time of Coronavirus?
 
 How long should I self-isolate for?
 
+What are the symptoms of Coronavirus?
+
+What should I do if I am unwell with Coronavirus symptoms?
+
+Am I eligible for testing?
+
+How do I book a test?
+
+How can I reduce my risk of catching or spreading coronavirus?
+
+When should I wash my hands?
+
+What should I do about my current medical treatments?
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 

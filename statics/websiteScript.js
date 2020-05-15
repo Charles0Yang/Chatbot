@@ -8,7 +8,7 @@ function getBotResponse() {
 
     $.get("/get", { msg: rawText }).done(function(data) { //Goes to the /get page which will return the bot's response as a string
         raw_data = data.toString().substring(2, data.length-2);
-        var min_string_length = 50 //The minimum strength length after which the response should have a "long" in the tag
+        var min_string_length = 70 //The minimum strength length after which the response should have a "long" in the tag
         if (raw_data.length > min_string_length){ //Checks if the response is long enough to display in multiple lines
             raw_data = raw_data.replace(/['"]+/g, ''); //Removes all the " and ' which separate each sentence so they don't appear in the response
             var responses = raw_data.split(","); //Splits the response based on the commas which represent new lines
@@ -25,3 +25,4 @@ function getBotResponse() {
         }
     });
 }
+
