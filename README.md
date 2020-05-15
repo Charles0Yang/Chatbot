@@ -22,6 +22,16 @@ What do you do?
 
 What is your favourite football team?
 
+Am I a high risk individual?
+
+What is Coronavirus?
+
+How does Coronavirus spread?
+
+What is the Incubation time of Coronavirus?
+
+How long should I self-isolate for?
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
