@@ -1,7 +1,7 @@
 function getBotResponse() {
     //Displays the user's input 
     var rawText = $("#textInput").val(); //What the user inputs
-    var userHtml = '<p class="userText"><span> &#128578; ' + rawText + "</span></p>"; //Converts it to html
+    var userHtml = '<p class="userText"><span> ' + rawText + "</span></p>"; //Converts it to html
     $("#textInput").val(""); //Gets a string
     $("#chatbox").append(userHtml); //Puts the html inside the chatbox
     document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" }); //Makes it so that the box containing the text will increase smoothly with every input
@@ -19,7 +19,7 @@ function getBotResponse() {
         }
         var sentences = responses.length; //Gets the number of sentences that should be displayed
         for (i = 0; i < sentences; i++) { //For each sentence a new HTML line needs to be generated
-            var botHtml = '<p class="botText" ><span> &#129302; ' + responses[i] + "</span></p>"; //Displays the response on the screen 
+            var botHtml = '<p class="botText" ><span>' + responses[i] + "</span></p>"; //Displays the response on the screen 
             $("#chatbox").append(botHtml); //Adds the html to the appropriate identifier
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
         }

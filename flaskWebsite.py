@@ -86,10 +86,10 @@ def chatbot_response(input):
         formatted_response = str(("{}".format(response))) 
         response_list.append(formatted_response)
     else:
-        if response == "Sorry I don't understand what you said":
+        if response == "Sorry I don't understand what you said": #Prevents "Sorry I don't understand" from being displayed character by character
             response_list.append(response)
         else:
-            for sentence in response:
+            for sentence in response: #If the tag is recognised and long is in the intent, then all the sentences need to returned in the response
                 response_list.append(sentence)
     return str(response_list) #Since a list is not allowed to be returned, a string version is returned which can then be converted to a list in javascript
 
