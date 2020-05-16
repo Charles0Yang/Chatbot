@@ -17,23 +17,24 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: white;
+  background-image: url('https://www.sparklogix.com/wp-content/uploads/2012/05/Screen-Shot-2012-05-21-at-9.40.23-PM.png');
   border-style: solid;
   border-width: 1px;
   border-radius: 10px;
-  border-color: blue;
+  border-color: purple;
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  opacity: 1;
 }
 
 li {
   float: left;
-  border-right: 1px solid #E5E1EE;
+  border-right: 1px solid black;
 }
 li:last-child {
   border-right: none;
-  border-left: 1px solid #E5E1EE;
+  border-left: 1px solid black;
 }
 
 li a {
@@ -47,7 +48,7 @@ li a {
 }
 
 li a:hover {
-  background-color: rgb(115, 199, 224);
+  background-color: gainsboro;
 }
 #chatbox {
   margin-left: auto;
@@ -103,12 +104,12 @@ li a:hover {
   font-size: 40px;
   text-align: center;
   line-height: 50px;
+  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
 }
 .bonnieHeading span{
   display: inline-block;
   /*background-color: rgb(160, 42, 115);
   background: -webkit-linear-gradient(rgba(235, 2, 2, 0.76), rgba(194, 58, 16, 0.904));*/
-  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
   padding: 20px 175px 20px 175px;
   border-radius: 10px;
 }
@@ -161,7 +162,7 @@ li a:hover {
 .mainHeading{
   text-align: center;
   font-size: 60px;
-  font-weight: bold;
+  font-weight: lighter;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0px;
 }
@@ -169,7 +170,7 @@ li a:hover {
 .heading{
   text-align: center;
   font-size: 40px;
-  font-weight: bold;
+  font-weight: lighter;
   font-style: italic;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding-top: 30px;
@@ -177,14 +178,14 @@ li a:hover {
 
 hr{ 
   width:70%; 
-  height:5px; 
+  height:2px; 
   line-height: 0px;
   background: black;
 }
 
 hr.small{
   width: 20%;
-  height: 5px;
+  height: 2px;
   background: black;
 }
 
@@ -194,6 +195,7 @@ hr.small{
   padding: 20px 0px 20px 0px;
   text-align: center;
   line-height: 30px;
+  font-weight: lighter;
 }
 
 #textBox{
@@ -206,6 +208,7 @@ a.email{
   font-size: 20px;
   padding-left: 350px;
   padding-bottom: 40px;
+  font-weight: lighter;
 }
 
 
