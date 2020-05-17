@@ -9,6 +9,11 @@
          "responses": ["Goodbye, I hope you have a great day!", "Sorry to see you go, I enjoyed our chat!", "Ok bye then! Enjoy the rest of your day!", "Had a nice time talking with you!"],
          "context_set": [""]
         },
+        {"tag": "thanks",
+         "patterns": ["Thanks", "Thank you!", "Cheers", "You've been very helpful", "Thanks for helping", "I appreciate it", "Very help of you thank you very much", "Very kind of you to help me"],
+         "responses": ["No problem at all!", "You are very welcome", "Anytime!"],
+         "context_set": [""]
+        },
         {"tag": "how are you",
          "patterns": ["How are you", "You good", "Are you well", "How's it going", "What's good", "You alright", "How are you feeling"],
          "responses": ["I am very well thank you!", "I'm great thanks for asking!"],
@@ -26,12 +31,12 @@
         },
 	{"tag": "what do you do",
          "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist"],
-         "responses": ["I am a chatbot", "My purpose is to answer any questions you may have about Coronavirus", "I can provide you with information about COVID-19!"],
+         "responses": ["My purpose is to answer any questions you may have about Coronavirus", "I can provide you with information about COVID-19!"],
          "context_set": [""]
         },
 	{"tag": "favourite football team",
          "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team"],
-         "responses": ["Arsenal"],
+         "responses": ["Chelsea."],
          "context_set": [""]
         },
         {"tag": "who is high risk long",
@@ -92,6 +97,36 @@
         {"tag": "existing medical needs long",
          "patterns": ["What should I do about my current medical treatments", "What should I about my upcoming appointments", "What should I do if I am unwell with existing medical conditions"],
          "responses": ["If you are unwell you can still speak to your GP although this would have to be over the phone", "If you have a treatment plan you should continue to follow it", "Some appointments have been postponed although your appointments may still be ongoing so contact your GP for clarification"],
+         "context_set": [""]
+        },
+        {"tag": "leave home long",
+         "patterns": ["When am I allowed to leave my house?", "When can I leave my home?", "In what circumstances can I go outside?", "When can I go out?"],
+         "responses": ["You can only leave your home in the following circumstances:", "If you have a medical need or are giving care/support to a vulnerable person", "Going shopping for essentials (e.g. food and medicine)", "Going out alone or someone you live with to exercise", "If staying at home would place you at risk of injury or home", "Travelling to and from work"],
+         "context_set": [""]
+        },
+        {"tag": "social distance meaning",
+         "patterns": ["What does social distancing mean?", "What is the meaning of social distancing?", "Define social distancing"],
+         "responses": ["Social distancing is staying at home and only leaving for a few reasons defined by the government. When you're outside your home you should stay at least two metres away from other people"],
+         "context_set": [""]
+        },
+        {"tag": "self-isolation meaning",
+         "patterns": ["What does self-isolation mean?", "What is the meaning of self isolation?", "Define self-isolation"],
+         "responses": ["It's avoiding contact with others (even those you live with) and not leaving your home for any reason. You should do this if you are displaying symptoms or live with somebody displaying symptoms"],
+         "context_set": [""]
+        },
+        {"tag": "shielding meaning",
+         "patterns": ["What does shielding mean?", "What is the meaning of shielding?", "Define shielding"],
+         "responses": ["Shielding is a tyle of self-isolation which involves not leaving your home for any reason until the end of June to reduce your risk of contracting coronavirus"],
+         "context_set": [""]
+        },
+        {"tag": "have to social distance?",
+         "patterns": ["Do I have to social distance", "Do I have to do social distancing", "Am I required to do social distancing?"],
+         "responses": ["Everyone should be social distancing. If you are over 70 or have existing health conditions try to stay home regardless"],
+         "context_set": [""]
+        },
+        {"tag": "have to shield?",
+         "patterns": ["Do I have to do shielding", "Do I have to be shielded", "Should I be shielding?"],
+         "responses": ["Anyone who has been identified as extremely vulnerable should be shielded"],
          "context_set": [""]
         }
 ]
