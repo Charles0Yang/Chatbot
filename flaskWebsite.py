@@ -6,9 +6,11 @@ Created on Wed May  6 19:32:38 2020
 """
 from flask import Flask, render_template, request
 import os
+from gtts import gTTS
 import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
+
 
 import pickle
 import numpy as np
@@ -30,6 +32,8 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 
 
 app = Flask(__name__, template_folder='templates', static_folder='statics')
+
+
 
 
 def pre_process_input(input):
