@@ -33,6 +33,7 @@ li {
   border-right: 1px solid black;
 }
 li:last-child {
+  float: none;
   border-right: none;
   border-left: 1px solid black;
 }

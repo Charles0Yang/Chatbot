@@ -2,7 +2,7 @@
 """
 Created on Wed May  6 19:32:38 2020
 
-@author: teo hughes and charles yang
+@authors: teo hughes and charles yang
 """
 from flask import Flask, render_template, request
 import os
@@ -77,7 +77,13 @@ def get_response(ints, intents_json):
                 result = i["responses"] #Returns all the responses in the tag 
                 break
             else:
-                result = "Sorry I don't understand what you said" #Returns generic "I don't understand message instead of a listed response
+                rand = random.randint(0, 2)
+                if rand == 0:
+                    result = "Sorry I don't understand what you said!" #Returns generic "I don't understand message instead of a listed response
+                elif rand == 1:
+                    result = "Sorry I didn't quite get that!"
+                else:
+                    result = "Sorry I haven't been programmed to answer this question yet!"
                 break
     return result
 
@@ -89,7 +95,7 @@ def chatbot_response(input):
         formatted_response = str(("{}".format(response))) 
         response_list.append(formatted_response)
     else:
-        if response == "Sorry I don't understand what you said": #Prevents "Sorry I don't understand" from being displayed character by character
+        if response == "Sorry I don't understand what you said!" or response == "Sorry I didn't quite get that!" or response == "Sorry I haven't been programmed to answer this question yet!": #Prevents "Sorry I don't understand" from being displayed character by character
             response_list.append(response)
         else:
             for sentence in response: #If the tag is recognised and long is in the intent, then all the sentences need to returned in the response

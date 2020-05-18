@@ -139,10 +139,10 @@
          "responses": ["The NHS has provided a list of helplines you can contract for expert advice. The link to the NHS page is at the top of the screen labeled 'Mental Health Helplines"],
          "context_set": [""]
         },
-        {"tag": "How many cases",
-        "patterns": ["How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of corona", "How many deaths of corona"],
-        "responses": ["To find out how many cases and deaths there are currently in every country click on the Live COVID-19 Coronavirus stream on the top left."],
-        "context_set": [""]
+        {"tag": "how many cases",
+         "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of corona", "How many deaths of corona"],
+         "responses": ["To find out how many cases and deaths there are currently in every country click on the Live COVID-19 Coronavirus stream on the top left."],
+         "context_set": [""]
         }
                
 ]
