@@ -101,17 +101,17 @@
         },
         {"tag": "leave home long",
          "patterns": ["When am I allowed to leave my house?", "When can I leave my home?", "In what circumstances can I go outside?", "When can I go out?"],
-         "responses": ["You can only leave your home in the following circumstances:", "If you have a medical need or are giving care/support to a vulnerable person", "Going shopping for essentials (e.g. food and medicine)", "Going out alone or someone you live with to exercise", "If staying at home would place you at risk of injury or home", "Travelling to and from work"],
+         "responses": ["You can only leave your home in the following circumstances:", "If you have a medical need or are giving care/support to a vulnerable person", "Going shopping for essentials (e.g. food and medicine)", "Going out alone or someone you live with to exercise", "If staying at home would place you at risk of injury or harm", "Travelling to and from work"],
          "context_set": [""]
         },
         {"tag": "social distance meaning",
          "patterns": ["What does social distancing mean?", "What is the meaning of social distancing?", "Define social distancing"],
-         "responses": ["Social distancing is staying at home and only leaving for a few reasons defined by the government. When you're outside your home you should stay at least two metres away from other people"],
+         "responses": ["Social distancing is staying at home and only leaving for a few reasons defined by the government. When you are outside your home you should stay at least two metres away from other people"],
          "context_set": [""]
         },
         {"tag": "self-isolation meaning",
          "patterns": ["What does self-isolation mean?", "What is the meaning of self isolation?", "Define self-isolation"],
-         "responses": ["It's avoiding contact with others (even those you live with) and not leaving your home for any reason. You should do this if you are displaying symptoms or live with somebody displaying symptoms"],
+         "responses": ["Self-isolation is avoiding contact with others (even those you live with) and not leaving your home for any reason. You should do this if you are displaying symptoms or live with somebody displaying symptoms"],
          "context_set": [""]
         },
         {"tag": "shielding meaning",
@@ -127,6 +127,16 @@
         {"tag": "have to shield?",
          "patterns": ["Do I have to do shielding", "Do I have to be shielded", "Should I be shielding?"],
          "responses": ["Anyone who has been identified as extremely vulnerable should be shielded"],
+         "context_set": [""]
+        },
+        {"tag": "coronavirus support",
+         "patterns": ["Can I talk to someone to get support?", "Can I speak to someone to get help?", "How can I get support?", "What support is there", "Where can I talk to someone for support?"],
+         "responses": ["You can use the link at the top of the screen labeled Coronavirus Support Line which will bring you to a page with an email and phone number which you can use to talk to someone"],
+         "context_set": [""]
+        },
+        {"tag": "mental health",
+         "patterns": ["I'm concerned about my dad's mental health", "I'm worried about my mum's mental health", "I'm scared for my mental health", "Can I talk to someone about my mental health"],
+         "responses": ["The NHS has provided a list of helplines you can contract for expert advice. The link to the NHS page is at the top of the screen labeled 'Mental Health Helplines"],
          "context_set": [""]
         }
 ]
