@@ -83,7 +83,7 @@ def get_response(ints, intents_json):
                 elif rand == 1:
                     result = "Sorry I didn't quite get that!"
                 else:
-                    result = "Sorry I haven't been programmed to answer this question yet!"
+                    result = "Sorry I haven't been programmed to answer that question yet!"
                 break
     return result
 
@@ -95,7 +95,7 @@ def chatbot_response(input):
         formatted_response = str(("{}".format(response))) 
         response_list.append(formatted_response)
     else:
-        if response == "Sorry I don't understand what you said!" or response == "Sorry I didn't quite get that!" or response == "Sorry I haven't been programmed to answer this question yet!": #Prevents "Sorry I don't understand" from being displayed character by character
+        if response == "Sorry I don't understand what you said!" or response == "Sorry I didn't quite get that!" or response == "Sorry I haven't been programmed to answer that question yet!": #Prevents "Sorry I don't understand" from being displayed character by character
             response_list.append(response)
         else:
             for sentence in response: #If the tag is recognised and long is in the intent, then all the sentences need to returned in the response

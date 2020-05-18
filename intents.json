@@ -36,7 +36,7 @@
         },
 	{"tag": "favourite football team",
          "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team"],
-         "responses": ["Chelsea."],
+         "responses": ["Liverpool", "Manchester City", "Leicester City", "Chelsea", "Manchester United", "Wolverhampton Wanderers", "Sheffield United", "Tottenham Hotspur", "Arsenal", "Burnley", "Crystal Palace", "Everton", "Newcastle United", "Southampton", "Brighton & Hove Albion", "West Ham United", "Watford", "AFC Bournemouth", "Aston Villa", "Norwich City"],
          "context_set": [""]
         },
         {"tag": "who is high risk long",
@@ -143,7 +143,21 @@
          "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of corona", "How many deaths of corona"],
          "responses": ["To find out how many cases and deaths there are currently in every country click on the Live COVID-19 Coronavirus stream on the top left."],
          "context_set": [""]
+        },
+        {"tag": "where are you from",
+         "patterns": ["Where are you from", "Where were you created", "Where is your origin", "Where are you", "Where do you come from", "Where did you appear into the world"],
+         "responses": ["I am from Milton Keynes, the City of Roundabouts!!!", "I am from Coventry, the home of the Sky Blues!!!"],
+         "context_set": [""]
+        },
+        {"tag": "Who created you long",
+         "patterns": ["Who created you", "Who made you", "Who made the website", "Who made the chatbot", "Who made Bonnie Bot"],
+         "responses": ["Two students of Eton College created me because their GCSEs and A levels were cancelled", "They decided to use their new found time to create a chatbot which provides information on the current pandemic, COVID-19."],
+         "context_set": [""]
+        },
+        {"tag": "conspiracy theories long",
+         "patterns": ["What are the conspiracy theories surrounding coronavirus", "Does 5G cause coronavirus", "Does 5G cause COVID-19", "Do 5G waves assist the transmission of coronavirus", "Should I burn 5G towers", "Why does 5G cause coronavirus"],
+         "responses": ["There is currently a conspiracy theory circulating around saying that 5G waves assist in the transmission of COVID-19", "However there is no scientific evidence to support this claim."],
+         "context_set": [""]
         }
-               
 ]
 }
