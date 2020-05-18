@@ -144,11 +144,6 @@
          "responses": ["To find out how many cases and deaths there are currently in every country click on the Live COVID-19 Coronavirus stream on the top left."],
          "context_set": [""]
         },
-        {"tag": "where are you from",
-         "patterns": ["Where are you from", "Where were you created", "Where is your origin", "Where are you", "Where do you come from", "Where did you appear into the world"],
-         "responses": ["I am from Milton Keynes, the City of Roundabouts!!!", "I am from Coventry, the home of the Sky Blues!!!"],
-         "context_set": [""]
-        },
         {"tag": "Who created you long",
          "patterns": ["Who created you", "Who made you", "Who made the website", "Who made the chatbot", "Who made Bonnie Bot"],
          "responses": ["Two students of Eton College created me because their GCSEs and A levels were cancelled", "They decided to use their new found time to create a chatbot which provides information on the current pandemic, COVID-19."],
