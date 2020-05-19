@@ -38,12 +38,11 @@ data_json = data.json()
 locations = ['barking and dagenham', 'barnet', 'barnsley', 'bath and north east somerset', 'bedford', 'bexley', 'birmingham', 'blackburn with darwen', 'blackpool', 'bolton', 'bournemouth, christchurch and poole', 'bracknell forest', 'bradford', 'brent', 'brighton and hove', 'bristol, city of', 'bromley', 'buckinghamshire', 'bury', 'calderdale', 'cambridgeshire', 'camden', 'central bedfordshire', 'cheshire east', 'cheshire west and chester', 'city of london', 'cornwall and isles of scilly', 'county durham', 'coventry', 'croydon', 'cumbria', 'darlington', 'derby', 'derbyshire', 'devon', 'doncaster', 'dorset', 'dudley', 'ealing', 'east riding of yorkshire', 'east sussex', 'enfield', 'essex', 'gateshead', 'gloucestershire', 'greenwich', 'hackney', 'halton', 'hammersmith and fulham', 'hampshire', 'haringey', 'harrow', 'hartlepool', 'havering', 'herefordshire, county of', 'hertfordshire', 'hillingdon', 'hounslow', 'isle of wight', 'islington', 'kensington and chelsea', 'kent', 'kingston upon hull, city of', 'kingston upon thames', 'kirklees', 'knowsley', 'lambeth', 'lancashire', 'leeds', 'leicester', 'leicestershire', 'lewisham', 'lincolnshire', 'liverpool', 'luton', 'manchester', 'medway', 'merton', 'middlesbrough', 'milton keynes', 'newcastle upon tyne', 'newham', 'norfolk', 'north east lincolnshire', 'north lincolnshire', 'north somerset', 'north tyneside', 'north yorkshire', 'northamptonshire', 'northumberland', 'nottingham', 'nottinghamshire', 'oldham', 'oxfordshire', 'peterborough', 'plymouth', 'portsmouth', 'reading', 'redbridge', 'redcar and cleveland', 'richmond upon thames', 'rochdale', 'rotherham', 'rutland', 'salford', 'sandwell', 'sefton', 'sheffield', 'shropshire', 'slough', 'solihull', 'somerset', 'south gloucestershire', 'south tyneside', 'southampton', 'southend-on-sea', 'southwark', 'st. helens', 'staffordshire', 'stockport', 'stockton-on-tees', 'stoke-on-trent', 'suffolk', 'sunderland', 'surrey', 'sutton', 'swindon', 'tameside', 'telford and wrekin', 'thurrock', 'torbay', 'tower hamlets', 'trafford', 'wakefield', 'walsall', 'waltham forest', 'wandsworth', 'warrington', 'warwickshire', 'west berkshire', 'west sussex', 'westminster', 'wigan', 'wiltshire', 'windsor and maidenhead', 'wirral', 'wokingham', 'wolverhampton', 'worcestershire', 'york', 'ayrshire and arran', 'borders', 'dumfries and galloway', 'fife', 'forth valley', 'grampian', 'greater glasgow and clyde', 'highland', 'lanarkshire', 'lothian', 'orkney', 'shetland', 'tayside', 'eileanan siar (western isles)', 'golden jubilee national hospital', 'wales', 'northern ireland']
 
 
-
 def fetch_recent_cases(user_location):
-    areas_object = json.loads(data_json['data'][0]['area'])
-    for areas in areas_object:
-        if user_location.lower() == areas['location'].lower():
-            return "There are {} cases in {}".format(areas['number'], areas['location'])
+    areas_object = json.loads(data_json['data'][0]['area']) #Turns the string in the api to json so that each area can be accessed
+    for areas in areas_object: #For each valid location in the api check whether the location is the same as the location the user inputted
+        if user_location.lower() == areas['location'].lower(): #Checks whether the no-caps version of the user input is the same as one of the locations from the api
+            return "There are {} cases in {}".format(areas['number'], areas['location']) #If it is return the number of cases in the area
 
 
 def pre_process_input(input):
@@ -64,7 +63,7 @@ def create_bag_of_words(input, words):
 
 def predict_class(input, model):
     p = create_bag_of_words(input, words)
-    res = model.predict(np.array([p]))[0]
+    res = model.predict(np.array([p]))[0] #Generates a list containing each response and the probability of the response
     ERROR_THRESHOLD = 0.25 #Percentage above which will be registered as an intent to be responded to
     results = [[i,r] for i,r in enumerate(res) if r>ERROR_THRESHOLD]
     results.sort(key=lambda x: x[1], reverse=True) #Sorts the results so that the highest probability intent will be responded to
@@ -102,8 +101,8 @@ def chatbot_response(input):
     response_list = []
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
-    if input.lower() in locations:
-        response_list.append(fetch_recent_cases(input.lower()))
+    if input.lower() in locations: #Checks whether the input is a location so the correct response can be displayed
+        response_list.append(fetch_recent_cases(input.lower())) #Adds the correct statement if the location is valid and the api contains a number of cases for that area
     else:
         if "long" not in intent_of_input[0]["intent"]: #If long is not in the intent of the input there is need to add several sentences
             formatted_response = str(("{}".format(response))) 
@@ -135,6 +134,9 @@ def get_bot_response():
 def about():
     return render_template("about.html")
             
+@app.route("/locations")
+def locationsSupported():
+    return render_template("locationsSupported.html")
 
 if __name__ == "__main__":
     app.run(debug=True) 
