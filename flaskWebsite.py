@@ -10,7 +10,7 @@ import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
 
-
+import requests
 import pickle
 import numpy as np
 import tensorflow as tf
@@ -32,7 +32,18 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 
 app = Flask(__name__, template_folder='templates', static_folder='statics')
 
+COUNTRIES_URL = "https://api.covid19uk.live/"
+data = requests.get(COUNTRIES_URL)
+data_json = data.json()
+locations = ['barking and dagenham', 'barnet', 'barnsley', 'bath and north east somerset', 'bedford', 'bexley', 'birmingham', 'blackburn with darwen', 'blackpool', 'bolton', 'bournemouth, christchurch and poole', 'bracknell forest', 'bradford', 'brent', 'brighton and hove', 'bristol, city of', 'bromley', 'buckinghamshire', 'bury', 'calderdale', 'cambridgeshire', 'camden', 'central bedfordshire', 'cheshire east', 'cheshire west and chester', 'city of london', 'cornwall and isles of scilly', 'county durham', 'coventry', 'croydon', 'cumbria', 'darlington', 'derby', 'derbyshire', 'devon', 'doncaster', 'dorset', 'dudley', 'ealing', 'east riding of yorkshire', 'east sussex', 'enfield', 'essex', 'gateshead', 'gloucestershire', 'greenwich', 'hackney', 'halton', 'hammersmith and fulham', 'hampshire', 'haringey', 'harrow', 'hartlepool', 'havering', 'herefordshire, county of', 'hertfordshire', 'hillingdon', 'hounslow', 'isle of wight', 'islington', 'kensington and chelsea', 'kent', 'kingston upon hull, city of', 'kingston upon thames', 'kirklees', 'knowsley', 'lambeth', 'lancashire', 'leeds', 'leicester', 'leicestershire', 'lewisham', 'lincolnshire', 'liverpool', 'luton', 'manchester', 'medway', 'merton', 'middlesbrough', 'milton keynes', 'newcastle upon tyne', 'newham', 'norfolk', 'north east lincolnshire', 'north lincolnshire', 'north somerset', 'north tyneside', 'north yorkshire', 'northamptonshire', 'northumberland', 'nottingham', 'nottinghamshire', 'oldham', 'oxfordshire', 'peterborough', 'plymouth', 'portsmouth', 'reading', 'redbridge', 'redcar and cleveland', 'richmond upon thames', 'rochdale', 'rotherham', 'rutland', 'salford', 'sandwell', 'sefton', 'sheffield', 'shropshire', 'slough', 'solihull', 'somerset', 'south gloucestershire', 'south tyneside', 'southampton', 'southend-on-sea', 'southwark', 'st. helens', 'staffordshire', 'stockport', 'stockton-on-tees', 'stoke-on-trent', 'suffolk', 'sunderland', 'surrey', 'sutton', 'swindon', 'tameside', 'telford and wrekin', 'thurrock', 'torbay', 'tower hamlets', 'trafford', 'wakefield', 'walsall', 'waltham forest', 'wandsworth', 'warrington', 'warwickshire', 'west berkshire', 'west sussex', 'westminster', 'wigan', 'wiltshire', 'windsor and maidenhead', 'wirral', 'wokingham', 'wolverhampton', 'worcestershire', 'york', 'ayrshire and arran', 'borders', 'dumfries and galloway', 'fife', 'forth valley', 'grampian', 'greater glasgow and clyde', 'highland', 'lanarkshire', 'lothian', 'orkney', 'shetland', 'tayside', 'eileanan siar (western isles)', 'golden jubilee national hospital', 'wales', 'northern ireland']
 
+
+
+def fetch_recent_cases(user_location):
+    areas_object = json.loads(data_json['data'][0]['area'])
+    for areas in areas_object:
+        if user_location.lower() == areas['location'].lower():
+            return "There are {} cases in {}".format(areas['number'], areas['location'])
 
 
 def pre_process_input(input):
@@ -70,9 +81,9 @@ def get_response(ints, intents_json):
     for i in list_of_intents:
         if(i["tag"] == tag): #If the intent of the user input matches the intent
             print(float(ints[0]["probability"])) #Print statement to check the certainty of the model of the user's input. Use to error check
-            if float(ints[0]["probability"]) > min_accuracy and "long" not in tag: #The model's probability of the response being valid must be above the min_accuracy otherwise the response may be invalid
-                result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
-                break
+            if float(ints[0]["probability"]) > min_accuracy and "long" not in tag: #The model's probability of the response being valid must be above the min_accuracy otherwise the response may be invalid    
+                    result = random.choice(i["responses"]) #Picks a random response from the list of responses in the intent of the user message
+                    break
             elif float(ints[0]["probability"]) > min_accuracy and "long" in tag: #For responses with long in the tag, the response will be several lines long so all responses need to be returned so all can be displayed on screen. These are usually very specific questions that have a long response
                 result = i["responses"] #Returns all the responses in the tag 
                 break
@@ -91,15 +102,18 @@ def chatbot_response(input):
     response_list = []
     intent_of_input = predict_class(input, model) #Gets the intent of the user input
     response = get_response(intent_of_input, intents) #Gets a random response based off the intent of the user input
-    if "long" not in intent_of_input[0]["intent"]: #If long is not in the intent of the input there is need to add several sentences
-        formatted_response = str(("{}".format(response))) 
-        response_list.append(formatted_response)
+    if input.lower() in locations:
+        response_list.append(fetch_recent_cases(input.lower()))
     else:
-        if response == "Sorry I don't understand what you said!" or response == "Sorry I didn't quite get that!" or response == "Sorry I haven't been programmed to answer that question yet!": #Prevents "Sorry I don't understand" from being displayed character by character
-            response_list.append(response)
+        if "long" not in intent_of_input[0]["intent"]: #If long is not in the intent of the input there is need to add several sentences
+            formatted_response = str(("{}".format(response))) 
+            response_list.append(formatted_response)
         else:
-            for sentence in response: #If the tag is recognised and long is in the intent, then all the sentences need to returned in the response
-                response_list.append(sentence)
+            if response == "Sorry I don't understand what you said!" or response == "Sorry I didn't quite get that!" or response == "Sorry I haven't been programmed to answer that question yet!": #Prevents "Sorry I don't understand" from being displayed character by character
+                response_list.append(response)
+            else:
+                for sentence in response: #If the tag is recognised and long is in the intent, then all the sentences need to returned in the response
+                    response_list.append(sentence)
     return str(response_list) #Since a list is not allowed to be returned, a string version is returned which can then be converted to a list in javascript
 
 
