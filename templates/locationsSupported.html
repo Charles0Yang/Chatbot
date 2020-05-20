@@ -11,7 +11,8 @@
       UdaYLXnSyAk8KcmpSiSqckqeBHLdDomGgrpps76wrulTQUPSBWp2lVVsePGOUUXjHhyodYGOI7E3
       r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
       gg==" rel="icon" type="image/x-icon" />
-    <title>About Bonnie Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Locations Supported</title>
     <meta name="description" content="Chatbot providing advice on COVID-19">
     <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice">
     <meta name="author" content="Teo Hughes and Charles Yang">
@@ -19,34 +20,47 @@
     <link href="statics/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');"> 
-    <ul>
-      <li><a href="/" title="Home Page">Home</a></li>
-      <li><a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a></li>
-      <li><a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a></li>
-      <li><a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a></li>
-      <li><a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a></li>
-      <li><a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a></li>
-      <li style="border-right: none;"><a href="/locations" title = "Locations Supported" style="background-color: gainsboro;">Locations</a></li>
-      <li><a href="/about" title="About Page">About</a></li>
-      
-
-    </ul>
+    <div class = "topnav", id = "myTopnav">
+      <a href="/" title="Home Page">Home</a>
+      <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
+      <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
+      <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
+      <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
+      <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+      <a href="/locations" title = "Locations Supported" style="background-color: gainsboro;">Locations</a>
+      <a href="/about" title="About Page">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
     <div class='boxed'>
       <div id="aboutUs">
         <p class="mainHeading">Supported Locations</p>
         <hr>
         <div id='textBox'>
-          <p class='aboutUsText'>Below are all the locations Bonnie can answer about the number of cases in the area. A quick way to find your area is to press and hold Control then press f. This will bring up a small input box on your screen which you can type your area into. If your area is supported it should take you to it's location on the page. We're very sorry that not all locations are available yet.</p>
+          <p class='aboutUsText'>Below are all the locations Bonnie can answer about the number of cases in the area. A quick way to find your area is to press and hold Control then press f. This will bring up a small input box on your screen which you can type your area info. If your area is supported it should take you to it's location on the page. We're very sorry that not all locations are available yet.</p>
         </div>
 
         <p class='heading'>Locations</p>
         <hr class='small'>
 
-        <div class='listBox'></div>
+        <div class='listBox'>
+          Barking And Dagenham, Barnet, Barnsley, Bath And North East Somerset, Bedford, Bexley, Birmingham, Blackburn With Darwen, Blackpool, Bolton, Bournemouth, Christchurch And Poole, Bracknell Forest, Bradford, Brent, Brighton And Hove, Bristol, City Of, Bromley, Buckinghamshire, Bury, Calderdale, Cambridgeshire, Camden, Central Bedfordshire, Cheshire East, Cheshire West And Chester, City Of london, Cornwall And Isles Of Scilly, County Durham, Coventry, Croydon, Cumbria, Darlington, Derby, Derbyshire, Devon, Doncaster, Dorset, Dudley, Ealing, East Riding Of Yorkshire, East Sussex, Enfield, Essex, Gateshead, Gloucestershire, Greenwich, Hackney, Halton, Hammersmith And Fulham, Hampshire, Haringey, Harrow, Hartlepool, Havering, Herefordshire, County Of, Hertfordshire, Hillingdon, Hounslow, Isle Of Wight, Islington, Kensington And Chelsea, Kent, Kingston Upon Hull, City Of, Kingston Upon Thames, Kirklees, Knowsley, Lambeth, Lancashire, Leeds, Leicester, Leicestershire, Lewisham, Lincolnshire, Liverpool, Luton, Manchester, Medway, Merton, Middlesbrough, Milton Keynes, Newcastle Upon Tyne, Newham, Norfolk, North East Lincolnshire, North Lincolnshire, North Somerset, North Tyneside, North Yorkshire, Northamptonshire, Northumberland, Nottingham, Nottinghamshire, Oldham, Oxfordshire, Peterborough, Plymouth, Portsmouth, Reading, Redbridge, Redcar And Cleveland, Richmond Upon Thames, Rochdale, Rotherham, Rutland, Salford, Sandwell, Sefton, Sheffield, Shropshire, Slough, Solihull, Somerset, South Gloucestershire, South Tyneside, Southampton, Southend-on-sea, Southwark, St. Helens, Staffordshire, Stockport, Stockton-on-tees, Stoke-on-trent, Suffolk, Sunderland, Surrey, Sutton, Swindon, Tameside, Telford And Wrekin, Thurrock, Torbay, Tower Hamlets, Trafford, Wakefield, Walsall, Waltham Forest, Wandsworth, Warrington, Warwickshire, West Berkshire, West Sussex, Westminster, Wigan, Wiltshire, Windsor And Maidenhead, Wirral, Wokingham, Wolverhampton, Worcestershire, York, Ayrshire And Arran, Borders, Dumfries And Galloway, Fife, Forth Valley, Grampian, Greater Glasgow And Clyde, Highland, Lanarkshire, Lothian, Orkney, Shetland, Tayside, Eileanan Siar (Western Isles), Golden Jubilee National Hospital, Wales, Northern Ireland
+        </div>
         
 
       </div>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+      }
+  }
+    </script>
   </body>
 
 </html>

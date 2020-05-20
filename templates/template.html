@@ -11,6 +11,7 @@
     r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
     gg==" rel="icon" type="image/x-icon" />
     <link href="statics/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="statics/websiteScript.js" type="text/javascript"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
     <meta name="description" content="Chatbot providing advice on COVID-19">
@@ -19,16 +20,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body> 
-    <ul>
-      <li><a href="/" title="Home Page" style="background-color: gainsboro;">Home</a></li>
-      <li><a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a></li>
-      <li><a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a></li>
-      <li><a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a></li>
-      <li><a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a></li>
-      <li><a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a></li>
-      <li style="border-right: none;"><a href="/locations" title = "Locations Supported">Locations</a></li>
-      <li><a href="/about" title="About Page">About</a></li>
-    </ul>
+    <div class = "topnav", id = "myTopnav">
+      <a href="/" title="Home Page" style="background-color: gainsboro;">Home</a>
+      <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
+      <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
+      <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
+      <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
+      <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+      <a href="/locations" title = "Locations Supported">Locations</a>
+      <a href="/about" title="About Page">About</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </div>
   <div class="boxed">
     <div>
       <div id="chatbox">
@@ -43,6 +47,16 @@
         <input id="textInput" type="text" name="msg" placeholder="Chat here!" />
       </div>
     </div>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+      }
+  }
+    </script>
     <script>
     $("#textInput").keypress(function(e) {
       if (e.which == 13) {
