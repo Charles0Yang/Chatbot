@@ -21,14 +21,21 @@
   </head>
   <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');"> 
     <div class = "topnav", id = "myTopnav">
-      <a href="/" title="Home Page" >Home</a>
+      <a href="/" title="Home Page" style="background-color: gainsboro;">Home</a>
       <a href="/locations" title = "Locations Supported">Locations</a>
-      <a href="/about" title="About Page" style="background-color: gainsboro;">About</a>
-      <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
-      <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
-      <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
-      <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
-      <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+      <a href="/about" title="About Page">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">COVID-19 Websites
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
+          <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
+          <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
+          <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
+          <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+        </div>
+      </div>
       <a href="javascript:void(0);" class="icon" onclick="myFunction()">
         <i class="fa fa-bars"></i>
       </a>
