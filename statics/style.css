@@ -131,7 +131,7 @@ h1{
   font-weight: lighter;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 50px;
-  text-align: centre;
+  text-align: center;
   line-height: 50px;
   background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
   width: 100%;
@@ -260,6 +260,5 @@ a.email:hover{
   line-height: 30px;
   font-style: italic;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 10px 10px
 }

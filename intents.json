@@ -11,7 +11,7 @@
         },
         {"tag": "thanks",
          "patterns": ["Thanks", "Thank you!", "Cheers", "You've been very helpful", "Thanks for helping", "I appreciate it", "Very help of you thank you very much", "Very kind of you to help me"],
-         "responses": ["No problem at all!", "You are very welcome", "Anytime!"],
+         "responses": ["No problem at all!", "You are very welcome!", "Anytime!"],
          "context_set": [""]
         },
         {"tag": "how are you",
