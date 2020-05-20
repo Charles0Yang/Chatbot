@@ -156,5 +156,9 @@ def about():
 def locationsSupported():
     return render_template("locationsSupported.html")
 
+@app.route("/feedback")
+def getFeedback():
+    return render_template("getFeedback.html")
+
 if __name__ == "__main__":
     app.run(debug=True) 

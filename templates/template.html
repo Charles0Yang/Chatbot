@@ -19,41 +19,46 @@
     <meta name="author" content="Teo Hughes and Charles Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body> 
-    <div class = "topnav", id = "myTopnav">
-      <a href="/" title="Home Page" style="background-color: gainsboro;">Home</a>
-      <a href="/locations" title = "Locations Supported">Locations</a>
-      <a href="/about" title="About Page">About</a>
-      <div class="dropdown">
-        <button class="dropbtn">COVID-19 Websites
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
-          <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
-          <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
-          <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
-          <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+  <body onload="theFunction()" style="margin:0;">
+    <div id="loader"></div>
+    <div style="display:none;" id="myDiv" class="animate-bottom">
+      <div class = "topnav", id = "myTopnav">
+        <a href="/" title="Home Page" style="background-color: gainsboro;"><i class="fa fa-home"></i> Home</a>
+        <a href="/locations" title = "Locations Supported">Locations</a>
+        <a href = "/feedback" title = "Give Feedback">Give Feedback</a>
+        <a href="/about" title="About Page">About</a>
+        <div class="dropdown">
+          <button class="dropbtn">COVID-19 Websites
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
+            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
+            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
+            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
+            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+          </div>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    <div class="boxed">
+      <div>
+        <div id="chatbox">
+          <p class="bonnieHeading">
+            <span>Bonnie Bot!</span>
+          </p>
+            <p class = "botText">
+              <span>Hi, I'm Bonnie your personal Chatbot!</span>
+            </p>
+        </div>
+        <div id="userInput">
+          <input id="textInput" type="text" name="msg" placeholder="Chat here!" />
         </div>
       </div>
-      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-        <i class="fa fa-bars"></i>
-      </a>
-    </div>
-  <div class="boxed">
-    <div>
-      <div id="chatbox">
-        <p class="bonnieHeading">
-          <span>Bonnie Bot!</span>
-        </p>
-          <p class = "botText">
-            <span>Hi, I'm Bonnie your personal Chatbot!</span>
-          </p>
-      </div>
-      <div id="userInput">
-        <input id="textInput" type="text" name="msg" placeholder="Chat here!" />
-      </div>
-    </div>
+    </div> 
+    
     <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -114,7 +119,15 @@
                 custom_text_source: "#chatbox" /*Optional: only read the text inside the HTML element with the id or class */
                 });
             }
-        }); 
+        });
+    function theFunction() {
+      myVar = setTimeout(showPage, 1000);
+  }
+
+    function showPage() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("myDiv").style.display = "block";
+  } 
     </script> 
   </body>
 </html>
