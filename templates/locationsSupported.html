@@ -20,6 +20,8 @@
     <link href="statics/style.css" rel="stylesheet" type="text/css" />
   </head>
   <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> 
+    
+    <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
     <div id="loader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
       <div class = "topnav", id = "myTopnav">
@@ -85,6 +87,25 @@
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
   }
+    var mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+
     </script>
   </body>
 
