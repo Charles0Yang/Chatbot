@@ -116,7 +116,7 @@
         },
         {"tag": "shielding meaning",
          "patterns": ["What does shielding mean?", "What is the meaning of shielding?", "Define shielding"],
-         "responses": ["Shielding is a tyle of self-isolation which involves not leaving your home for any reason until the end of June to reduce your risk of contracting coronavirus"],
+         "responses": ["Shielding is a type of self-isolation which involves not leaving your home for any reason until the end of June to reduce your risk of contracting COVID-19"],
          "context_set": [""]
         },
         {"tag": "have to social distance?",
