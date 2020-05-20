@@ -1,7 +1,7 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
-  /*background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg');
-  */background-repeat: no-repeat;
+  background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg');
+  background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
@@ -20,9 +20,11 @@ h1{
   border-width: 1px;
   border-radius: 10px;
   border-color: purple;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
+  /*position: -webkit-sticky; /* Safari */
+  position: fixed;
   top: 0;
+  right: 0;
+  width: 100%;
   opacity: 1;
   overflow: hidden;
   
