@@ -1,7 +1,7 @@
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg');
-  background-repeat: no-repeat;
+  /*background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg');
+  */background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
 }
@@ -13,7 +13,6 @@ h1{
   border-radius: 20px;
 }
 .topnav {
-  list-style-type: none;
   margin: 0;
   padding: 0;
   background-image: url('https://www.sparklogix.com/wp-content/uploads/2012/05/Screen-Shot-2012-05-21-at-9.40.23-PM.png');
@@ -25,39 +24,84 @@ h1{
   position: sticky;
   top: 0;
   opacity: 1;
-  overflow: auto;
-  white-space: nowrap;
+  overflow: hidden;
   
 }
 .topnav a {
-  display: inline-block;
+  float: left;
+  display: block;
   color: darkblue;
   text-align: center;
   padding: 17px;
   text-decoration: none;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 17px;
-  border-right: 1px solid black;
 }
 
-.topnav a:hover {
-  background-color: gainsboro;
-}
 .topnav .icon {
   display: none;
 }
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
 
-@media screen and (max-width: 800px) {
-  .topnav a:not(:first-child) {display: none;}
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: darkblue;
+  padding: 17px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: gainsboro;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: gainsboro;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
   .topnav a.icon {
     float: right;
     display: block;
   }
 }
 
-@media screen and (max-width: 800px) {
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
   .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
+  .topnav.responsive a.icon {
     position: absolute;
     right: 0;
     top: 0;
@@ -67,8 +111,14 @@ h1{
     display: block;
     text-align: left;
   }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
 }
-
 
 
 #chatbox {
