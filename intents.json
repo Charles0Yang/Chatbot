@@ -141,7 +141,7 @@
         },
         {"tag": "how many cases long",
          "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of corona", "How many deaths of corona"],
-         "responses": ["To find out how many cases and deaths there are currently in every country click on the Live COVID-19 Coronavirus stream on the top left. To find out how many cases there are in your area, simply enter the name in the input box. A list of supported areas is available at the top of the page"],
+         "responses": ["To find out how many cases and deaths there are currently in every country simply type the name of the country. To find out how many cases there are in your area, simply enter the name in the input box. A list of supported areas is available at the top of the page"],
          "context_set": [""]
         },
         {"tag": "how many cases in my area",
