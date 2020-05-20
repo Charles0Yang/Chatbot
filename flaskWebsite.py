@@ -148,9 +148,9 @@ def get_bot_response():
         userText = request.args.get('msg') #Gets the user input from the textbox
         return chatbot_response(userText) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
 
-@app.route("/about")
+@app.route("/test")
 def about():
-    return render_template("about.html")
+    return render_template("other.html")
             
 @app.route("/locations")
 def locationsSupported():
@@ -160,9 +160,9 @@ def locationsSupported():
 def getFeedback():
     return render_template("getFeedback.html")
 
-@app.route("/test")
+@app.route("/about")
 def getTest():
-    return render_template("test.html")
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run(debug=True) 

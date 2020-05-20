@@ -220,10 +220,6 @@ h1{
   margin-top: 60px;
   border: 1px solid rgba(0, 0, 0, 0.486);
   border-radius: 25px;
-  /*background-image: url(https://www.sciencealert.com/images/2020-04/processed/earthmovement_1024.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100% 100%;*/
   background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
   padding-bottom: 30px;
 }
@@ -254,7 +250,6 @@ h1{
   font-weight: lighter;
   font-style: italic;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  padding-top: 30px;
 }
 
 hr{ 
@@ -379,17 +374,71 @@ a.email:hover{
 #myBtn:hover {
   background-color: gainsboro;
 }
+#aboutBtn {
+  display: none;
+  position: fixed;
+  bottom: 10px;
+  right: 15px;
+  z-index: 99;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+  color: darkblue;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
 
-.parallax {
-  /* The image used */
-  background-image: url('https://www.albemarle.org.uk/images/computing-2019-a-level.jpg');
+#aboutBtn:hover {
+  background-color: gainsboro;
+}
 
-  /* Full height */
+.parallax1 {
+  background-image: url('https://specials-images.forbesimg.com/imageserve/5e4a3210a854780006b18efa/960x0.jpg?fit=scale');
   height: 100%; 
   width: 100%;
   margin: 0px;
-
-  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax2 {
+  background-image: url('https://gabrielamueller.com/wp-content/uploads/2019/01/gabriela-mueller-artifitcial-intelligence-2000.jpg');
+  height: 100%; 
+  width: 100%;
+  margin: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax3 {
+  background-image: url('https://media-exp1.licdn.com/dms/image/C4D12AQEpT9a_XdqA7g/article-cover_image-shrink_720_1280/0?e=1594857600&v=beta&t=2j0SuT_gMRlRpefswd2qnVdQidNyNS0jEzWdoOKK2s0');
+  height: 100%; 
+  width: 100%;
+  margin: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax4 {
+  background-image: url('https://miro.medium.com/max/4118/1*uQdZlvHn4rb4boX0_VBIVw.jpeg');
+  height: 100%; 
+  width: 100%;
+  margin: 0px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.parallax5 {
+  background-image: url('https://www.sciencenews.org/wp-content/uploads/2019/11/110819_ts_ai_feat-1028x579.jpg');
+  height: 100%; 
+  width: 100%;
+  margin: 0px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -399,3 +448,12 @@ a.email:hover{
   height: 500px;
   background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
 }
+.aboutBoxed {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.486);
+  border-radius: 25px;
+  background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+  padding: 10px;
+  box-sizing: border-box;
+}
+
