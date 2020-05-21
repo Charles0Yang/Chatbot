@@ -50,16 +50,16 @@ def fetch_recent_cases(user_location):
             return "There are {} cases in {}".format(areas['number'], areas['location']) #If it is return the number of cases in the area
 
 def fetch_country_cases(country):
-    cases = -1
-    country_found = ""
-    for c in country_data_json:
-        if country == (c['country']).lower():
-            cases = c['cases']
-            country_found = c['country']
-    if cases == -1:
-        return ("No data found about {}".format(country))
+    cases = -1 #Set to impossible number of cases so we can see if the number has been updated or not
+    country_found = "" #The country that the user is searching for
+    for c in country_data_json: #For each country that the api supports go through and check whether the name inputted by the user is the same
+        if country == (c['country']).lower(): #If the lowercase versions of both input and api name are the same 
+            cases = c['cases'] #Set the number of cases to the cases that the API returns
+            country_found = c['country'] #Set country_found as the country from the API so the country is outputted with a capital letter instead of all lowercase
+    if cases == -1: #If cases hasn't been updated
+        return ("No data found about {}".format(country)) #Return that no data isn't found. Shouldn't be returned as if country isn't supported by API earlier error message should be displayed
     else:
-        return ("There are {} cases in {}".format(cases, country_found))
+        return ("There are {} cases in {}".format(cases, country_found)) #Returns the number of cases in the country in an appropriate format
 
 def pre_process_input(input):
     #Takes the input and pre-processes it via tokenization and lemmatization 
