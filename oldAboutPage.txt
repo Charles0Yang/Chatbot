@@ -1,0 +1,36 @@
+      <div class='boxed'>
+        <div id="aboutUs">
+          <p class="mainHeading">About Us</p>
+          <hr>
+          <div id='textBox'>
+            <p class='aboutUsText'>Bonnie Bot is a chatbot created to help answer questions about Coronavirus in a clear and concise manner and in an interactable way. We aim to provide as up-to-date and accurate information as possible by using official Government advice. We hope that Bonnie will be able to provide you with some useful advice and we appreciate any feedback you may have!</p>
+          </div>
+
+          <p class='heading'>What Bonnie can do</p>
+          <hr class='small'>
+          <div id='textBox'>
+            <p class='aboutUsText'>Bonnie can answer many general queries about Coronavirus. If there's a question which you think she should be able to answer, email us with the email below or leave it in the feedback form. Bonnie can also tell you the up-to-date number of cases in any area within the Locations page.</p>
+          </div>
+  
+          <p class='heading'>Who we are</p>
+          <hr class='small'>
+          <div id='textBox'>
+            <p class='aboutUsText'>We are students at Eton College in Year 13 and Year 11 with an interest in computer science, and hope to use the skills we've gained to build an app that you'll hopefully find helpful!</p>
+          </div>
+  
+          <p class='heading'>Our Purpose</p>
+          <hr class='small'>
+          <div id='textBox'>
+            <p class='aboutUsText'>Our aim with Bonnie is to help address the current Coronavirus crisis and the consequences that it inevitably brings. Given the nationwide lockdown that has been imposed, we hope that some form of interactability will be a welcome change from receiving static google answers. Furthermore, we aim to quickly and easily provide information and advice in one place so that you don't have to go trawling through the web. </p>
+          </div>
+          
+          <p class='heading'>Contact Us</p>
+          <hr class='small'>
+          <div id='textBox'>
+            <p class='aboutUsText'>If you have any queries about Bonnie Bot or if you've found a bug, or even if you're just interested in how we build Bonnie Bot, feel free to email us using the link below or at <b>bonnie_bot@outlook.com</b></p>
+            <a href="mailto:bonnie_bot@outlook.com" target = "_blank" title="Email us!" class="email">Email Us!</a>
+          
+  
+        </div>
+      </div>
+    </div>
