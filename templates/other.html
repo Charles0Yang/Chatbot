@@ -1,37 +1,35 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+
+<html lang="en">
   <head>
-    <title>Give Feedback</title>
+    <meta charset="utf-8">
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
-    AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
-    RQfiCgEBGyIYwI+kAAAA+klEQVQoz6XRPS9DARjF8V9fVFIh3BpoJzGIj+Et0cTF7gMIq/gQEqPJ
-    NzDKlbBguquhixAxWDQEUWlEe9saitTcMz05+efk5Dz0q9TvEULWAJoSoh8/24MOWzAl5d65D52e
-    hJCMVfNuXGPWjEvHWtFfQtqUJRduPeJZ1aKKe21ShBk7lh0qW1HHkBOnNp3Zj1pp5G0LZBXFAoFY
-    UdaYLXnSyAk8KcmpSiSqckqeBHLdDomGgrpps76wrulTQUPSBWp2lVVsePGOUUXjHhyodYGOI7E3
-    r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
-    gg==" rel="icon" type="image/x-icon" />
-    <link href="statics/style.css" rel="stylesheet" type="text/css" />
+      AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
+      RQfiCgEBGyIYwI+kAAAA+klEQVQoz6XRPS9DARjF8V9fVFIh3BpoJzGIj+Et0cTF7gMIq/gQEqPJ
+      NzDKlbBguquhixAxWDQEUWlEe9saitTcMz05+efk5Dz0q9TvEULWAJoSoh8/24MOWzAl5d65D52e
+      hJCMVfNuXGPWjEvHWtFfQtqUJRduPeJZ1aKKe21ShBk7lh0qW1HHkBOnNp3Zj1pp5G0LZBXFAoFY
+      UdaYLXnSyAk8KcmpSiSqckqeBHLdDomGgrpps76wrulTQUPSBWp2lVVsePGOUUXjHhyodYGOI7E3
+      r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
+      gg==" rel="icon" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="statics/websiteScript.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
+    <title>About Bonnie Bot</title>
     <meta name="description" content="Chatbot providing advice on COVID-19">
     <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice">
     <meta name="author" content="Teo Hughes and Charles Yang">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body, html {
-  height: 100%;
-  background-image: none;
-}
-
-</style>
-</head>
-<body>
-    <button onclick="topFunction()" id="aboutBtn" title="Scroll to top">Scroll To Top</button>
+    <link href="statics/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> 
+    
+    <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
+    <div id="loader"></div>
+    
+    <div style="display:none;" id="myDiv" class="animate-bottom">
       <div class = "topnav", id = "myTopnav">
         <a href="/" title="Home Page"><i class="fa fa-home"></i> Home</a>
         <a href="/locations" title = "Locations Supported">Locations</a>
         <a href = "/feedback" title = "Give Feedback">Give Feedback</a>
+        <a href = "/test" title = "About Test">About Test</a>
         <a href="/about" title="About Page" style="background-color: gainsboro;">About</a>
         <div class="dropdown">
           <button class="dropbtn">COVID-19 Websites
@@ -55,12 +53,6 @@ body, html {
           <hr>
           <div id='textBox'>
             <p class='aboutUsText'>Bonnie Bot is a chatbot created to help answer questions about Coronavirus in a clear and concise manner and in an interactable way. We aim to provide as up-to-date and accurate information as possible by using official Government advice. We hope that Bonnie will be able to provide you with some useful advice and we appreciate any feedback you may have!</p>
-          </div>
-
-          <p class='heading'>What Bonnie can do</p>
-          <hr class='small'>
-          <div id='textBox'>
-            <p class='aboutUsText'>Bonnie can answer many general queries about Coronavirus. If there's a question which you think she should be able to answer, email us with the email below or leave it in the feedback form. Bonnie can also tell you the up-to-date number of cases in any area within the Locations page.</p>
           </div>
   
           <p class='heading'>Who we are</p>
@@ -86,39 +78,8 @@ body, html {
       </div>
     </div>
     
-<div class="parallax1"></div>
-<div class="aboutBoxed">
-    <div id="aboutUs">
-        <p class="heading">About Us</p>
-        <hr>
-        <p class='aboutUsText'>Bonnie Bot is a chatbot created to help answer questions about Coronavirus in a clear and concise manner and in an interactable way. We aim to provide as up-to-date and accurate information as possible by using official Government advice. We hope that Bonnie will be able to provide you with some useful advice and we appreciate any feedback you may have!</p>
-    </div>
-</div>
-<div class="parallax2"></div>
-<div class="aboutBoxed">
-    <p class='heading'>Who we are</p>
-    <hr class='small'>
-    <p class='aboutUsText'>We are students at Eton College in Year 13 and Year 11 with an interest in computer science, and hope to use the skills we've gained to build an app that you'll hopefully find helpful!</p>
-</div>    
-<div class="parallax3"></div>  
-<div class="aboutBoxed">
-    <p class='heading'>Our Purpose</p>
-    <hr class='small'>
-    <p class='aboutUsText'>Our aim with Bonnie is to help address the current Coronavirus crisis and the consequences that it inevitably brings. Given the nationwide lockdown that has been imposed, we hope that some form of interactability will be a welcome change from receiving static google answers. Furthermore, we aim to quickly and easily provide information and advice in one place so that you don't have to go trawling through the web. </p>
-</div>
-<div class="parallax4"></div>  
-<div class="aboutBoxed">          
-        <p class='heading'>Contact Us</p>
-        <hr class='small'>
-        <p class='aboutUsText'>If you have any queries about Bonnie Bot or if you've found a bug, or even if you're just interested in how we build Bonnie Bot, feel free to email us using the link below or at <b>bonnie_bot@outlook.com</b></p>
-        <a href="mailto:bonnie_bot@outlook.com" target = "_blank" title="Email us!" class="email">
-        Email Us!</a>
-</div>
-<div class="parallax5"></div>
-</body>
-</html>
-<script>
-    function myFunction() {
+    <script>
+      function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
           x.className += " responsive";
@@ -134,7 +95,7 @@ body, html {
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
   }
-  var mybutton = document.getElementById("aboutBtn");
+    var mybutton = document.getElementById("myBtn");
 
     // When the user scrolls down 20px from the top of the document, show the button
     window.onscroll = function() {scrollFunction()};
@@ -146,8 +107,13 @@ body, html {
         mybutton.style.display = "none";
       }
     }
-  function topFunction() {
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
-</script>
+    </script>
+  </body>
+
+</html>
