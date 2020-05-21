@@ -4,6 +4,8 @@ body{
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% 100%;
+  /*hides scrollbar for IE and firefox*/
+  /*-ms-overflow-style: none;*/
 }
 h1{
   display: block;
@@ -444,6 +446,11 @@ a.email:hover{
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (max-device-width: 1366px) {
+  .parallax1 .parallax2 .parallax3 .parallax4 .parallax5{
+    background-attachment: scroll;
+  }
+}
 .aboutTextBox{
   height: 500px;
   background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
@@ -456,4 +463,22 @@ a.email:hover{
   padding: 10px;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 20px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+  background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-image: url("https://image.freepik.com/free-vector/green-geometric-background_1378-199.jpg");
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg'); 
+}
