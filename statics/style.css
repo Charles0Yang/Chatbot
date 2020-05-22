@@ -398,8 +398,8 @@ a.email:hover{
 
 .parallax1 {
   background-image: url('https://specials-images.forbesimg.com/imageserve/5e4a3210a854780006b18efa/960x0.jpg?fit=scale');
-  max-height: 100%; 
-  max-width: 100%;
+  height: 100%; 
+  width: 100%;
   margin: 0px;
   background-attachment: fixed;
   background-position: center;
@@ -408,8 +408,8 @@ a.email:hover{
 }
 .parallax2 {
   background-image: url('https://gabrielamueller.com/wp-content/uploads/2019/01/gabriela-mueller-artifitcial-intelligence-2000.jpg');
-  max-height: 100%; 
-  max-width: 100%;
+  height: 100%; 
+  width: 100%;
   margin: 0px;
   background-attachment: fixed;
   background-position: center;
@@ -418,8 +418,8 @@ a.email:hover{
 }
 .parallax3 {
   background-image: url('https://media-exp1.licdn.com/dms/image/C4D12AQEpT9a_XdqA7g/article-cover_image-shrink_720_1280/0?e=1594857600&v=beta&t=2j0SuT_gMRlRpefswd2qnVdQidNyNS0jEzWdoOKK2s0');
-  max-height: 100%; 
-  max-width: 100%;
+  height: 100%; 
+  width: 100%;
   margin: 0px;
   background-attachment: fixed;
   background-position: center;
@@ -428,8 +428,8 @@ a.email:hover{
 }
 .parallax4 {
   background-image: url('https://miro.medium.com/max/4118/1*uQdZlvHn4rb4boX0_VBIVw.jpeg');
-  max-height: 100%; 
-  max-width: 100%;
+  height: 100%; 
+  width: 100%;
   margin: 0px;
   background-attachment: fixed;
   background-position: center;
@@ -438,8 +438,8 @@ a.email:hover{
 }
 .parallax5 {
   background-image: url('https://www.sciencenews.org/wp-content/uploads/2019/11/110819_ts_ai_feat-1028x579.jpg');
-  max-height: 100%; 
-  max-width: 100%;
+  height: 100%; 
+  width: 100%;
   margin: 0px;
   background-attachment: fixed;
   background-position: center;
