@@ -149,7 +149,7 @@ def get_bot_response():
         return chatbot_response(userText) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
 
 @app.route("/test")
-def about():
+def other():
     return render_template("other.html")
             
 @app.route("/locations")
@@ -161,7 +161,7 @@ def getFeedback():
     return render_template("getFeedback.html")
 
 @app.route("/about")
-def getTest():
+def about():
     return render_template("about.html")
 
 if __name__ == "__main__":
