@@ -52,6 +52,47 @@
             <p class='aboutUsText'>Thank you so much for giving feedback to this website. 
               It is much appreciated and it helps us into making it better for everyone and we are trying to help as many people as we can with this website!</p>
           </div>
+          <h2>Contact</h2>
+
+          {% if success %}
+            <p>Thank you for your message. We'll get back to you shortly.</p>
+       
+          {% else %}
+       
+            {% for message in form.name.errors %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+          
+            {% for message in form.email.errors %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+          
+            {% for message in form.subject.errors %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+          
+            {% for message in form.message.errors %}
+              <div class="flash">{{ message }}</div>
+            {% endfor %}
+         
+          <form action="{{ url_for('getFeedback') }}" method=post>
+            {{ form.hidden_tag() }}
+          
+            {{ form.name.label }}
+            {{ form.name }}
+          
+            {{ form.email.label }}
+            {{ form.email }}
+          
+            {{ form.subject.label }}
+            {{ form.subject }}
+          
+            {{ form.message.label }}
+            {{ form.message }}
+          
+            {{ form.submit }}
+          </form>
+          {% endif %}
       </div>
     </div>
   

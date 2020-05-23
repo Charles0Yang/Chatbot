@@ -396,8 +396,9 @@ a.email:hover{
   background-color: gainsboro;
 }
 
+
 .parallax1 {
-  background-image: url('https://specials-images.forbesimg.com/imageserve/5e4a3210a854780006b18efa/960x0.jpg?fit=scale');
+  background-image: url('https://images.unsplash.com/photo-1557683311-eac922347aa1?ixlib=rb-1.2.1&w=1000&q=80');
   height: 100%; 
   width: 100%;
   margin: 0px;
@@ -407,7 +408,7 @@ a.email:hover{
   background-size: cover;
 }
 .parallax2 {
-  background-image: url('https://gabrielamueller.com/wp-content/uploads/2019/01/gabriela-mueller-artifitcial-intelligence-2000.jpg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2uRoR6vcb60jydkODXeWtkxty742b9E3XKP7Ky6KB9bHcDnUJ&usqp=CAU');
   height: 100%; 
   width: 100%;
   margin: 0px;
@@ -417,7 +418,7 @@ a.email:hover{
   background-size: cover;
 }
 .parallax3 {
-  background-image: url('https://media-exp1.licdn.com/dms/image/C4D12AQEpT9a_XdqA7g/article-cover_image-shrink_720_1280/0?e=1594857600&v=beta&t=2j0SuT_gMRlRpefswd2qnVdQidNyNS0jEzWdoOKK2s0');
+  background-image: url('https://ak.picdn.net/shutterstock/videos/1017297130/thumb/1.jpg');
   height: 100%; 
   width: 100%;
   margin: 0px;
@@ -474,11 +475,84 @@ a.email:hover{
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-image: url("https://image.freepik.com/free-vector/green-geometric-background_1378-199.jpg");
+  background-color: darkgrey;
   border-radius: 10px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-image: url('https://wallpapersmug.com/download/1920x1080/17fd71/geometry-triangles-abstract.jpg'); 
+  background-color: rgba(117, 114, 114, 0.979);
+}
+
+
+/* Contact form */
+form label {
+  font-size: 1.2em;
+  font-weight: bold;
+  display: block;
+  padding: 10px 0;
+}
+ 
+form input#name,
+form input#email,
+form input#subject {
+  width: 400px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  padding: 5px;
+  font-size: 1.1em;
+}
+ 
+form textarea#message {
+  width: 500px;
+  height: 100px;
+  background-color: #fafafa;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border: 1px solid #cccccc;
+  margin-bottom: 10px;
+  padding: 5px;
+  font-size: 1.1em;
+}
+ 
+form input#submit {
+  display: block;
+  -webkit-border-radius: 3px; 
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  border:1px solid #d8d8d8;
+  padding: 10px; 
+  font-weight:bold; 
+  text-align: center; 
+  color: #000000; 
+  background-color: #f4f4f4;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
+  background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
+  background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
+}
+ 
+form input#submit:hover{
+  cursor: pointer;
+  border:1px solid #c1c1c1; 
+  background-color: #dbdbdb;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
+  background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+}
+
+/* Message flashing */
+.flash {
+  background-color: #FBB0B0;
+  padding: 10px;
+  width: 400px;
 }

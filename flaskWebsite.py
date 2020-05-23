@@ -4,11 +4,14 @@ Created on Wed May  6 19:32:38 2020
 
 @authors: teo hughes and charles yang
 """
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, flash
 import os
 import nltk
 from nltk.stem import WordNetLemmatizer
 lemmatizer = WordNetLemmatizer()
+
+from forms import ContactForm
+from flask_mail import Message, Mail
 
 import requests
 import pickle
@@ -29,8 +32,19 @@ intents = json.loads(open('intents.json').read())
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 
+mail = Mail()
 
 app = Flask(__name__, template_folder='templates', static_folder='statics')
+
+app.secret_key = 'development key'
+
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = 465
+app.config["MAIL_USE_SSL"] = True
+app.config["MAIL_USERNAME"] = 'bonniebot77@gmail.com'
+app.config["MAIL_PASSWORD"] = 'Chelseabest'
+ 
+mail.init_app(app)
 
 LOCATIONS_URL = "https://api.covid19uk.live/"
 data = requests.get(LOCATIONS_URL)
@@ -148,17 +162,29 @@ def get_bot_response():
         userText = request.args.get('msg') #Gets the user input from the textbox
         return chatbot_response(userText) #Returns the appropriate response to the user's input to be used in the javascript file so that the bot's response can be displayed
 
-@app.route("/test")
-def other():
-    return render_template("other.html")
             
 @app.route("/locations")
 def locationsSupported():
     return render_template("locationsSupported.html")
 
-@app.route("/feedback")
+@app.route("/feedback", methods=['GET', 'POST'])
 def getFeedback():
-    return render_template("getFeedback.html")
+    form = ContactForm()
+    if request.method == "POST":
+        if form.validate() == False:
+            flash('All fields are required.')
+            return render_template("getFeedback.html", form=form)
+        else:
+            msg = Message(form.subject.data, sender='contact@example.com', recipients=['bonniebot77@gmail.com'])
+            msg.body = """
+            From: %s <%s>
+            %s
+            """ % (form.name.data, form.email.data, form.message.data)
+            mail.send(msg)
+
+            return render_template('getFeedback.html', success=True)
+    else:
+        return render_template("getFeedback.html", form=form)
 
 @app.route("/about")
 def about():

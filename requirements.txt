@@ -4,3 +4,6 @@ keras
 Flask
 gunicorn
 requests
+flask-wtf
+wtforms
+flask-mail
