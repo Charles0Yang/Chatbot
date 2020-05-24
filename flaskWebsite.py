@@ -105,7 +105,7 @@ def predict_class(input, model):
 def get_response(ints, intents_json):
     tag = ints[0]["intent"] #Gets the name of the tag of the intent which the user input belongs to
     list_of_intents = intents_json["intents"] #List of all intents 
-    min_accuracy = 0.9993 #Probability above which the response should be valid. If below this number then bot should reply "Sorry I don't understand what you said"
+    min_accuracy = 0.99 #Probability above which the response should be valid. If below this number then bot should reply "Sorry I don't understand what you said"
     result = ""
     for i in list_of_intents:
         if(i["tag"] == tag): #If the intent of the user input matches the intent
