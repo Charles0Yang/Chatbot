@@ -30,7 +30,7 @@ body{
   padding: 1em;
   line-height: 1.7em;
   text-decoration: none;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-size: 1em;
   border-right: 0.0625em solid black;
 }
@@ -144,7 +144,7 @@ body{
   background-color: white;
   margin: auto;
   padding-left: 0.313em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-size: 1.25em;
 }
 #textInput:focus{
@@ -152,7 +152,7 @@ body{
 }
 .userText{
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-size: 2.125vw;
   text-align: right;
   line-height: 2.34375vw;
@@ -172,7 +172,7 @@ body{
 .bonnieHeading {
   color: black;
   font-weight: lighter;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-size: 2.5vw;
   text-align: center;
   line-height: 2.5vw;
@@ -191,7 +191,7 @@ body{
 
 .botText {
   color: black;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-size: 2.125vw;
   text-align: left;
   line-height: 2.34375vw;
@@ -235,8 +235,8 @@ body{
   text-align: center;
   font-size: 3.75em;
   font-weight: lighter;
-  color: #20bcd5;
-  font-family: 'Handlee', cursive;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   padding: 0em;
 }
 
@@ -245,26 +245,26 @@ body{
   font-size: 2.5em;
   font-weight: lighter;
   font-style: italic;
-  color: #20bcd5;
-  font-family: 'Handlee', cursive;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 hr{ 
   width:70%; 
   height:0.125em; 
   line-height: 0em;
-  background: #20bcd5;
+  background: black;
 }
 
 hr.small{
   width: 20%;
   height: 0.125em;
-  background: #20bcd5;
+  background: black;
 }
 
 .aboutUsText{
-  color: #20bcd5;
-  font-family: 'Handlee', cursive;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 1.25em;
   padding: 1.25em 0em 1.25em 0em;
   text-align: center;
@@ -280,7 +280,7 @@ hr.small{
 a.email{
   text-align: center;
   font-size: 1.25em;
-  margin-left: 45%;
+  margin-left: auto;
   font-weight: lighter;
 }
 
@@ -293,15 +293,15 @@ a.email:hover{
   margin-right: auto;
   width: 60%;
   margin-top: 2.5em;
-  border: 0.25em dashed #20bcd5;
+  border: 0.25em dashed black;
   border-radius: 1.7em;
   text-align: center;
   font-size: 1.875em;
   font-weight: lighter;
   line-height: 1.875em;
   font-style: italic;
-  color: #20bcd5;
-  font-family: 'Handlee', cursive;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   padding: 0.625em 0.625em
 }
 #loader {
@@ -482,8 +482,8 @@ form label {
   font-weight: lighter;
   display: block;
   padding: 0.625em 0;
-  color: #20bcd5;
-  font-family: 'Handlee', cursive;
+  color: black;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
  
 form input#name,
@@ -495,10 +495,10 @@ form input#subject {
      -moz-border-radius: 0.625em;
           border-radius: 0.625em;
   font-size: 1.1em;
-  border: 0.25em dashed #20bcd5;
-  color: #20bcd5;
+  border: 0.05em dashed black;
+  color: black;
   padding: 0.75em;
-  font-family: 'Handlee', cursive;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 
 }
  
@@ -506,15 +506,15 @@ form textarea#message {
   width: 75%;
   height: 6.25em;
   background-color: #fafafa;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   -webkit-border-radius: 0.19em;
      -moz-border-radius: 0.19em;
           border-radius: 0.19em;
-  border: 0.25em dashed #20bcd5;
+  border: 0.05em dashed black;
   margin-bottom: 0.625em;
   padding: 0.75em;
-  font-family: 'Handlee', cursive;
-  color: #20bcd5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
   font-size: 1.1em;
 }
  
@@ -523,14 +523,14 @@ form input#submit {
   -webkit-border-radius: 0.19em; 
      -moz-border-radius: 0.19em;
           border-radius: 0.19em;
-  border: 0.25em dashed #20bcd5;
+  border: 0.10em solid black;
   font-size: 1.25em;
-  color: #20bcd5;
-  padding: 0.75em;
+  color: black;
+  padding: 0.5em;
   margin: auto;
-  font-weight:bold; 
+  font-weight:normal; 
   text-align: center;
-  font-family: 'Handlee', cursive;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   background-color: #f4f4f4;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
@@ -557,17 +557,17 @@ form input#submit:hover{
   padding: 0.625em;
   width: 60%;
   font-size: 1.1em;
-  font-family: 'Handlee', cursive;
-  color: #20bcd5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
 }
 
 /* Thank you message */
 .thankYouMessage{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
   font-weight: bold;
   font-size: 1.5em;
   margin-left: 15%;
   margin-right: 15%;
-  font-family: 'Handlee', cursive;
-  color: #20bcd5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: black;
 }
