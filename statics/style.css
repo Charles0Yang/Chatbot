@@ -242,7 +242,8 @@ h1{
   text-align: center;
   font-size: 60px;
   font-weight: lighter;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #20bcd5;
+  font-family: 'Handlee', cursive;
   padding: 0px;
 }
 
@@ -251,24 +252,26 @@ h1{
   font-size: 40px;
   font-weight: lighter;
   font-style: italic;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #20bcd5;
+  font-family: 'Handlee', cursive;
 }
 
 hr{ 
   width:70%; 
   height:2px; 
   line-height: 0px;
-  background: black;
+  background: #20bcd5;
 }
 
 hr.small{
   width: 20%;
   height: 2px;
-  background: black;
+  background: #20bcd5;
 }
 
 .aboutUsText{
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #20bcd5;
+  font-family: 'Handlee', cursive;
   font-size: 20px;
   padding: 20px 0px 20px 0px;
   text-align: center;
@@ -297,14 +300,15 @@ a.email:hover{
   margin-right: auto;
   width: 60%;
   margin-top: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.486);
+  border: 4px dashed #20bcd5;
   border-radius: 25px;
   text-align: center;
   font-size: 30px;
   font-weight: lighter;
   line-height: 30px;
   font-style: italic;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #20bcd5;
+  font-family: 'Handlee', cursive;
   padding: 10px 10px
 }
 #loader {
@@ -491,7 +495,8 @@ form label {
   font-weight: lighter;
   display: block;
   padding: 10px 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #20bcd5;
+  font-family: 'Handlee', cursive;
 }
  
 form input#name,
@@ -502,9 +507,12 @@ form input#subject {
   -webkit-border-radius: 10px;
      -moz-border-radius: 10px;
           border-radius: 10px;
-  border: 1px solid #727171;
-  padding: 5px;
   font-size: 1.1em;
+  border: 4px dashed #20bcd5;
+  color: #20bcd5;
+  padding: 12px;
+  font-family: 'Handlee', cursive;
+
 }
  
 form textarea#message {
@@ -515,9 +523,11 @@ form textarea#message {
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
-  border: 1px solid #727171;
+  border: 4px dashed #20bcd5;
   margin-bottom: 10px;
-  padding: 5px;
+  padding: 12px;
+  font-family: 'Handlee', cursive;
+  color: #20bcd5;
   font-size: 1.1em;
 }
  
@@ -526,11 +536,14 @@ form input#submit {
   -webkit-border-radius: 3px; 
      -moz-border-radius: 3px;
           border-radius: 3px;
-  border:1px solid #d8d8d8;
-  padding: 10px; 
+  border: 4px dashed #20bcd5;
+  font-size: 20px;
+  color: #20bcd5;
+  padding: 12px;
+  margin: auto;
   font-weight:bold; 
   text-align: center;
-  color: #000000; 
+  font-family: 'Handlee', cursive;
   background-color: #f4f4f4;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
@@ -542,7 +555,6 @@ form input#submit {
  
 form input#submit:hover{
   cursor: pointer;
-  border:1px solid #c1c1c1; 
   background-color: #dbdbdb;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
@@ -557,6 +569,9 @@ form input#submit:hover{
   background-color: #FBB0B0;
   padding: 10px;
   width: 400px;
+  font-size: 1.1em;
+  font-family: 'Handlee', cursive;
+  color: #20bcd5;
 }
 
 /* Thank you message */
@@ -566,4 +581,6 @@ form input#submit:hover{
   font-size: 1.5em;
   margin-left: 15%;
   margin-right: 15%;
+  font-family: 'Handlee', cursive;
+  color: #20bcd5;
 }
