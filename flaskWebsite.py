@@ -210,5 +210,9 @@ def getFeedback():
 def about():
     return render_template("about.html")
 
+@app.route("/howtouse")
+def howtouse():
+    return render_template("howto.html")
+    
 if __name__ == "__main__":
     app.run(debug=True) 
