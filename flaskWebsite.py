@@ -76,23 +76,22 @@ def fetch_country_cases(country):
         return ("There are {} cases in {}".format(cases, country_found)) #Returns the number of cases in the country in an appropriate format
 
 def contains_location(input):
-    location = ""
-    words = input.split()
-    for word in words:
-        if word in locations:
-            location = word
+    returned_location = ""
+    words = input
+    for location in locations:
+        if location in words:
+            returned_location = location
             break
-    return location
+    return returned_location
 
 def contains_country(input):
-    country = ""
-    words = input.split()
-    for word in words:
-        print(word)
-        if word in countries:
-            country = word
+    returned_country = ""
+    words = input
+    for country in countries:
+        if country in words:
+            returned_country = country
             break
-    return country
+    return returned_country
 
 
 def pre_process_input(input):
