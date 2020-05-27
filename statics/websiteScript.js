@@ -22,6 +22,31 @@ function getBotResponse() {
             var botHtml = '<p class="botText" ><span>' + responses[i] + "</span></p>"; //Displays the response on the screen 
             $("#chatbox").append(botHtml); //Adds the html to the appropriate identifier
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
+            textToSpeech(responses[i])
         }
     });
+}
+
+function textToSpeech(msg){
+    // get all voices that browser offers
+	var available_voices = window.speechSynthesis.getVoices();
+
+	// this will hold an english voice
+    var english_voice = '';
+    
+    // find voice by language locale "en-UK"
+	// if not then select the first voice
+	for(var i=0; i<available_voices.length; i++) {
+		if(available_voices[i].lang === 'en-UK') {
+			english_voice = available_voices[i];
+			break;
+		}
+    }
+    if(english_voice === '')
+        english_voice = available_voices[0];
+        
+    var message = new SpeechSynthesisUtterance(msg);
+    message.pitch = 1.5
+    message.rate = 1;
+    window.speechSynthesis.speak(message);
 }
