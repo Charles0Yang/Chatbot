@@ -57,4 +57,12 @@ function textToSpeech(msg){
 
 function toggleVoiceOn(){
     voice_on = !voice_on;
+    document.getElementById("voiceBtn").style.display = "none"
+    document.getElementById("voice2Btn").style.display = "block"
+}
+
+function toggleVoiceOff(){
+    voice_on != !voice_on; /*Fix this*/
+    document.getElementById("voiceBtn").style.display = "block"
+    document.getElementById("voice2Btn").style.display = "none"
 }
