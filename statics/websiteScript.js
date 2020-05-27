@@ -24,45 +24,46 @@ function getBotResponse() {
             var botHtml = '<p class="botText" ><span>' + responses[i] + "</span></p>"; //Displays the response on the screen 
             $("#chatbox").append(botHtml); //Adds the html to the appropriate identifier
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
-            if (voice_on == true){
-                textToSpeech(responses[i]);
+            if (voice_on == true){ //Checks if the user has toggled on voice 
+                textToSpeech(responses[i]); //If voice has been turned on read out the message as audio output
             }
         }
     });
 }
 
-function textToSpeech(msg){
-    // get all voices that browser offers
+function textToSpeech(msg) {
+    //Get all voices that browser offers
 	var available_voices = window.speechSynthesis.getVoices();
 
-	// this will hold an english voice
+	//This will hold an english voice
     var english_voice = '';
     
-    // find voice by language locale "en-UK"
-	// if not then select the first voice
+    //Find voice by language locale "en-UK"
+	//If not then select the first voice
 	for(var i=0; i<available_voices.length; i++) {
 		if(available_voices[i].lang === 'en-UK') {
 			english_voice = available_voices[i];
 			break;
 		}
     }
-    if(english_voice === '')
+    if(english_voice === '') { //If an english voice isn't availabe, use any available voice
         english_voice = available_voices[0];
-        
-    var message = new SpeechSynthesisUtterance(msg);
-    message.pitch = 1.5
-    message.rate = 1;
-    window.speechSynthesis.speak(message);
+}    
+    var message = new SpeechSynthesisUtterance(msg); //Creates a new object
+    message.pitch = 1.5 //Assigns pitch to message
+    message.rate = 1; //Assigns rate of speed of message
+    window.speechSynthesis.speak(message); //Outputs the message in audio format
 }
 
-function toggleVoiceOn(){
-    voice_on = !voice_on;
-    document.getElementById("voiceBtn").style.display = "none"
+function toggleVoiceOn() {
+    voice_on = !voice_on; //Switches the state of the voice_on boolean
+    //Sets the voice on button as displayed and the other button as hidden
+    document.getElementById("voiceBtn").style.display = "none" 
     document.getElementById("voice2Btn").style.display = "block"
 }
 
-function toggleVoiceOff(){
-    voice_on != !voice_on; /*Fix this*/
+function toggleVoiceOff() {
+    voice_on = !voice_on; 
     document.getElementById("voiceBtn").style.display = "block"
     document.getElementById("voice2Btn").style.display = "none"
 }
