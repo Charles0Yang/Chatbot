@@ -1,3 +1,5 @@
+var voice_on = false;
+
 function getBotResponse() {
     //Displays the user's input 
     var rawText = $("#textInput").val(); //What the user inputs
@@ -22,7 +24,9 @@ function getBotResponse() {
             var botHtml = '<p class="botText" ><span>' + responses[i] + "</span></p>"; //Displays the response on the screen 
             $("#chatbox").append(botHtml); //Adds the html to the appropriate identifier
             document.getElementById("userInput").scrollIntoView({ block: "start", behavior: "smooth" });
-            textToSpeech(responses[i])
+            if (voice_on == true){
+                textToSpeech(responses[i]);
+            }
         }
     });
 }
@@ -49,4 +53,8 @@ function textToSpeech(msg){
     message.pitch = 1.5
     message.rate = 1;
     window.speechSynthesis.speak(message);
+}
+
+function toggleVoiceOn(){
+    voice_on = !voice_on;
 }

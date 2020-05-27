@@ -22,7 +22,7 @@
   <body onload="theFunction()" style="margin:0;">
     
     <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
-    <button id="voiceBtn" title="Turn Voice On/Off">Turn Voice On/Off</button>
+    <button onclick="toggleVoiceOn()" id="voiceBtn" title="Turn Voice On/Off">Turn Voice On/Off</button>
     <div id="loader"></div>
     <div style="display:none;" id="myDiv" class="animate-bottom">
       <div class = "topnav", id = "myTopnav">
@@ -63,6 +63,7 @@
       </div>
     </div> 
     
+
     <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -90,7 +91,7 @@
                 widget_id: "3eg1fvbl65",  // DO NOT REMOVE. This is your widget ID for your WebReader
                 icon: {
                 //    icon_name: "speaker", /*Optional: Alternative icon to show as the widget icon*/
-                //    icon_position: "bottom-left", /*Optional: Position for the the widget to show up at*/
+                      icon_position: "top-right", /*Optional: Position for the the widget to show up at*/
                 //    icon_position_offsets: {/*Optional: Custom position offsets for the the widget to show up at*/
                 //        left:""
                 //        right:""
@@ -150,6 +151,7 @@
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     }
+
     </script> 
   </body>
 </html>
