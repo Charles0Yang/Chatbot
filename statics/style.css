@@ -603,7 +603,56 @@ form input#submit:hover{
   }
   .bonnieHeading {
     font-size: 1em;
+    line-height: 1.5em;
+  }
+  #textInput {
+    font-size: 1em;
+    border-width: 0.15em 0.04em 0.15em 0.6em;
+  }
+  .botText {
+    font-size: 1em;
     line-height: 1em;
+  }
+  .userText {
+    font-size: 1em;
+    line-height: 1em;
+  }
+  #voiceBtn {
+    bottom: 0.6em;
+    left: 1em;
+    font-size: 0.7em;
+    padding: 0.4em;
+  }
+  #voice2Btn {
+    bottom: 0.6em;
+    left: 1em;
+    font-size: 0.7em;
+    padding: 0.4em;
+  }
+  #myBtn {
+    bottom: 0.6em;
+    right: 1em;
+    font-size: 0.7em;
+    padding: 0.4em;
+  }
+  
+  .aboutUsText {
+    font-size: 1em;
+    padding: 1em 0em 1em 0em;
+    line-height: 1.5em;
+  }
+
+  .mainHeading {
+    font-size: 2em;
+  }
+  .heading {
+    font-size: 1.5em;
+  }
+  .listBox {
+    margin-top: 1.5em;
+    font-size: 1.25em;
+    line-height: 1.25em;
+    padding: 0.4em;
   }
 }
 
