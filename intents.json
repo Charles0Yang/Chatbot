@@ -233,5 +233,10 @@
          "patterns": ["How will police enforce the rules", "How are the rules going to be enforced", "What will happen if I break the rules"],
          "responses": ["The Police will act with discretion and common in applying the following measures, however they have the power to disperse you, make you leave an area, issue you with a fixed penalty, or arrest you", "The fines are listed below:", "First offence - £100 (£50 if paid within 14 days)", "Second offence - £200", "Third offence - £400", "Fourth offence - £800", "Fifth offence - £1600", "Maximum penalty - £3200"],
          "context_set": [""]
-        }
+        },
+        {"tag": "risky touch long",
+        "patterns": ["Is it risky to touch a delivery", "Should I touch my shopping", "Can I touch other people", "Can i touch stuff", "Will I get coronavirus if I touch something"],
+        "responses": ["You will not contract coronavirus by touching something", "as long as you clean the object you are touching and as long as you wash your hands afterwards."],
+        "context_set": [""]
+       }
 ]}
