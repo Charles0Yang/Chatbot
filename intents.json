@@ -5,7 +5,7 @@
          "context_set": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go"],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go", "quit", "exit"],
          "responses": ["Goodbye, I hope you have a great day!", "Sorry to see you go, I enjoyed our chat!", "Ok bye then! Enjoy the rest of your day!", "Had a nice time talking with you!"],
          "context_set": [""]
         },
@@ -20,32 +20,37 @@
          "context_set": [""]
         },
 	{"tag": "name",
-         "patterns": ["What is your name", "What did your parents call you", "What should I call you", "What should I refer to you as?"],
+         "patterns": ["What is your name", "What did your parents call you", "What should I call you", "What should I refer to you as?", "What's your name", "Who are you"],
          "responses": ["My name is Bonnie!", "You can call me Bonnie!"],
          "context_set": [""]
         },
 	{"tag": "friends",
-         "patterns": ["Can you be my friend", "I want to be your friend", "Let's be friends", "Will you be my friend", "I have no friends, so can you be my friend", "I want another friend"],
+         "patterns": ["Can you be my friend", "I want to be your friend", "Let's be friends", "Will you be my friend", "I have no friends, so can you be my friend", "I want another friend", "Wanna be friends??"],
          "responses": ["I would love to be your friend!", "Of course we can be friends!"],
          "context_set": [""]
         },
 	{"tag": "what do you do",
-         "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist"],
+         "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist", "How can you help me", "What can you do"],
          "responses": ["My purpose is to answer any questions you may have about Coronavirus", "I can provide you with information about COVID-19!"],
          "context_set": [""]
         },
 	{"tag": "favourite football team",
-         "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team"],
+         "patterns": ["Whats your favourite football team", "Favourite team???", "favourite football team", "What is the name of your favourite football team?"],
          "responses": ["Liverpool", "Manchester City", "Leicester City", "Chelsea", "Manchester United", "Wolverhampton Wanderers", "Sheffield United", "Tottenham Hotspur", "Arsenal", "Burnley", "Crystal Palace", "Everton", "Newcastle United", "Southampton", "Brighton & Hove Albion", "West Ham United", "Watford", "AFC Bournemouth", "Aston Villa", "Norwich City"],
          "context_set": [""]
         },
         {"tag": "who is high risk long",
-         "patterns": ["Am I a high risk individual?", "Am I at high risk of Coronavirus?", "Am I classified as being at high risk?", "Is my grandparent at high risk?"],
-         "responses": ["You are at risk if any of the following apply to you:", "Aged 70 and over", "Have a long term condition", "Pregnant"],
+         "patterns": ["Am I a high risk individual?", "Am I at high risk of Coronavirus?", "Am I classified as being at high risk?", "Is my grandparent at high risk?", "Am I high risk", "How can I be high risk"],
+         "responses": ["You are at risk if any of the following apply to you:", "Aged 70 and over", "Have a long term condition", "Have had an organ transplant", "If you are being shielde", "Pregnant"],
+         "context_set": [""]
+        },
+        {"tag": "what is high risk",
+         "patterns": ["What is high risk", "What is the definition of high risk", "Can you explain high risk"],
+         "responses": ["High risk is when you are clinically extremely vulnerable to COVID-19"],
          "context_set": [""]
         },
         {"tag": "what is coronavirus long",
-         "patterns": ["What is coronavirus", "What is covid-19", "What is corona", "Define coronavirus"],
+         "patterns": ["What is coronavirus", "What is covid-19", "What is coronavirus", "Define coronavirus", "Can you explain coronavirus"],
          "responses": ["Coronavirus (or Covid-19) is in a family of viruses including the common cold and other respitory illnesses", "It affects your airways and lungs", "The effects are mild for many however it can be very severe"],
          "context_set": [""]
         },
@@ -56,7 +61,7 @@
         },
         {"tag": "incubation",
          "patterns": ["What is the average incubation period", "How long do symptoms take to develop", "How long does it take for symptoms to show", "After how much time would I develop Coronavirus after being infected"],
-         "responses": ["The average is 5 days, but it could be between 1 and 14 days"],
+         "responses": ["The average incubation period of COVID-19 is 5 days, but it could be between 1 and 14 days"],
          "context_set": [""]
         },
         {"tag": "self-isolate time long",
@@ -65,27 +70,27 @@
          "context_set": [""]
         },
         {"tag": "coronavirus symptoms long",
-         "patterns": ["What are the symptoms of Coronavirus", "How can I tell if I have coronavirus", "What symptoms would I have if I have corona?", "If I have covid what are the symptoms"],
+         "patterns": ["What are the symptoms", "What are the symptoms of Coronavirus", "How can I tell if I have coronavirus", "What symptoms would I have if I have corona?", "If I have covid what are the symptoms"],
          "responses": ["The most common symptoms are a persistent/dry cough and a high temperature (37.7°C or above)", "Other symptoms may include:", "Shortness of breath", "A sore throat", "A blocked/runny nose", "Stomach discomfort and diarrhoea", "Loss of taste and smell"],
          "context_set": [""]
         },
         {"tag": "unwell what should I do long",
-         "patterns": ["If I'm unwell what should I do?", "If I have coronavirus symptoms what should I do", "If I'm ill with corona what should I do?"],
+         "patterns": ["If I'm unwell what should I do?", "If I have coronavirus symptoms what should I do", "If I'm ill with coronavirus what should I do?", "If i have symptoms", "I have symptoms"],
          "responses": ["If you are classed as extremely vulnerable and have symptoms call NHS at 111", "If not you can use the following link to check your symptoms and access support", "https://111.nhs.uk/covid-19/", "You should also consider alerting people you have close contact within the last 48 hours to let them know you have symptoms"],
          "context_set": [""]
         },
         {"tag": "can I be tested long",
-         "patterns": ["Am I eligible to be tested?", "Can I get a test for Coronavirus", "Can I get tested", "Am I allowed to get a test"],
+         "patterns": ["Can I be tested", "Am I eligible to be tested?", "Can I get a test for Coronavirus", "Can I get tested", "Am I allowed to get a test"],
          "responses": ["You are eligible for a test if any of the following apply to you:", "Aged 65 and over and displaying symptoms of Coronavirus", "Unable to work from home and displaying symptoms of Coronavirus", "All NHS and social care staff", "All care home residents and people being discharged from hospital into care homes"],
          "context_set": [""]
         },
         {"tag": "how can I get a test",
-         "patterns": ["How do I book a test", "How can I get a test?", "How should I organise a test"],
+         "patterns": ["How do I book a test", "How can I get a test?", "How should I organise a test", "Can I get a test"],
          "responses": ["If you're eligible you can book a test at https://self-referral.test-for-coronavirus.service.gov.uk/test-type"],
          "context_set": [""]
         },
         {"tag": "reduce coronavirus risk long",
-         "patterns": ["How can I reduce my risk of catching or spreading coronavirus", "How can I prevent getting corona", "How do I not get corona", "How do I stop myself from spreading coronavirus", "How to stop spreading covid", "How to prevent catching coronavirus"],
+         "patterns": ["How can I reduce my risk of catching or spreading coronavirus", "How can I prevent getting coronavirus", "How do I not get coronavirus", "How do I stop myself from spreading coronavirus", "How to stop spreading covid", "How to prevent catching coronavirus", "How can i not get coronavirus"],
          "responses": ["Stay at least 2 metres away from other people when outside your house", "Wash your hands frequently and thoroughly", "Cover your face when using public transport or in a crowded shop", "Stay at home!"],
          "context_set": [""]
         },
@@ -95,52 +100,52 @@
          "context_set": [""]
         },
         {"tag": "existing medical needs long",
-         "patterns": ["What should I do about my current medical treatments", "What should I about my upcoming appointments", "What should I do if I am unwell with existing medical conditions"],
+         "patterns": ["What should I do about my current medical treatments", "What should I do about my upcoming appointments", "What should I do if I am unwell with existing medical conditions", "How can I get my medical treatments"],
          "responses": ["If you are unwell you can still speak to your GP although this would have to be over the phone", "If you have a treatment plan you should continue to follow it", "Some appointments have been postponed although your appointments may still be ongoing so contact your GP for clarification"],
          "context_set": [""]
         },
         {"tag": "leave home long",
-         "patterns": ["When am I allowed to leave my house?", "When can I leave my home?", "In what circumstances can I go outside?", "When can I go out?"],
-         "responses": ["You are allowed to leave your home except in the following circumstances:", "To visit friends and fakily inside their homes", "Staying overnight away from your own home", "Exercising in an indoor sports court/leisure centre/gym/pool", "Using an outdoor gym or playground", "Gather outdoors in a group of more than six"],
+         "patterns": ["When am I allowed to leave my house?", "When can I leave my home?", "In what circumstances can I go outside?", "When can I go out?", "When can I leave home?", "When can I leave my house"],
+         "responses": ["You are allowed to leave your home except in the following circumstances:", "To visit friends and family inside their homes", "Staying overnight away from your own home", "Exercising in an indoor sports court/leisure centre/gym/pool", "Using an outdoor gym or playground", "Gather outdoors in a group of more than six"],
          "context_set": [""]
         },
         {"tag": "social distance meaning",
-         "patterns": ["What does social distancing mean?", "What is the meaning of social distancing?", "Define social distancing"],
+         "patterns": ["What does social distancing mean?", "What is the meaning of social distancing?", "Define social distancing", "What is social distancing", "Can you explain social distancing"],
          "responses": ["Social distancing is staying at home and only leaving for a few reasons defined by the government. When you are outside your home you should stay at least two metres away from other people"],
          "context_set": [""]
         },
         {"tag": "self-isolation meaning",
-         "patterns": ["What does self-isolation mean?", "What is the meaning of self isolation?", "Define self-isolation"],
+         "patterns": ["What does self-isolation mean?", "What is the meaning of self isolation?", "Define self-isolation", "What is self-isolation", "Can you explain self-isolation"],
          "responses": ["Self-isolation is avoiding contact with others (even those you live with) and not leaving your home for any reason. You should do this if you are displaying symptoms or live with somebody displaying symptoms"],
          "context_set": [""]
         },
         {"tag": "shielding meaning",
-         "patterns": ["What does shielding mean?", "What is the meaning of shielding?", "Define shielding"],
+         "patterns": ["What does shielding mean?", "What is the meaning of shielding?", "Define shielding", "What is shielding", "Can you explain shielding"],
          "responses": ["Shielding is a type of self-isolation which involves not leaving your home for any reason until the end of June to reduce your risk of contracting COVID-19"],
          "context_set": [""]
         },
         {"tag": "have to social distance?",
-         "patterns": ["Do I have to social distance", "Do I have to do social distancing", "Am I required to do social distancing?"],
+         "patterns": ["Do I have to social distance", "Do I have to do social distancing", "Am I required to do social distancing?", "Why should I social distance", "Why am i social distancing"],
          "responses": ["Everyone should be social distancing. If you are over 70 or have existing health conditions try to stay home regardless"],
          "context_set": [""]
         },
         {"tag": "have to shield?",
-         "patterns": ["Do I have to do shielding", "Do I have to be shielded", "Should I be shielding?"],
-         "responses": ["Anyone who has been identified as extremely vulnerable should be shielded"],
+         "patterns": ["Do I have to do shielding", "Do I have to be shielded", "Should I be shielding?", "I am at high risk, should I be shielding"],
+         "responses": ["Anyone who has been identified as extremely vulnerable or high risk should be shielded"],
          "context_set": [""]
         },
         {"tag": "coronavirus support",
-         "patterns": ["Can I talk to someone to get support?", "Can I speak to someone to get help?", "How can I get support?", "What support is there", "Where can I talk to someone for support?"],
-         "responses": ["You can use the link at the top of the screen labeled Coronavirus Support Line which will bring you to a page with an email and phone number which you can use to talk to someone"],
+         "patterns": ["Can I talk to someone to get support?", "Can I speak to someone to get help?", "How can I get support?", "What support is there", "Where can I talk to someone for support?", "How can I get support for coronavirus", "I need support"],
+         "responses": ["You can use the link at the top of the screen labelled Coronavirus Support Line (hover over COVID-19 Websites) which will bring you to a page with an email and phone number which you can use to talk to someone"],
          "context_set": [""]
         },
         {"tag": "mental health",
          "patterns": ["I'm concerned about my dad's mental health", "I'm worried about my mum's mental health", "I'm scared for my mental health", "Can I talk to someone about my mental health"],
-         "responses": ["The NHS has provided a list of helplines you can contract for expert advice. The link to the NHS page is at the top of the screen labeled 'Mental Health Helplines"],
+         "responses": ["The NHS has provided a list of helplines you can contract for expert advice. The link to the NHS page is on the COVID-19 Website dropdown labelled 'Mental Health Helplines"],
          "context_set": [""]
         },
         {"tag": "how many cases long",
-         "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases in", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of corona", "How many deaths of corona"],
+         "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases in", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of coronavirus", "How many deaths of coronavirus"],
          "responses": ["Simply type the name of the country/UK area and Bonnie should reply with the number of coronavirus cases if you have typed in a valid location. A list of supported areas is available at the top of the page"],
          "context_set": [""]
         },
@@ -155,88 +160,88 @@
          "context_set": [""]
         },
         {"tag": "how can I help long",
-         "patterns": ["How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against corona"],
+         "patterns": ["How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against coronavirus", "How can I help"],
          "responses": ["The best way you can help is of course to stay at home!", "There are other ways you can help though", "If you would like to donate there are many great charities providing help to those particularly affected", "There are also other charities which provide ways for you to volunteer in your local area with vulnerable people or the NHS", "We would like to encourage you to research yourselves and find what suits you best!"],
          "context_set": [""]
         },
         {"tag": "park",
-         "patterns": ["Can I meet with friends and family in the park", "Am I allowed to go to the park", "Can I go to an outdoor park"],
+         "patterns": ["Can I meet with friends and family in the park", "Am I allowed to go to the park", "Can I go to an outdoor park", "Can I go to the park?"],
          "responses": ["You can meet in a group of up to six people if you are outdoors. You should stay at least 2 metres away from the people you do not live with"],
          "context_set": [""]
         },
         {"tag": "sport",
-         "patterns": ["Can I play sport with someone I live with", "Can I play tennis with a friend", "Can I play cricket with my family", "Am I allowed to play outdoors sport with people I don't live with"],
+         "patterns": ["Can I play sport with someone I live with", "Can I play tennis with a friend", "Can I play cricket with my family", "Am I allowed to play outdoors sport with people I don't live with", "Can I play sport", "Can I do sport", "Can i play sport in the park", "Can i play sport with a friend"],
          "responses": ["You can exercise or play sport in groups of up to six people from other households, but you should try to keep 2 metres between you when you can. You should keep sharing equipment to a minimum and make sure to clean equipment thoroughly"],
          "context_set": [""]
         },
         {"tag": "garden",
-         "patterns": ["Am I allowed to sit in someone's back garden?", "Can I sit in a friend's garden?"],
+         "patterns": ["Am I allowed to sit in someone's back garden?", "Can I sit in a friend's garden?", "Can I go to a garden", "Can I go to my friend's garden"],
          "responses": ["You are allowed to spend time in gardens and other private outdoor spaces in groups of up to 6 people from different households"],
          "context_set": [""]
         },
         {"tag": "travel",
-         "patterns": ["How far can I travel for exercise or outdoor activity", "Are there restrictions on how far I can travel"],
+         "patterns": ["How far can I travel for exercise or outdoor activity", "Are there restrictions on how far I can travel", "Where can I travel", "How can I travel"],
          "responses": ["There are no restrictions on how far you can travel but you should return the same night"],
          "context_set": [""]
         },
         {"tag": "tourism",
-         "patterns": ["Can I visit outdoor tourist sites?", "Can I go to tourist locations?"],
+         "patterns": ["Can I visit outdoor tourist sites?", "Can I go to tourist locations?", "Can I go to touristic places", "Can I vist tourist sites"],
          "responses": ["You can still travel to outdoor tourist locations, however some indoor sites may not be allowed to open"],
          "context_set": [""]
         },
         {"tag": "weddings",
-         "patterns": ["Can weddings go ahead?", "Are we allowed to have a wedding?", "Can we get married and have a wedding?", "Can I have a wedding?"],
-         "responses": ["No. The government has said that it is still not possible to gather in sufficient numbers indoors to enable a wedding ceremony"],
+         "patterns": ["Can weddings go ahead?", "Are we allowed to have a wedding?", "Can we get married and have a wedding?", "Can I have a wedding?", "Can my wedding go ahead"],
+         "responses": ["You can not have a wedding. The government has said that it is still not possible to gather in sufficient numbers indoors to enable a wedding ceremony."],
          "context_set": [""]
         },
         {"tag": "worship",
-         "patterns": ["Can I pray in a place of worship", "Can I go to a place of worship to pray?", "Am I allowed to go to a church", "Am I allowed to go a mosque", "Am I allowed to go to a synagogue", "Am I allowed to go to a temple to worship"],
-         "responses": ["No. It is still not possible to pray in any place of worship"],
+         "patterns": ["Can I pray in a place of worship", "Can I go to a place of worship to pray?", "Am I allowed to go to a church", "Am I allowed to go a mosque", "Am I allowed to go to a synagogue", "Am I allowed to go to a temple to worship", "Can I worship in", "Can I go to a place of worship?"],
+         "responses": ["No. It is still not possible to go to any place of worship"],
          "context_set": [""]
         },
         {"tag": "work long",
-         "patterns": ["When am I allowed to go back to work", "When can I go to work", "Who is permitted to go to work?"],
+         "patterns": ["When am I allowed to go back to work", "When can I go to work", "Who is permitted to go to work?", "When can I go back to work"],
          "responses": ["Those in essential retail where work can only be done in the workplace may be permitted to work", "Essential retail includes but is not limited to the following:", "Supermarkets", "Those in construction and manufacturing", "Those working in labs and research facilities", "Those administering takeways and deliveries", "Tradesmen and cleaners", "Those who are facilitating trade or transport goods"],
          "context_set": [""]
         },
         {"tag": "critical worker long",
-         "patterns": ["What is a critical worker?", "Who is defined as a critical worker", "Who can be a critical worker"],
-         "responses": ["Critical workers are those working in health and care and other essential services", "They can send their children to school/childcare regardless of year group"],
+         "patterns": ["Who are critical workers?", "What is a critical worker?", "Who is defined as a critical worker", "Who can be a critical worker"],
+         "responses": ["Critical workers are those working in health and care and other essential services", "They can send their children to school/childcare regardless of their year group"],
          "context_set": [""]
         },
         {"tag": "pubs cinemas hairdressers",
-         "patterns": ["When will pubs open", "When can I go to the pub", "When can I go to the cinema", "When will cinemas open", "When can I go to the hairdressers", "When will hairdressers open", "When can I get a haircut"],
+         "patterns": ["When will pubs open", "When can I go to the pub", "When can I go to the cinema", "When will cinemas open", "When can I go to the hairdressers", "When will hairdressers open", "When can I get a haircut", "When can i go to the theatre?"],
          "responses": ["Businesses such as pubs/cinemas/hairdressers will not open until Step 3 is reached. This is projected to be July 4 at the earliest"],
          "context_set": [""]
         },
         {"tag": "face coverings work",
-         "patterns": ["Do I need to wear a face covering at work?", "Should I wear a face covering to work", "Am I required to wear a face mask to work"],
+         "patterns": ["Do I need to wear a face covering at work?", "Should I wear a face covering to work", "Am I required to wear a face mask to work", "Should I wear a face mask", "Should I wear face coverings"],
          "responses": ["Face coverings are not compulsory, however it is recommended that you wear one in enclosed public spaces where social distancing is not possible"],
          "context_set": [""]
         },
         {"tag": "public transport",
-         "patterns": ["Who is allowed to travel on public transport?", "Am I allowed to use public transport", "Can I use public transport to get to work"],
+         "patterns": ["Who is allowed to travel on public transport?", "Am I allowed to use public transport", "Can I use public transport to get to work", "Can I go on public transport"],
          "responses": ["If you cannot work from home and have to travel to work, you can use public transport if it is your only option. If possible, try to reduce travel and cycle/walk as much as possible"],
          "context_set": [""]
         },
         {"tag": "school long",
-         "patterns": ["When can my child go back to school", "When can my son return to school", "When can my daughter go to University", "Are schools open", "When are schools reopening"],
+         "patterns": ["When can my child go back to school", "When can my son return to school", "When can my daughter go to University", "Are schools open", "When are schools reopening", "When can I go to school", "When do schools open"],
          "responses": ["From Monday 1st June all early year settings can reopen and schools can start welcoming back pupils in Reception/Year 1/Year 6 in smaller class sizes", "From Monday 15th June pupils in Year 10 and 12 will prepare to begin some face to face support with teachers"],
          "context_set": [""]
         },
         {"tag": "child safe school long",
-         "patterns": ["Will my child be safe at school", "What measure are being put in place to make sure my child is safe at school?", "How are schools going to be made safe", "What changes are being made to schools to make them safe"],
+         "patterns": ["Will my child be safe at school", "What measure are being put in place to make sure my child is safe at school?", "How are schools going to be made safe", "What changes are being made to schools to make them safe", "Are schools safe", "Should I send my kids to school"],
          "responses": ["Protective measures for schools include:", "Regular hand cleaning", "Hygiene and cleaning measure", "Small consistent group and class sizes of no more than 15 pupils", "Schools have also been asked to consider:", "Stagger arrival times/break times/assemblies", "Making use of outdoor space"],
          "context_set": [""]
         },
         {"tag": "enforce fines",
-         "patterns": ["How will police enforce the rules", "How are the rules going to be enforced", "What will happen if I break the rules"],
-         "responses": ["The Police will act with discretion and common in applying the following measures, however they have the power to disperse you, make you leave an area, issue you with a fixed penalty, or arrest you", "The fines are listed below:", "First offence - £100 (£50 if paid within 14 days)", "Second offence - £200", "Third offence - £400", "Fourth offence - £800", "Fifth offence - £1600", "Maximum penalty - £3200"],
+         "patterns": ["How will police enforce the rules", "What are the fines", "How are the rules going to be enforced", "What will happen if I break the rules"],
+         "responses": ["The Police will act with discretion in applying the following measures, however they have the power to disperse you, make you leave an area, issue you with a fixed penalty, or arrest you", "The fines are listed below:", "First offence - £100 (£50 if paid within 14 days)", "Second offence - £200", "Third offence - £400", "Fourth offence - £800", "Fifth offence - £1600", "Maximum penalty - £3200"],
          "context_set": [""]
         },
         {"tag": "risky touch long",
         "patterns": ["Is it risky to touch a delivery", "Should I touch my shopping", "Can I touch other people", "Can i touch stuff", "Will I get coronavirus if I touch something"],
-        "responses": ["You will not contract coronavirus by touching something", "as long as you clean the object you are touching and as long as you wash your hands afterwards."],
+        "responses": ["You will not contract coronavirus by touching something", "As long as you clean the object you are touching and as long as you wash your hands afterwards."],
         "context_set": [""]
        }
 ]}

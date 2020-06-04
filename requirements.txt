@@ -7,3 +7,5 @@ requests
 flask-wtf
 wtforms
 flask-mail
+
+#You need these packages/libraries to run the code on your computer try pip install <NAME> on your command prompt
