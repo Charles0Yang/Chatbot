@@ -106,6 +106,8 @@ How will police enforce the rules?
 
 Is it risky to touch a delivery?
 
+How long does coronavirus survive outside the body?
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.

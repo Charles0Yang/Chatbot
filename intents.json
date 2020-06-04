@@ -240,8 +240,13 @@
          "context_set": [""]
         },
         {"tag": "risky touch long",
-        "patterns": ["Is it risky to touch a delivery", "Should I touch my shopping", "Can I touch other people", "Can i touch stuff", "Will I get coronavirus if I touch something"],
-        "responses": ["You will not contract coronavirus by touching something", "As long as you clean the object you are touching and as long as you wash your hands afterwards."],
-        "context_set": [""]
-       }
+         "patterns": ["Is it risky to touch a delivery", "Should I touch my shopping", "Can I touch other people", "Can i touch stuff", "Will I get coronavirus if I touch something"],
+         "responses": ["You will not contract COVID-19 by touching something", "As long as you clean the object you are touching and as long as you wash your hands afterwards."],
+         "context_set": [""]
+        },
+        {"tag": "coronavirus surface survive long",
+         "patterns": ["How long does coronavirus stay in the air", "how long does coronavirus survive?", "How long does coronavirus survive on other surfaces", "Does coronavirus survive outside the body", "How long does coronavirus survive on plastic", "How long does coronavirus survive on cardboard", "How long does coronavirus survive on metal"],
+         "responses": ["The following are examples of how long COVID-19 survives on different surfaces", "Air : Half an hour", "A fine mist : 3 hours or more", "Copper surfaces : Up to 4 hours", "Cardboard surfaces : Up to 24 hours", "Plastic and Stainless Steel : At least 72 hours"],
+         "context_set": [""]
+        }
 ]}
