@@ -33,7 +33,7 @@ function getBotResponse() {
 
 function textToSpeech(msg) {
     //Get all voices that browser offers
-	var available_voices = window.speechSynthesis.getVoices();
+    var available_voices = window.speechSynthesis.getVoices();
 
 	//This will hold an english voice
     var english_voice = '';
@@ -48,7 +48,7 @@ function textToSpeech(msg) {
     }
     if(english_voice === '') { //If an english voice isn't availabe, use any available voice
         english_voice = available_voices[0];
-}    
+    }    
     var message = new SpeechSynthesisUtterance(msg); //Creates a new object
     message.pitch = 1.5 //Assigns pitch to message
     message.rate = 1; //Assigns rate of speed of message
