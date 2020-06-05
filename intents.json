@@ -160,7 +160,7 @@
          "context_set": [""]
         },
         {"tag": "how can I help long",
-         "patterns": ["How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against coronavirus", "How can I help"],
+         "patterns": ["How can I help", "How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against coronavirus", "How can I help", "What can I do to help"],
          "responses": ["The best way you can help is of course to stay at home!", "There are other ways you can help though", "If you would like to donate there are many great charities providing help to those particularly affected", "There are also other charities which provide ways for you to volunteer in your local area with vulnerable people or the NHS", "We would like to encourage you to research yourselves and find what suits you best!"],
          "context_set": [""]
         },
