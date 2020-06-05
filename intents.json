@@ -5,7 +5,7 @@
          "context_set": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["This is a test to see if goodbye tag works because it is obvious it is a test and the other tags don't work!", "cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go", "quit", "exit"],
+         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go"],
          "responses": ["Goodbye, I hope you have a great day!", "Sorry to see you go, I enjoyed our chat!", "Ok bye then! Enjoy the rest of your day!", "Had a nice time talking with you!"],
          "context_set": [""]
         },

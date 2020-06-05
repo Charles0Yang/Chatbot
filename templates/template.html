@@ -1,7 +1,11 @@
 <!DOCTYPE html>
-<html lang="en-GB">
-  <head>
-    <title>Bonnie Bot</title>
+<!--This is the main website page were the chatbot is-->
+
+<html lang="en-GB"> <!--Language of the website-->
+  <head> <!--Contains title and link to static files and provides meta data-->
+    
+    <!--Title and icon (what you see where the tab for the website is)-->
+    <title>Bonnie Bot</title> 
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
     AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
     RQfiCgEBGyIYwI+kAAAA+klEQVQoz6XRPS9DARjF8V9fVFIh3BpoJzGIj+Et0cTF7gMIq/gQEqPJ
@@ -10,62 +14,101 @@
     UdaYLXnSyAk8KcmpSiSqckqeBHLdDomGgrpps76wrulTQUPSBWp2lVVsePGOUUXjHhyodYGOI7E3
     r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
     gg==" rel="icon" type="image/x-icon" />
-    <link href="statics/style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="statics/websiteScript.js" type="text/javascript"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> 
-    <meta name="description" content="Chatbot providing advice on COVID-19">
-    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice">
-    <meta name="author" content="Teo Hughes and Charles Yang">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body onload="theFunction()" style="margin:0;">
+
+    <!--Link to the static files-->
+    <link href="statics/style.css" rel="stylesheet" type="text/css" /> <!--CSS file-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon stylesheet-->
+    <script src="statics/websiteScript.js" type="text/javascript"></script> <!--Javascript file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> <!--jquery file-->
     
+    <!--Metadata-->
+    <meta name="description" content="Chatbot providing advice on COVID-19"> <!--Description-->
+    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice"> <!--Keywords (for search engine)-->
+    <meta name="author" content="Teo Hughes and Charles Yang"> <!--Authors-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Width of the viewport, set to device width so it is responsive-->
+  </head>
+
+  <!--Body-->
+  <body onload="theFunction()" style="margin:0;"> <!--When the body loads theFunction() runs-->
+    
+    <!--The loading screen-->
     <div id="loader"></div>
     
-    <div style="display:none;" id="myDiv" class="animate-bottom">
-      <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
-      <button onclick="toggleVoiceOff()" id="voice2Btn" title="Turn Voice Off">Turn Voice Off</button>
-      <button onclick="toggleVoiceOn()" id="voiceBtn" title="Turn Voice On">Turn Voice On</button>
+    <!--What you see on the web page-->
+    <div style="display:none;" id="myDiv" class="animate-bottom"> <!--When the website loads it doesn't show, but when it does it animates as it appears (class="animate-bottom")-->
+      
+      <!--The three buttons used-->
+      <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button> <!--Button which when pressed scrolls to top-->
+      <button onclick="toggleVoiceOff()" id="voice2Btn" title="Turn Voice Off">Turn Voice Off</button> <!--Button that turns the voice off-->
+      <button onclick="toggleVoiceOn()" id="voiceBtn" title="Turn Voice On">Turn Voice On</button> <!--Button that turns the voice on-->
+      
+      <!--The Menu bar at the top-->
       <div class = "topnav", id = "myTopnav">
-        <a href="/" title="Home Page" style="background-color: gainsboro;"><i class="fa fa-home"></i> Home</a>
-        <a href="/howtouse" title="How To Use Bonnie Bot">How To Use</a>
-        <a href="/locations" title = "Locations Supported">Locations</a>
-        <a href = "/feedback" title = "Give Feedback">Give Feedback</a>
-        <a href="/about" title="About Page">About Us</a>
+
+        <!--The links to the pages on our website-->
+        <a href="/" title="Home Page" style="background-color: gainsboro;"><i class="fa fa-home"></i> Home</a> <!--The Home Page (Has a background color showing it is active (being used))-->
+        <a href="/howtouse" title="How To Use Bonnie Bot">How To Use</a> <!--The How To Use page-->
+        <a href="/locations" title = "Locations Supported">Supported Locations</a> <!--The Supported Locations page-->
+        <a href = "/feedback" title = "Give Feedback">Give Feedback</a> <!--The Give Feedback page-->
+        <a href="/about" title="About Page">About Us</a> <!--The About Us page-->
+        
+        <!--The dropdown showing links to other websites-->
         <div class="dropdown">
+
+          <!--Button which shows the dropdown when hovered over-->
           <button class="dropbtn">COVID-19 Websites
             <i class="fa fa-caret-down"></i>
           </button>
+
+          <!--The other websites linked-->
           <div class="dropdown-content">
-            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
-            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
-            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
-            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
-            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a> <!--Live COVID-19 Stream-->
+            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a> <!--Age Uk Website-->
+            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a> <!--Coronavirus gov.uk website-->
+            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a> <!--Coronavirus Support-->
+            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a> <!--Mental Health Helplines-->
           </div>
+        
         </div>
+        
+        <!--Button which shows when the browser window is small (it offers another dropdown)-->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
+
       </div>
+
+    <!--The items inside the box-->
     <div class="boxed">
+
+
       <div>
+        <!--Where the chatbot text is displayed-->
         <div id="chatbox">
+          
+          <!--Heading of the chatbot-->
           <p class="bonnieHeading">
             <span>Bonnie Bot!</span>
           </p>
-            <p class = "botText">
-              <span>Hi, I'm Bonnie Bot! I will try my best to answer any questions you may have about COVID-19!</span>
-            </p>
+          
+          <!--Text introducing the chatbot-->
+          <p class = "botText">
+            <span>Hi, I'm Bonnie Bot! I will try my best to answer any questions you may have about COVID-19!</span>
+          </p>
+
         </div>
+
+        <!--Where the user inputs the question-->
         <div id="userInput">
-          <input id="textInput" type="text" name="msg" placeholder="Chat here!" />
+          <input id="textInput" type="text" name="msg" placeholder="Chat here!" /> <!--Input with a placeholder called "Chat here!"-->
         </div>
+
       </div>
+    
     </div> 
     
 
+    <!--Javascript to show the menu bar differently when it is smaller-->
     <script>
       function myFunction() {
         var x = document.getElementById("myTopnav");
@@ -76,6 +119,8 @@
       }
   }
     </script>
+
+    <!--Javascript which gets the chatbot response-->
     <script>
     $("#textInput").keypress(function(e) {
       if (e.which == 13) {
@@ -83,25 +128,34 @@
       }
     });
     </script>
+    
+    <!--End of the div which is the main page-->
     </div>
+
+    <!--Javascript which reads the text out to the user-->
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
     <script>
-        
+    
+    // Function to show the loading screen for a second
     function theFunction() {
       myVar = setTimeout(showPage, 1000);
   }
 
 
+    // Function to stop showing the loading screen and to show the main page
     function showPage() {
       document.getElementById("loader").style.display = "none";
       document.getElementById("myDiv").style.display = "block";
   } 
+
+    // The button to scroll to the top
     var mybutton = document.getElementById("myBtn");
 
-    // When the user scrolls down 20px from the top of the document, show the button
+    //Calls the function when the user starts scrolling
     window.onscroll = function() {scrollFunction()};
 
+    //Function to show the button when the user scrolls more than 20px
     function scrollFunction() {
       if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
         mybutton.style.display = "block";
@@ -117,5 +171,9 @@
     }
 
     </script> 
+
+  <!--End of body-->
   </body>
+
+<!--End of html-->
 </html>
