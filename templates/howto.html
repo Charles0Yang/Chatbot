@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!--This is the get feedback website page where it tells the user to enter feedback and then sends it to bonniebot77@gmail.com-->
+<!-- This is the get feedback website page where it tells the user to enter feedback and then sends it to bonniebot77@gmail.com -->
 
-<html lang="en-GB"> <!--Language of the website-->
+<html lang="en-GB"> <!-- Language of the website -->
 
-  <head> <!--Contains title and link to static files and provides meta data-->
+  <head> <!-- Contains title and link to static files and provides meta data -->
     
-    <!--Title and icon (what you see where the tab for the website is)-->
+    <!-- Title and icon (what you see where the tab for the website is) -->
     <title>How to use Bonnie Bot</title>
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
       AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
@@ -16,183 +16,183 @@
       r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
       gg==" rel="icon" type="image/x-icon" />
     
-    <!--Link to the static files-->
-    <link href="statics/style.css" rel="stylesheet" type="text/css" /> <!--CSS file-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!--Icon stylesheet-->
+    <!-- Link to the static files -->
+    <link href="statics/style.css" rel="stylesheet" type="text/css" /> <!-- CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Icon stylesheet -->
 
-    <!--Metadata-->
-    <meta charset="utf-8"> <!--Unicode character set-->
-    <meta name="description" content="Chatbot providing advice on COVID-19"> <!--Description-->
-    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice"> <!--Keywords (for search engine)-->
-    <meta name="author" content="Teo Hughes and Charles Yang"> <!--Authors-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Width of the viewport, set to device width so it is responsive-->
+    <!-- Metadata -->
+    <meta charset="utf-8"> <!-- Unicode character set -->
+    <meta name="description" content="Chatbot providing advice on COVID-19"> <!-- Description -->
+    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice"> <!-- Keywords (for search engine) -->
+    <meta name="author" content="Teo Hughes and Charles Yang"> <!-- Authors -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Width of the viewport, set to device width so it is responsive -->
     
   </head>
 
-  <!--Body with a different background image to the main page(blue gradient)-->
-  <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> <!--When the body loads theFunction() runs-->
+  <!-- Body with a different background image to the main page(blue gradient) -->
+  <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> <!-- When the body loads theFunction() runs -->
     
-    <!--The loading screen-->
+    <!-- The loading screen -->
     <div id="loader"></div>
 
-    <!--What you see on the web page-->
+    <!-- What you see on the web page -->
     <div style="display:none;" id="myDiv" class="animate-bottom">
       
-      <!--The button to scroll to the top-->
+      <!-- The button to scroll to the top -->
       <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
       
-      <!--The Menu bar at the top-->
+      <!-- The Menu bar at the top -->
       <div class = "topnav", id = "myTopnav">
 
-        <!--The links to the pages on our website-->
-        <a href="/" title="Home Page"><i class="fa fa-home"></i> Home</a> <!--The Home Page-->
-        <a href="/howtouse" title="How To Use Bonnie Bot" style="background-color: gainsboro;">How To Use</a> <!--The How To Use page (Has a background color showing it is active (being used))-->
-        <a href="/locations" title = "Locations Supported">Locations</a> <!--The Supported Locations page-->
-        <a href = "/feedback" title = "Give Feedback">Give Feedback</a> <!--The Give Feedback page-->
-        <a href="/about" title="About Page">About Us</a> <!--The About Us page-->
+        <!-- The links to the pages on our website -->
+        <a href="/" title="Home Page"><i class="fa fa-home"></i> Home</a> <!-- The Home Page -->
+        <a href="/howtouse" title="How To Use Bonnie Bot" style="background-color: gainsboro;">How To Use</a> <!-- The How To Use page (Has a background color showing it is active (being used)) -->
+        <a href="/locations" title = "Locations Supported">Locations</a> <!-- The Supported Locations page -->
+        <a href = "/feedback" title = "Give Feedback">Give Feedback</a> <!-- The Give Feedback page -->
+        <a href="/about" title="About Page">About Us</a> <!-- The About Us page -->
 
-        <!--The dropdown showing links to other websites-->
+        <!-- The dropdown showing links to other websites -->
         <div class="dropdown">
 
-          <!--Button which shows the dropdown when hovered over-->
+          <!-- Button which shows the dropdown when hovered over -->
           <button class="dropbtn">COVID-19 Websites
             <i class="fa fa-caret-down"></i>
           </button>
 
-          <!--The other websites linked-->
+          <!-- The other websites linked -->
           <div class="dropdown-content">
-            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a> <!--Live COVID-19 Stream-->
-            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a> <!--Age Uk Website-->
-            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a> <!--Coronavirus gov.uk website-->
-            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a> <!--Coronavirus Support-->
-            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a> <!--Mental Health Helplines-->
+            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a> <!-- Live COVID-19 Stream -->
+            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a> <!-- Age Uk Website -->
+            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a> <!-- Coronavirus gov.uk website -->
+            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a> <!-- Coronavirus Support -->
+            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a> <!-- Mental Health Helplines -->
           </div>
 
         </div>
 
-        <!--Button which shows when the browser window is small (it offers another dropdown)-->
+        <!-- Button which shows when the browser window is small (it offers another dropdown) -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
 
       </div>
 
-      <!--The items inside the box-->
+      <!-- The items inside the box -->
       <div class='boxed'>
 
-        <!--The how to use section-->
+        <!-- The how to use section -->
         <div id="aboutUs">
 
-          <!--Heading about how to use Bonnie Bot-->
+          <!-- Heading about how to use Bonnie Bot -->
           <p class="mainHeading">How To Use Bonnie Bot</p>
-          <hr> <!--Line-->
+          <hr> <!-- Line -->
 
-          <!--Text about Bonnie (the chatbot)-->
+          <!-- Text about Bonnie (the chatbot) -->
           <div id='textBox'>
             <p class='aboutUsText'>Bonnie Bot is a chatbot which was designed to answer questions specifically about COVID-19. We are continually updating this Website and we know that it can be so much better but we rely on your feedback to improve it! So please after having a go at this website type some feedback on the give feedback page!</p>
           </div>
           
-          <!--Heading about what you can ask her-->
+          <!-- Heading about what you can ask her -->
           <p class='heading'>What You Can Ask Her</p>
-          <hr class='small'> <!--Small line-->
+          <hr class='small'> <!-- Small line -->
 
-          <!--Text about what you can ask her-->
+          <!-- Text about what you can ask her -->
           <div id='textBox'>
             <p class='aboutUsText'>Bonnie can answer a range of questions about Coronavirus such as what the most common symptoms are, what shielding is, and how to get support. Bonnie can also provide you with the latest number of cases in most UK areas and countries across the world. For a full list of the areas she can provided cases for, you can go to our page called "Locations" which can be found in the top menu bar. For a full list of possible questions scroll down to the bottom of the page where there is a list of possible types of questions</p>
           </div>
   
-          <!--Heading about Bonnie's Extra Features-->
+          <!-- Heading about Bonnie's Extra Features -->
           <p class='heading'>Extra Features</p>
-          <hr class='small'> <!--Small line-->
+          <hr class='small'> <!-- Small line -->
 
-          <!--Text about Bonnie's Extra Features-->
+          <!-- Text about Bonnie's Extra Features -->
           <div id='textBox'>
             <p class='aboutUsText'>Bonnie can read out her messages so that you don't have to read them yourself. To do this, click on the button in the bottom left corner. As we are continuously trying to improve Bonnie, we have included a feedback page where you can help us make her better. We have also included a tab with links to useful coronavirus websites.</p>
           </div>
           
-          <!--Heading about the Video-->
+          <!-- Heading about the Video -->
           <p class='heading'>Video</p>
-          <hr class='small'> <!--Small line-->
+          <hr class='small'> <!-- Small line -->
 
-          <!--Text describing the video-->
+          <!-- Text describing the video -->
           <div id='textBox'>
             <p class='aboutUsText'>Here is our video explaining how to use it!</p>
           </div>
 
-          <!--Heading about possible question-->
+          <!-- Heading about possible question -->
           <p class='heading'>Types Of Possible Questions</p>
-          <hr class='small'> <!--Small line-->
+          <hr class='small'> <!-- Small line -->
 
-          <!--Text describing the possible questions-->
+          <!-- Text describing the possible questions -->
           <div id='textBox'>
             <p class='aboutUsText'>Below are a few examples of the type of questions you can ask. You do not need to type the exact question word to word to get an answer you can just type a question similar to it if you want.</p>
           </div>
 
-          <!--List of possible questions, scroll down to line 183 to skip it-->
+          <!-- List of possible questions, scroll down to line 183 to skip it -->
           <div class='listBox'>
-            How many cases are there in <em>"UK CITY"</em>? <br> <!--Line break-->
-            How many cases are there in <em>"COUNTRY"</em>? <br> <!--Line break-->
-            Hello! <br> <!--Line break-->
-            How are you? <br> <!--Line break-->
-            Goodbye! <br> <!--Line break-->
-            What is your name? <br> <!--Line break-->
-            Can we be friends? <br> <!--Line break-->  
-            What do you do? <br> <!--Line break-->
-            What is your favourite football team? <br> <!--Line break-->
-            Am I a high risk individual? <br> <!--Line break-->
-            What is Coronavirus? <br> <!--Line break-->
-            How does Coronavirus spread? <br> <!--Line break-->
-            What is the Incubation time of Coronavirus? <br> <!--Line break-->
-            How long should I self-isolate for? <br> <!--Line break-->
-            What are the symptoms of Coronavirus? <br> <!--Line break-->
-            What should I do if I am unwell with Coronavirus symptoms? <br> <!--Line break-->
-            Am I eligible for testing? <br> <!--Line break-->
-            How do I book a test? <br> <!--Line break-->
-            How can I reduce my risk of catching or spreading coronavirus? <br> <!--Line break-->
-            When should I wash my hands? <br> <!--Line break-->
-            What should I do about my current medical treatments? <br> <!--Line break-->
-            When am I allowed to leave my home? <br> <!--Line break-->
-            What is social distancing? <br> <!--Line break-->
-            What is self isolation? <br> <!--Line break-->
-            What is shielding? <br> <!--Line break-->
-            Do I have to social distance? <br> <!--Line break-->
-            Do I have to do shielding? <br> <!--Line break-->
-            How can I get support? <br> <!--Line break-->
-            Can I talk to someone about my mental health? <br> <!--Line break-->
-            Who created you? <br> <!--Line break-->
-            What are the conspiracy theories about COVID-19? <br> <!--Line break-->
-            How can I help? <br> <!--Line break-->
-            Can I go to the park? <br> <!--Line break-->
-            Can I play sport? <br> <!--Line break-->
-            Can I go to my friend's garden? <br> <!--Line break-->
-            Where can I travel? <br> <!--Line break-->
-            Can I go to tourist locations? <br> <!--Line break-->
-            Can I have a wedding? <br> <!--Line break-->
-            Can I go to a place of worship? <br> <!--Line break-->
-            When can I go back to work? <br> <!--Line break-->
-            Who are critical workers? <br> <!--Line break-->
-            When can I go to the pub/cinema/hairdressers? <br> <!--Line break-->
-            Should I wear a face mask? <br> <!--Line break-->
-            Can I go on public transport? <br> <!--Line break-->
-            When do schools open? <br> <!--Line break-->
-            Are schools safe? <br> <!--Line break-->
-            How will police enforce the rules? <br> <!--Line break-->
-            Is it risky to touch a delivery? <br> <!--Line break-->
-            How long does coronavirus survive outside the body? <br> <!--Line break-->
-            What is the probability of catching coronavirus? <br> <!--Line break-->
+            How many cases are there in <em>"UK CITY"</em>? <br> <!-- Line break -->
+            How many cases are there in <em>"COUNTRY"</em>? <br> <!-- Line break -->
+            Hello! <br> <!-- Line break -->
+            How are you? <br> <!-- Line break -->
+            Goodbye! <br> <!-- Line break -->
+            What is your name? <br> <!-- Line break -->
+            Can we be friends? <br> <!-- Line break -->  
+            What do you do? <br> <!-- Line break -->
+            What is your favourite football team? <br> <!-- Line break -->
+            Am I a high risk individual? <br> <!-- Line break -->
+            What is Coronavirus? <br> <!-- Line break -->
+            How does Coronavirus spread? <br> <!-- Line break -->
+            What is the Incubation time of Coronavirus? <br> <!-- Line break -->
+            How long should I self-isolate for? <br> <!-- Line break -->
+            What are the symptoms of Coronavirus? <br> <!-- Line break -->
+            What should I do if I am unwell with Coronavirus symptoms? <br> <!-- Line break -->
+            Am I eligible for testing? <br> <!-- Line break -->
+            How do I book a test? <br> <!-- Line break -->
+            How can I reduce my risk of catching or spreading coronavirus? <br> <!-- Line break -->
+            When should I wash my hands? <br> <!-- Line break -->
+            What should I do about my current medical treatments? <br> <!-- Line break -->
+            When am I allowed to leave my home? <br> <!-- Line break -->
+            What is social distancing? <br> <!-- Line break -->
+            What is self isolation? <br> <!-- Line break -->
+            What is shielding? <br> <!-- Line break -->
+            Do I have to social distance? <br> <!-- Line break -->
+            Do I have to do shielding? <br> <!-- Line break -->
+            How can I get support? <br> <!-- Line break -->
+            Can I talk to someone about my mental health? <br> <!-- Line break -->
+            Who created you? <br> <!-- Line break -->
+            What are the conspiracy theories about COVID-19? <br> <!-- Line break -->
+            How can I help? <br> <!-- Line break -->
+            Can I go to the park? <br> <!-- Line break -->
+            Can I play sport? <br> <!-- Line break -->
+            Can I go to my friend's garden? <br> <!-- Line break -->
+            Where can I travel? <br> <!-- Line break -->
+            Can I go to tourist locations? <br> <!-- Line break -->
+            Can I have a wedding? <br> <!-- Line break -->
+            Can I go to a place of worship? <br> <!-- Line break -->
+            When can I go back to work? <br> <!-- Line break -->
+            Who are critical workers? <br> <!-- Line break -->
+            When can I go to the pub/cinema/hairdressers? <br> <!-- Line break -->
+            Should I wear a face mask? <br> <!-- Line break -->
+            Can I go on public transport? <br> <!-- Line break -->
+            When do schools open? <br> <!-- Line break -->
+            Are schools safe? <br> <!-- Line break -->
+            How will police enforce the rules? <br> <!-- Line break -->
+            Is it risky to touch a delivery? <br> <!-- Line break -->
+            How long does coronavirus survive outside the body? <br> <!-- Line break -->
+            What is the probability of catching coronavirus? <br> <!-- Line break -->
           </div>
           
-        <!--End of how to use section-->  
+        <!-- End of how to use section -->  
         </div>
 
-      <!--End of the box-->
+      <!-- End of the box -->
       </div>
 
-    <!--End of the website that we see-->
+    <!-- End of the website that we see -->
     </div>
     
 
-    <!--Javascript inside the html-->
+    <!-- Javascript inside the html -->
     <script>
 
       // Function to show the menu bar differently when it is smaller
@@ -239,8 +239,8 @@
 
     </script>
 
-  <!--End of body-->
+  <!-- End of body -->
   </body>
 
-<!--End of html-->
+<!-- End of html -->
 </html>
