@@ -5,7 +5,7 @@
          "context_set": [""]
         },
         {"tag": "goodbye",
-         "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go", "quit", "exit"],
+         "patterns": ["This is a test to see if goodbye tag works because it is obvious it is a test and the other tags don't work!", "cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "I'm off now", "I'm going", "bye", "gtg", "got to go", "quit", "exit"],
          "responses": ["Goodbye, I hope you have a great day!", "Sorry to see you go, I enjoyed our chat!", "Ok bye then! Enjoy the rest of your day!", "Had a nice time talking with you!"],
          "context_set": [""]
         },
@@ -140,7 +140,7 @@
          "context_set": [""]
         },
         {"tag": "mental health",
-         "patterns": ["I'm concerned about my dad's mental health", "I'm worried about my mum's mental health", "I'm scared for my mental health", "Can I talk to someone about my mental health"],
+         "patterns": ["I need mental health help", "I'm concerned about my dad's mental health", "I'm worried about my mum's mental health", "I'm scared for my mental health", "Can I talk to someone about my mental health"],
          "responses": ["The NHS has provided a list of helplines you can contract for expert advice. The link to the NHS page is on the COVID-19 Website dropdown labelled 'Mental Health Helplines"],
          "context_set": [""]
         },
@@ -247,6 +247,11 @@
         {"tag": "coronavirus surface survive long",
          "patterns": ["How long does coronavirus stay in the air", "how long does coronavirus survive?", "How long does coronavirus survive on other surfaces", "Does coronavirus survive outside the body", "How long does coronavirus survive on plastic", "How long does coronavirus survive on cardboard", "How long does coronavirus survive on metal"],
          "responses": ["The following are examples of how long COVID-19 survives on different surfaces", "Air : Half an hour", "A fine mist : 3 hours or more", "Copper surfaces : Up to 4 hours", "Cardboard surfaces : Up to 24 hours", "Plastic and Stainless Steel : At least 72 hours"],
+         "context_set": [""]
+        },
+        {"tag": "corona probability long",
+         "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
+         "responses": ["There is not a recognised probability of catching coronavirus although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"],
          "context_set": [""]
         }
 ]}
