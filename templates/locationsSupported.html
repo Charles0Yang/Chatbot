@@ -1,8 +1,12 @@
-<!doctype html>
+<!DOCTYPE html>
+<!-- This is the supported locations website page where it tells the user the possible locations where they can know the cases from -->
 
-<html lang="en-GB">
-  <head>
-    <meta charset="utf-8">
+<html lang="en-GB"> <!-- Language of the website -->
+
+  <head> <!-- Contains title and link to static files and provides meta data -->
+
+    <!-- Title and icon (what you see where the tab for the website is) -->
+    <title>Locations Supported</title>
     <link href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAQAAAC1+jfqAAAABGdBTUEAALGPC/xhBQAAACBjSFJN
       AAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElN
       RQfiCgEBGyIYwI+kAAAA+klEQVQoz6XRPS9DARjF8V9fVFIh3BpoJzGIj+Et0cTF7gMIq/gQEqPJ
@@ -11,103 +15,160 @@
       UdaYLXnSyAk8KcmpSiSqckqeBHLdDomGgrpps76wrulTQUPSBWp2lVVsePGOUUXjHhyodYGOI7E3
       r0YtybszYs6eik7PkhBOWjOh7U3sKvo/NYRpgzJo+Yrafb/xR9/pZEbpvgVJgQAAAABJRU5ErkJg
       gg==" rel="icon" type="image/x-icon" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Locations Supported</title>
-    <meta name="description" content="Chatbot providing advice on COVID-19">
-    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice">
-    <meta name="author" content="Teo Hughes and Charles Yang">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="statics/style.css" rel="stylesheet" type="text/css" />
-  </head>
-  <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> 
+
+    <!-- Link to the static files -->
+    <link href="statics/style.css" rel="stylesheet" type="text/css" /> <!-- CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- Icon stylesheet -->
     
-    <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
+    <!-- Metadata -->
+    <meta charset="utf-8"> <!-- Unicode character set -->
+    <meta name="description" content="Chatbot providing advice on COVID-19"> <!-- Description -->
+    <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice"> <!-- Keywords (for search engine) -->
+    <meta name="author" content="Teo Hughes and Charles Yang"> <!-- Authors -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Width of the viewport, set to device width so it is responsive -->
+    
+  </head>
+
+  <!-- Body with a different background image to the main page(blue gradient) -->
+  <body style="background-image: url('https://images.unsplash.com/photo-1557683316-973673baf926?ixlib=rb-1.2.1&w=1000&q=80');" onload="theFunction()" style="margin:0;"> <!-- When the body loads theFunction() runs -->
+    
+    <!-- The loading screen -->
     <div id="loader"></div>
-    <div style="display:none;" id="myDiv" class="animate-bottom">
+
+    <!-- What you see on the web page -->
+    <div style="display:none;" id="myDiv" class="animate-bottom"> <!-- When the website loads it doesn't show, but when it does it animates as it appears (class="animate-bottom") -->
+      
+      <!-- The button to scroll to the top -->
+      <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button>
+      
+      <!-- The Menu bar at the top -->
       <div class = "topnav", id = "myTopnav">
-        <a href="/" title="Home Page"><i class="fa fa-home"></i> Home</a>
-        <a href="/howtouse" title="How To Use Bonnie Bot">How To Use</a>
-        <a href="/locations" title = "Locations Supported" style="background-color: gainsboro;">Locations</a>
-        <a href = "/feedback" title = "Give Feedback">Give Feedback</a>
-        <a href="/about" title="About Page">About Us</a>
+
+        <!-- The links to the pages on our website -->
+        <a href="/" title="Home Page"><i class="fa fa-home"></i> Home</a> <!-- The Home Page -->
+        <a href="/howtouse" title="How To Use Bonnie Bot">How To Use</a> <!-- The How To Use page -->
+        <a href="/locations" title = "Locations Supported" style="background-color: gainsboro;">Locations</a> <!-- The Supported Locations page (Has a background color showing it is active (being used)) -->
+        <a href = "/feedback" title = "Give Feedback">Give Feedback</a> <!-- The Give Feedback page -->
+        <a href="/about" title="About Page">About Us</a> <!-- The About Us page -->
+        
+        <!-- The dropdown showing links to other websites -->
         <div class="dropdown">
+
+          <!-- Button which shows the dropdown when hovered over -->
           <button class="dropbtn">COVID-19 Websites
             <i class="fa fa-caret-down"></i>
           </button>
+
+          <!-- The other websites linked -->
           <div class="dropdown-content">
-            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a>
-            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a>
-            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a>
-            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a>
-            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a>
+            <a href="https://www.youtube.com/watch?v=NMre6IAAAiU" target = "_blank" title = "COVID-19 Live Stream">Live COVID-19 Counter Stream</a> <!-- Live COVID-19 Stream -->
+            <a href="https://www.ageuk.org.uk/information-advice/coronavirus/" target = "_blank" title = "Age UK">Age UK</a> <!-- Age Uk Website -->
+            <a href="https://www.gov.uk/coronavirus" target = "_blank" title = "Official Government Advice">Official Government Advice</a> <!-- Coronavirus gov.uk website -->
+            <a href="https://www.supportline.org.uk/problems/coronavirus-covid-19/" target = "_blank" title = "Coronavirus Support Line">Coronavirus Support Line</a> <!-- Coronavirus Support -->
+            <a href="https://www.nhs.uk/conditions/stress-anxiety-depression/mental-health-helplines/" target = "_blank" title = "Mental Health Helplines">Mental Health Helplines</a> <!-- Mental Health Helplines -->
           </div>
+        
         </div>
+
+        <!-- Button which shows when the browser window is small (it offers another dropdown) -->
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
           <i class="fa fa-bars"></i>
         </a>
+
       </div>
+
+      <!-- The items inside the box -->
       <div class='boxed'>
+
+        <!-- The locations support section -->
         <div id="aboutUs">
+
+          <!-- Heading about the supported locations -->
           <p class="mainHeading">Supported Locations</p>
-          <hr>
+          <hr> <!-- Line -->
+
+          <!-- Text about the supported locations -->
           <div id='textBox'>
             <p class='aboutUsText'>Below are all the locations Bonnie can answer about the number of cases in the area. A quick way to find your area is to press and hold Control (ctrl) then press f. This will bring up a small input box on your screen which you can type your area info (i.e. name). If your area is supported it should take you to it's location on the page. We're very sorry that not all locations are available yet.</p>
           </div>
   
+          <!-- Heading about the UK areas -->
           <p class='heading'>UK Areas</p>
-          <hr class='small'>
+          <hr class='small'> <!-- Small line -->
   
+          <!-- List of all the UK areas that are supported -->
           <div class='listBox'>
             Barking And Dagenham, Barnet, Barnsley, Bath And North East Somerset, Bedford, Bexley, Birmingham, Blackburn With Darwen, Blackpool, Bolton, Bournemouth, Christchurch And Poole, Bracknell Forest, Bradford, Brent, Brighton And Hove, Bristol, City Of, Bromley, Buckinghamshire, Bury, Calderdale, Cambridgeshire, Camden, Central Bedfordshire, Cheshire East, Cheshire West And Chester, City Of london, Cornwall And Isles Of Scilly, County Durham, Coventry, Croydon, Cumbria, Darlington, Derby, Derbyshire, Devon, Doncaster, Dorset, Dudley, Ealing, East Riding Of Yorkshire, East Sussex, Enfield, Essex, Gateshead, Gloucestershire, Greenwich, Hackney, Halton, Hammersmith And Fulham, Hampshire, Haringey, Harrow, Hartlepool, Havering, Herefordshire, County Of, Hertfordshire, Hillingdon, Hounslow, Isle Of Wight, Islington, Kensington And Chelsea, Kent, Kingston Upon Hull, City Of, Kingston Upon Thames, Kirklees, Knowsley, Lambeth, Lancashire, Leeds, Leicester, Leicestershire, Lewisham, Lincolnshire, Liverpool, Luton, Manchester, Medway, Merton, Middlesbrough, Milton Keynes, Newcastle Upon Tyne, Newham, Norfolk, North East Lincolnshire, North Lincolnshire, North Somerset, North Tyneside, North Yorkshire, Northamptonshire, Northumberland, Nottingham, Nottinghamshire, Oldham, Oxfordshire, Peterborough, Plymouth, Portsmouth, Reading, Redbridge, Redcar And Cleveland, Richmond Upon Thames, Rochdale, Rotherham, Rutland, Salford, Sandwell, Sefton, Sheffield, Shropshire, Slough, Solihull, Somerset, South Gloucestershire, South Tyneside, Southampton, Southend-on-sea, Southwark, St. Helens, Staffordshire, Stockport, Stockton-on-tees, Stoke-on-trent, Suffolk, Sunderland, Surrey, Sutton, Swindon, Tameside, Telford And Wrekin, Thurrock, Torbay, Tower Hamlets, Trafford, Wakefield, Walsall, Waltham Forest, Wandsworth, Warrington, Warwickshire, West Berkshire, West Sussex, Westminster, Wigan, Wiltshire, Windsor And Maidenhead, Wirral, Wokingham, Wolverhampton, Worcestershire, York, Ayrshire And Arran, Borders, Dumfries And Galloway, Fife, Forth Valley, Grampian, Greater Glasgow And Clyde, Highland, Lanarkshire, Lothian, Orkney, Shetland, Tayside, Eileanan Siar (Western Isles), Golden Jubilee National Hospital, Wales, Northern Ireland
           </div>
           
-          <p class="heading">Countries</p>
-          <hr class = "small">
-  
+          <!-- Heading about the country areas -->
+          <p class="heading">Country Areas</p>
+          <hr class = "small"> <!-- Small line -->
+          
+          <!-- List of all the countries that are supported -->
           <div class="listBox">
             Afghanistan, Albania, Algeria, Andorra, Angola, Anguilla, Antigua And Barbuda, Argentina, Armenia, Aruba, Australia, Austria, Azerbaijan, Bahamas, Bahrain, Bangladesh, Barbados, Belarus, Belgium, Belize, Benin, Bermuda, Bhutan, Bolivia, Bosnia, Botswana, Brazil, British Virgin Islands, Brunei, Bulgaria, Burkina Faso, Burundi, Cabo Verde, Cambodia, Cameroon, Canada, Caribbean Netherlands, Cayman Islands, Central African Republic, Chad, Channel Islands, Chile, China, Colombia, Comoros, Congo, Costa Rica, Croatia, Cuba, Curaçao, Cyprus, Czechia, Côte Divoire, Drc, Denmark, Diamond Princess, Djibouti, Dominica, Dominican Republic, Ecuador, Egypt, El Salvador, Equatorial Guinea, Eritrea, Estonia, Ethiopia, Falkland Islands (Malvinas), Faroe Islands, Fiji, Finland, France, French Guiana, French Polynesia, Gabon, Gambia, Georgia, Germany, Ghana, Gibraltar, Greece, Greenland, Grenada, Guadeloupe, Guatemala, Guinea, Guinea-bissau, Guyana, Haiti, Vatican City, Honduras, Hong Kong, Hungary, Iceland, India, Indonesia, Iran, Iraq, Ireland, Isle Of Man, Israel, Italy, Jamaica, Japan, Jordan, Kazakhstan, Kenya, Kuwait, Kyrgyzstan, Lao Peoples Democratic Republic, Latvia, Lebanon, Lesotho, Liberia, Libyan Arab Jamahiriya, Liechtenstein, Lithuania, Luxembourg, Ms Zaandam, Macao, Macedonia, Madagascar, Malawi, Malaysia, Maldives, Mali, Malta, Martinique, Mauritania, Mauritius, Mayotte, Mexico, Moldova, Monaco, Mongolia, Montenegro, Montserrat, Morocco, Mozambique, Myanmar, Namibia, Nepal, Netherlands, New Caledonia, New Zealand, Nicaragua, Niger, Nigeria, Norway, Oman, Pakistan, Palestine, Panama, Papua New Guinea, Paraguay, Peru, Philippines, Poland, Portugal, Qatar, Romania, Russia, Rwanda, Réunion, S. Korea, Saint Kitts And Nevis, Saint Lucia, Saint Martin, Saint Pierre Miquelon, Saint Vincent And The Grenadines, San Marino, Sao Tome And Principe, Saudi Arabia, Senegal, Serbia, Seychelles, Sierra Leone, Singapore, Sint Maarten, Slovakia, Slovenia, Somalia, South Africa, South Sudan, Spain, Sri Lanka, St. Barth, Sudan, Suriname, Swaziland, Sweden, Switzerland, Syrian Arab Republic, Taiwan, Tajikistan, Tanzania, Thailand, Timor-leste, Togo, Trinidad And Tobago, Tunisia, Turkey, Turks And Caicos Islands, UAE, UK, USA, Uganda, Ukraine, Uruguay, Uzbekistan, Venezuela, Vietnam, Western Sahara, Yemen, Zambia, Zimbabwe
           </div>
+        
+        <!-- End of supported locations text -->
         </div>
+
+      <!-- End of the box -->
       </div>
+
+    <!-- End of the website that we see -->
     </div>
     
+
+    <!-- Javascript inside the html -->
     <script>
+
+      // Function to show the menu bar differently when it is smaller
       function myFunction() {
         var x = document.getElementById("myTopnav");
         if (x.className === "topnav") {
           x.className += " responsive";
         } else {
           x.className = "topnav";
+        }
       }
-  }
-    function theFunction() {
-      myVar = setTimeout(showPage, 1000);
-  }
 
-    function showPage() {
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("myDiv").style.display = "block";
-  }
-    var mybutton = document.getElementById("myBtn");
-
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = function() {scrollFunction()};
-
-    function scrollFunction() {
-      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        mybutton.style.display = "block";
-      } else {
-        mybutton.style.display = "none";
+      // Function to show the loading screen for a second
+      function theFunction() {
+        myVar = setTimeout(showPage, 1000);
       }
-    }
 
-    // When the user clicks on the button, scroll to the top of the document
-    function topFunction() {
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    }
+      // Function to stop showing the loading screen and to show the main page
+      function showPage() {
+        document.getElementById("loader").style.display = "none";
+        document.getElementById("myDiv").style.display = "block";
+      }
+
+      // The button to scroll to the top
+      var mybutton = document.getElementById("myBtn");
+
+      //Calls the function when the user starts scrolling
+      window.onscroll = function() {scrollFunction()};
+
+      //Function to show the button when the user scrolls more than 20px
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
 
     </script>
+
+  <!-- End of body -->
   </body>
 
+<!-- End of html -->
 </html>
