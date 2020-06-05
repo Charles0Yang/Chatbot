@@ -41,7 +41,7 @@
         },
         {"tag": "who is high risk long",
          "patterns": ["Am I a high risk individual?", "Am I at high risk of Coronavirus?", "Am I classified as being at high risk?", "Is my grandparent at high risk?", "Am I high risk", "How can I be high risk"],
-         "responses": ["You are at risk if any of the following apply to you:", "Aged 70 and over", "Have a long term condition", "Have had an organ transplant", "If you are being shielde", "Pregnant"],
+         "responses": ["You are at risk if any of the following apply to you:", "Aged 70 and over", "Have a long term condition", "Have had an organ transplant", "If you are being shielded", "Pregnant"],
          "context_set": [""]
         },
         {"tag": "what is high risk",

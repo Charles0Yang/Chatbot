@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--This is the main website page were the chatbot is-->
+<!--This is the main website page where the chatbot is-->
 
 <html lang="en-GB"> <!--Language of the website-->
   <head> <!--Contains title and link to static files and provides meta data-->
@@ -22,10 +22,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"> </script> <!--jquery file-->
     
     <!--Metadata-->
+    <meta charset="utf-8"> <!--Unicode character set-->
     <meta name="description" content="Chatbot providing advice on COVID-19"> <!--Description-->
     <meta name="keywords" content="Chatbot, COVID-19 advice, coronavirus advice"> <!--Keywords (for search engine)-->
     <meta name="author" content="Teo Hughes and Charles Yang"> <!--Authors-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--Width of the viewport, set to device width so it is responsive-->
+  
   </head>
 
   <!--Body-->
@@ -48,7 +50,7 @@
         <!--The links to the pages on our website-->
         <a href="/" title="Home Page" style="background-color: gainsboro;"><i class="fa fa-home"></i> Home</a> <!--The Home Page (Has a background color showing it is active (being used))-->
         <a href="/howtouse" title="How To Use Bonnie Bot">How To Use</a> <!--The How To Use page-->
-        <a href="/locations" title = "Locations Supported">Supported Locations</a> <!--The Supported Locations page-->
+        <a href="/locations" title = "Locations Supported">Locations</a> <!--The Supported Locations page-->
         <a href = "/feedback" title = "Give Feedback">Give Feedback</a> <!--The Give Feedback page-->
         <a href="/about" title="About Page">About Us</a> <!--The About Us page-->
         
@@ -78,35 +80,38 @@
 
       </div>
 
-    <!--The items inside the box-->
-    <div class="boxed">
+      <!--The items inside the box-->
+      <div class="boxed">
 
+        <div>
+          <!--Where the chatbot text is displayed-->
+          <div id="chatbox">
+          
+            <!--Heading of the chatbot-->
+            <p class="bonnieHeading">
+              <span>Bonnie Bot!</span>
+            </p>
+          
+            <!--Text introducing the chatbot-->
+            <p class = "botText">
+              <span>Hi, I'm Bonnie Bot! I will try my best to answer any questions you may have about COVID-19!</span>
+            </p>
 
-      <div>
-        <!--Where the chatbot text is displayed-->
-        <div id="chatbox">
-          
-          <!--Heading of the chatbot-->
-          <p class="bonnieHeading">
-            <span>Bonnie Bot!</span>
-          </p>
-          
-          <!--Text introducing the chatbot-->
-          <p class = "botText">
-            <span>Hi, I'm Bonnie Bot! I will try my best to answer any questions you may have about COVID-19!</span>
-          </p>
+          </div>
+
+          <!--Where the user inputs the question-->
+          <div id="userInput">
+            <input id="textInput" type="text" name="msg" placeholder="Chat here!" /> <!--Input with a placeholder called "Chat here!"-->
+          </div>
 
         </div>
-
-        <!--Where the user inputs the question-->
-        <div id="userInput">
-          <input id="textInput" type="text" name="msg" placeholder="Chat here!" /> <!--Input with a placeholder called "Chat here!"-->
-        </div>
-
-      </div>
     
-    </div> 
+      <!--End of the box-->
+      </div> 
     
+    <!--End of the div which is the main page-->
+    </div>
+
 
     <!--Javascript to show the menu bar differently when it is smaller-->
     <script>
@@ -118,10 +123,10 @@
           x.className = "topnav";
       }
   }
-    </script>
+    
 
-    <!--Javascript which gets the chatbot response-->
-    <script>
+    // Javascript which gets the chatbot response
+    
     $("#textInput").keypress(function(e) {
       if (e.which == 13) {
         getBotResponse();
@@ -129,8 +134,6 @@
     });
     </script>
     
-    <!--End of the div which is the main page-->
-    </div>
 
     <!--Javascript which reads the text out to the user-->
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
@@ -141,7 +144,6 @@
     function theFunction() {
       myVar = setTimeout(showPage, 1000);
   }
-
 
     // Function to stop showing the loading screen and to show the main page
     function showPage() {
