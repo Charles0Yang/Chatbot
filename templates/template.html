@@ -32,7 +32,7 @@
   </head>
 
   <!-- Body -->
-  <body onload="theFunction()" style="margin:0;"> <!-- When the body loads theFunction() runs -->
+  <body onload="theFunction()"> <!-- When the body loads theFunction() runs -->
     
     <!-- The loading screen -->
     <div id="loader"></div>
@@ -40,10 +40,9 @@
     <!-- What you see on the web page -->
     <div style="display:none;" id="myDiv" class="animate-bottom"> <!-- When the website loads it doesn't show, but when it does it animates as it appears (class="animate-bottom") -->
       
-      <!-- The three buttons used -->
+      <!-- The two buttons used -->
       <button onclick="topFunction()" id="myBtn" title="Scroll to top">Scroll To Top</button> <!-- Button which when pressed scrolls to top -->
-      <button onclick="toggleVoiceOff()" id="voice2Btn" title="Turn Voice Off">Turn Voice Off</button> <!-- Button that turns the voice off -->
-      <button onclick="toggleVoiceOn()" id="voiceBtn" title="Turn Voice On">Turn Voice On</button> <!-- Button that turns the voice on -->
+      <button onclick="toggleVoice()" id="voiceBtn" title="Turn Voice On"><i class="fa fa-volume-up"></i></button> <!-- Button that turns the voice on and off -->
       
       <!-- The Menu bar at the top -->
       <div class = "topnav", id = "myTopnav">
@@ -113,23 +112,10 @@
     <!-- End of the div which is the main page -->
     </div>
 
-
     <!-- Javascript inside the html -->
     <script>
 
-      // Function to show the menu bar differently when it is smaller
-      function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-          x.className += " responsive";
-        } else {
-          x.className = "topnav";
-        }
-      }
-    
-
-      // Javascript which gets the chatbot response
-    
+      // Javascript which gets the chatbot response   
       $("#textInput").keypress(function(e) {
         if (e.which == 13) {
           getBotResponse();
@@ -137,46 +123,10 @@
       });
     
     </script>
-    
 
     <!-- Javascript which reads the text out to the user -->
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
     <script src="https://webreader.naturalreaders.com/nr-webreader.js" defer></script>
-    <script>
-    
-      // Function to show the loading screen for a second
-      function theFunction() {
-        myVar = setTimeout(showPage, 1000);
-      }
-
-      // Function to stop showing the loading screen and to show the main page
-      function showPage() {
-        document.getElementById("loader").style.display = "none";
-        document.getElementById("myDiv").style.display = "block";
-      } 
-
-      // The button to scroll to the top
-      var mybutton = document.getElementById("myBtn");
-
-      //Calls the function when the user starts scrolling
-      window.onscroll = function() {scrollFunction()};
-
-      //Function to show the button when the user scrolls more than 20px
-      function scrollFunction() {
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) { //If the user has scrolled the distance
-          mybutton.style.display = "block"; //Displays the button
-        } else {
-          mybutton.style.display = "none"; //Don't display the button
-        }
-      }
-
-      // When the user clicks on the button, scroll to the top of the document
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-
-    </script> 
 
   <!-- End of body -->
   </body>

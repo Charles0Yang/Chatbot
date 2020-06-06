@@ -1,7 +1,9 @@
 // Javascript file
 
+
 // At the start there is no voice
 var voice_on = false;
+
 
 // Function to get the chatbot response
 function getBotResponse() {
@@ -85,21 +87,93 @@ function textToSpeech(msg) {
 
 
 // Function to toggle the voice on
-function toggleVoiceOn() {
+function toggleVoice() {
 
-    voice_on = !voice_on; // Switches the state of the voice_on boolean (to true)
+    voice_on = !voice_on; // Switches the state of the voice_on boolean (to true/false)
     
-    // Sets the voice off button as displayed and the other button as hidden
-    document.getElementById("voiceBtn").style.display = "none" 
-    document.getElementById("voice2Btn").style.display = "block"
+    // If the width of the screen is more than 775 pixels
+    if ($(window).width() > 775) {
+
+        // Turns the text to Turn Voice On or Turn Voice up
+        if (document.getElementById("voiceBtn").innerHTML=="Turn Voice On") {
+            document.getElementById("voiceBtn").innerHTML = "Turn Voice Off"
+        } else {
+            document.getElementById("voiceBtn").innerHTML = "Turn Voice On"
+        }
+
+    // If the width of the screen is less than 775 pixels
+    } else {
+
+        // Turns the text to volume up or volume down
+        if (document.getElementById("voiceBtn").innerHTML=='<i class="fa fa-volume-up"></i>') {
+            document.getElementById("voiceBtn").innerHTML = '<i class="fa fa-volume-off"></i>'
+        } else {
+            document.getElementById("voiceBtn").innerHTML = '<i class="fa fa-volume-up"></i>'
+        }
+    }
 }
 
-// Function to toggle the voice off
-function toggleVoiceOff() {
 
-    voice_on = !voice_on; // Switches the state of the voice_on boolean (to false) 
+// Function to show the loading screen for a second
+function theFunction() {
+    myVar = setTimeout(showPage, 1000);
+}
 
-    // Sets the voice on button as displayed and the other button as hidden
-    document.getElementById("voiceBtn").style.display = "block"
-    document.getElementById("voice2Btn").style.display = "none"
+
+// Function to stop showing the loading screen and to show the main page
+function showPage() {
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("myDiv").style.display = "block";
+    if ($(window).width() > 775) {
+        document.getElementById("voiceBtn").innerHTML = "Turn Voice On";
+    }
+} 
+
+
+// Function to show the dropdowns of the menu bar when the button is pressed
+function myFunction() {
+
+    var x = document.getElementById("myTopnav");
+
+    // Changes the topnav to responsive or not
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+}
+
+
+// Calls the function when the user starts scrolling
+window.onscroll = function() {scrollFunction()};
+
+
+// Function to show the button when the user scrolls more than 20px
+function scrollFunction() {
+
+    // If the user has scrolled the distance
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+        // If the screen width is more than 775 px
+        if ($(window).width() > 775) {
+            document.getElementById("myBtn").innerHTML = "Scroll to top" // Replace text to Scroll to top
+
+        } else {
+            document.getElementById("myBtn").innerHTML = "<i class='fa fa-arrow-up'></i> TOP" // Replace text to (arrow up) TOP
+        }
+
+        document.getElementById("myBtn").style.display = "block" // Show the button
+    
+    } else {
+        document.getElementById("myBtn").style.display = "none" // Do not show the button
+    }
+}
+
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+
+    //Scroll to top
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
 }

@@ -33,7 +33,6 @@ body {
   /* Positioning topnav links */
   display: block;
   float: left;
-  width: 16.666%;
   text-align: center;
   /* Styling topnav links */  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
@@ -55,7 +54,6 @@ body {
 .dropdown {
   /* Positioning the dropdown button of the menu bar */
   float: left;
-  width: 16.666%;
   overflow: hidden;
   /* Border */
   border-right: solid 0.0625em black;
@@ -65,7 +63,6 @@ body {
 .dropdown .dropbtn {
   /* Positioning the dropdowns */
   margin: 0;
-  width: 100%;
   text-align: center;
   /* Styling the dropdowns */
   font-family: inherit;
@@ -84,7 +81,6 @@ body {
   /* Positioning the dropdown content */
   display: none;
   position: absolute;
-  width: 100%;
   min-width: 10em;
   /* Background image */
   background-image: url('https://www.sparklogix.com/wp-content/uploads/2012/05/Screen-Shot-2012-05-21-at-9.40.23-PM.png');
@@ -463,7 +459,7 @@ a.email:hover {
 }
 
 /* Setting the style for the voice buttons */
-#voiceBtn, #voice2Btn {
+#voiceBtn {
   /* Positioning the voice buttons */
   display: block;
   position: fixed;
@@ -484,13 +480,13 @@ a.email:hover {
 }
 
 /* When the voice buttons are pressed */
-#voiceBtn:active, #voice2Btn:active {
+#voiceBtn:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
 /* When the voice buttons are hovered over */
-#voiceBtn:hover, #voice2Btn:hover {
+#voiceBtn:hover {
   background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
   color: darkblue;
 }
@@ -631,47 +627,12 @@ form input#submit:hover {
   font-weight: bold;
 }
 
-/* When the screen is less than 1165px wide */
-@media screen and (max-width: 1165px) {
-
-  /* Change the font size of the topnav smaller */
-  .topnav a, .dropdown .dropbtn {
-    font-size: 0.75em;
-    font-weight: bold;
-  }
-}
-
-/* When the screen is less than 900px wide */
-@media screen and (max-width: 900px) {
-  
-  /* Change the font size of the topnav smaller */
-  .topnav a, .dropdown .dropbtn {
-    font-size: 0.65em;
-  }
-}
-
-/* When the screen is less than 785px wide */
-@media screen and (max-width: 785px) {
+/* When the screen is less than 775px wide */
+@media screen and (max-width: 775px) {
 
   /* Only display the home tab of the topnav */
-  .topnav a:not(:first-child), .dropbtn, .dropdown-content {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
-    width: auto;
-    font-size: 1em;
-    font-weight: normal;
-  }
-
-  /* Changing the style of the dropdown */
-  .dropdown, .dropdown a {
-    width: auto;
-    font-size: 1em;
-    font-weight: normal;
-  }
-
-  /* Make the width of the home tab to auto */
-  .topnav a:first-child {
-    font-size: 1em;
-    width: auto;
   }
 
   /* Display the menu icon on the topnav */
@@ -709,14 +670,6 @@ form input#submit:hover {
     line-height: 1em;
   }
 
-  /* Decrease the size of the voice buttons */
-  #voiceBtn, #voice2Btn {
-    bottom: 0.6em;
-    left: 0.5em;
-    font-size: 0.7em;
-    padding: 0.4em;
-  }
-  
   /* Decrease the size of the scroll to top button */
   #myBtn {
     right: 0.5em;
@@ -752,7 +705,7 @@ form input#submit:hover {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 785px) {
+@media screen and (max-width: 775px) {
   
   /* Setting the style for the responsive topnav */
   .topnav.responsive {position: relative;}
@@ -776,7 +729,5 @@ form input#submit:hover {
     display: block;
     width: 100%;
     text-align: left;
-    font-size: 1em;
-    font-weight: normal;
   }
 }
