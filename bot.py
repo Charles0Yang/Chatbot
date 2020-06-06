@@ -136,7 +136,7 @@ sgd = SGD(lr=0.01, decay=1e-6, momentum=0.9, nesterov=True)
 model.compile(loss="categorical_crossentropy", optimizer=sgd, metrics=["accuracy"])
 
 # Fitting and saving the model
-hist = model.fit(np.array(train_x), np.array(train_y), epochs = 1000, batch_size = 5, verbose = 1)
+hist = model.fit(np.array(train_x), np.array(train_y), epochs = 5000, batch_size = 5, verbose = 1)
 
 # Saves the model to the chatbot_model.h5 file
 model.save("chatbot_model.h5", hist)

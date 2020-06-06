@@ -196,7 +196,7 @@ def get_response(ints, intents_json):
                 break
             
             else: # If the question isn't understood
-
+            
                 # Returns a random response saying I don't understand
                 rand = random.randint(0, 2)
                 if rand == 0:
