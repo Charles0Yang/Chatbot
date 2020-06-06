@@ -2,11 +2,13 @@
 
 Bonnie Bot is a Chatbot we have created to help provide useful information about Coronavirus in a concise and interactable way
 
+![](images/bonnie_bot_homepage.PNG)
+
 ## How to access
 
 Simply click [here](https://bonniebot.herokuapp.com/)!
 
-Please provide feedback!
+Any feedback would be greatly appreciated!
 
 ## Current types of sentence Bonnie Bot will respond to
 
