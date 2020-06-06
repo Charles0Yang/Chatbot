@@ -2,7 +2,7 @@
 
 Bonnie Bot is a Chatbot we have created to help provide useful information about Coronavirus in a concise and interactable way
 
-![Bonnie Bot Main Page](https://imgur.com/a/TFC3Jxk)
+![](images/bonnie_bot_homepage.PNG)
 
 ## How to access
 
