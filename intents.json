@@ -85,8 +85,8 @@
          "context_set": [""]
         },
         {"tag": "how can I get a test",
-         "patterns": ["How do I book a test", "How can I get a test?", "How should I organise a test", "Can I get a test"],
-         "responses": ["If you're eligible you can book a test at https://self-referral.test-for-coronavirus.service.gov.uk/test-type"],
+         "patterns": ["How do I book a test", "How can I get a test?", "How should I organise a test", "Can I get a test", "Am I eligible for a test"],
+         "responses": ["If you are eligible you can book a test at https://self-referral.test-for-coronavirus.service.gov.uk/test-type"],
          "context_set": [""]
         },
         {"tag": "reduce coronavirus risk long",
@@ -151,7 +151,7 @@
         },
         {"tag": "Who created you long",
          "patterns": ["Who created you", "Who made you", "Who made the website", "Who made the chatbot", "Who made Bonnie Bot"],
-         "responses": ["Two students of Eton College created me because their GCSEs and A levels were cancelled", "They decided to use their new found time to create a chatbot which provides information on the current pandemic, COVID-19."],
+         "responses": ["Two students of Eton College created me because their GCSEs and A levels were cancelled", "They decided to use their new found time to create a chatbot which provides information on COVID-19."],
          "context_set": [""]
         },
         {"tag": "conspiracy theories long",
@@ -181,12 +181,12 @@
         },
         {"tag": "travel",
          "patterns": ["How far can I travel for exercise or outdoor activity", "Are there restrictions on how far I can travel", "Where can I travel", "How can I travel"],
-         "responses": ["There are no restrictions on how far you can travel but you should return the same night"],
+         "responses": ["There are no restrictions on how far you can travel within the UK but you should return the same night"],
          "context_set": [""]
         },
         {"tag": "tourism",
          "patterns": ["Can I visit outdoor tourist sites?", "Can I go to tourist locations?", "Can I go to touristic places", "Can I vist tourist sites"],
-         "responses": ["You can still travel to outdoor tourist locations, however some indoor sites may not be allowed to open"],
+         "responses": ["You can still travel to outdoor tourist locations in the UK but some indoor sites may not be allowed to open"],
          "context_set": [""]
         },
         {"tag": "weddings",
@@ -216,12 +216,12 @@
         },
         {"tag": "face coverings work",
          "patterns": ["Do I need to wear a face covering at work?", "Should I wear a face covering to work", "Am I required to wear a face mask to work", "Should I wear a face mask", "Should I wear face coverings"],
-         "responses": ["Face coverings are not compulsory, however it is recommended that you wear one in enclosed public spaces where social distancing is not possible"],
+         "responses": ["Face coverings are not compulsory, However it is recommended that you wear one in enclosed public spaces where social distancing is not possible"],
          "context_set": [""]
         },
         {"tag": "public transport",
          "patterns": ["Who is allowed to travel on public transport?", "Am I allowed to use public transport", "Can I use public transport to get to work", "Can I go on public transport"],
-         "responses": ["If you cannot work from home and have to travel to work, you can use public transport if it is your only option. If possible, try to reduce travel and cycle/walk as much as possible"],
+         "responses": ["If you cannot work from home and have to travel to work you can use public transport if it is your only option. Try to reduce travel and cycle/walk as much as possible"],
          "context_set": [""]
         },
         {"tag": "school long",
@@ -234,14 +234,14 @@
          "responses": ["Protective measures for schools include:", "Regular hand cleaning", "Hygiene and cleaning measure", "Small consistent group and class sizes of no more than 15 pupils", "Schools have also been asked to consider:", "Stagger arrival times/break times/assemblies", "Making use of outdoor space"],
          "context_set": [""]
         },
-        {"tag": "enforce fines",
+        {"tag": "enforce fines long",
          "patterns": ["How will police enforce the rules", "What are the fines", "How are the rules going to be enforced", "What will happen if I break the rules"],
          "responses": ["The Police will act with discretion in applying the following measures, however they have the power to disperse you, make you leave an area, issue you with a fixed penalty, or arrest you", "The fines are listed below:", "First offence - £100 (£50 if paid within 14 days)", "Second offence - £200", "Third offence - £400", "Fourth offence - £800", "Fifth offence - £1600", "Maximum penalty - £3200"],
          "context_set": [""]
         },
-        {"tag": "risky touch long",
+        {"tag": "risky touch",
          "patterns": ["Is it risky to touch a delivery", "Should I touch my shopping", "Can I touch other people", "Can i touch stuff", "Will I get coronavirus if I touch something"],
-         "responses": ["You will not contract COVID-19 by touching something", "As long as you clean the object you are touching and as long as you wash your hands afterwards."],
+         "responses": ["You will not contract COVID-19 by touching something as long as you clean the object you are touching and wash your hands afterwards."],
          "context_set": [""]
         },
         {"tag": "coronavirus surface survive long",
@@ -256,7 +256,7 @@
         },
         {"tag": "corona probability long",
          "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
-         "responses": ["There is not a recognised probability of catching coronavirus although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"],
+         "responses": ["There is not a recognised probability of catching coronavirus although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "This risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"],
          "context_set": [""]
         }
         
