@@ -250,8 +250,9 @@
          "context_set": [""]
         },
         {"tag": "premier league return",
-         "patterns": ["When is the premier league returning?", "When is football restarting?", "When can I watch premier league football", "On what date is the prem restarting"],
-         "responses": ["The Premier League is returning on the 17th June"]
+         "patterns": ["When does the premier league return", "When does the prem return", "When is the premier league returning?", "When is football restarting?", "When can I watch premier league football", "On what date is the prem restarting", "when does football return", "when does the prem return", "when is football back"],
+         "responses": ["The Premier League is returning on the 17th June"],
+         "context_set": [""]
         },
         {"tag": "corona probability long",
          "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
