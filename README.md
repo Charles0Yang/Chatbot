@@ -108,6 +108,8 @@ Is it risky to touch a delivery?
 
 How long does coronavirus survive outside the body?
 
+When does the Premier League return?
+
 What is the probability of catching coronavirus?
 
 ## Contributing
