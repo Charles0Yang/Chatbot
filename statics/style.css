@@ -120,7 +120,7 @@ body {
 
 /* Setting the style for the website we see */
 #myDiv {
-  /* Positioning the website we see  */
+  /* Positioning the website we see */
   display: none;
   text-align: center;
 }
@@ -396,7 +396,7 @@ a.email:hover {
 }
 
 
-/* Rotating the loading screen for safari*/
+/* Rotating the loading screen for safari */
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -458,229 +458,252 @@ a.email:hover {
   background-color: rgb(180, 175, 175);
 }
 
+/* Setting the style for the voice buttons */
+#voiceBtn, #voice2Btn {
+  /* Positioning the voice buttons */
+  display: block;
+  position: fixed;
+  bottom: 1.25em;
+  left: 1.875em;
+  /* Background image */
+  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
+  /* Styling the voice buttons */
+  font-size: 1em;
+  color: black;
+  padding: 0.5em;
+  z-index: 99;
+  cursor: pointer;
+  /* Border and outline */
+  border: none;
+  outline: none;
+  border-radius: 0.313em;
+}
+
+/* When the voice buttons are pressed */
+#voiceBtn:active, #voice2Btn:active {
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* When the voice buttons are hovered over */
+#voiceBtn:hover, #voice2Btn:hover {
+  background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
+  color: darkblue;
+}
+
+/* Setting the style for the width of the scrollbar */
 ::-webkit-scrollbar {
   width: 1.25em;
 }
 
-/* Track */
+/* Setting the style for the track of the scrollbar */
 ::-webkit-scrollbar-track {
   background-image: url('https://www.designbolts.com/wp-content/uploads/2012/12/White-Gradient-Squares-Seamless-Patterns-For-Website-Backgrounds.jpg');
 }
  
-/* Handle */
+/* Setting the style for the thumb of the scrollbar */
 ::-webkit-scrollbar-thumb {
   background-color: darkgrey;
   border-radius: 0.625em;
 }
 
-/* Handle on hover */
+/* Setting the style for the thumb of the scrollbar when it is hovered over */
 ::-webkit-scrollbar-thumb:hover {
   background-color: rgba(117, 114, 114, 0.979);
 }
 
-
-/* Contact form */
+/* Setting the style for the contact form */
 form label {
-  font-size: 1.2em;
-  font-weight: lighter;
+  /* Positioning the contact form */
   display: block;
-  padding: 0.625em 0;
-  color: black;
+  /* Styling the contact form */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.2em;
+  color: black;
+  padding: 0.625em 0;
+  font-weight: lighter;
 }
- 
+
+/* Setting the style for the name, subject and email section of the contact form */
 form input#name,
 form input#email,
 form input#subject {
+  /* Positioning the name, subject and email section of the contact form */
   width: 60%;
+  /* Styling the name, subject and email section of the contact form */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1em;
+  color: black;
   background-color: #fafafa;
+  padding: 0.75em;
+  /* Border */
+  border: 0.05em dashed black;
   -webkit-border-radius: 0.625em;
      -moz-border-radius: 0.625em;
           border-radius: 0.625em;
-  font-size: 1.1em;
-  border: 0.05em dashed black;
-  color: black;
-  padding: 0.75em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
 }
- 
+
+/* Setting the style for the message of the contact form */
 form textarea#message {
+  /* Positioning the message of the contact form */
+  margin-bottom: 0.625em;
   width: 75%;
   height: 6.25em;
+  /* Styling the message of the contact form */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1em;
+  color: black;
   background-color: #fafafa;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
+  padding: 0.75em;
+  /* Border */
+  border: 0.05em dashed black;
   -webkit-border-radius: 0.19em;
      -moz-border-radius: 0.19em;
           border-radius: 0.19em;
-  border: 0.05em dashed black;
-  margin-bottom: 0.625em;
-  padding: 0.75em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black;
-  font-size: 1.1em;
 }
- 
+
+/* Setting the style for the submit button of the contact form */
 form input#submit {
+  /* Positioning the submit button of the contact form */
   display: block;
-  -webkit-border-radius: 0.19em; 
-     -moz-border-radius: 0.19em;
-          border-radius: 0.19em;
-  border: 0.10em solid black;
-  font-size: 1.25em;
-  color: black;
-  padding: 0.5em;
   margin: auto;
-  font-weight:normal; 
   text-align: center;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: #f4f4f4;
+  /* Background image */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f4f4f4), color-stop(100%, #e5e5e5));
   background-image: -webkit-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: -moz-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: -ms-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: -o-linear-gradient(top, #f4f4f4, #e5e5e5);
   background-image: linear-gradient(top, #f4f4f4, #e5e5e5);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#f4f4f4, endColorstr=#e5e5e5);
+  /* Styling the submit button of the contact form */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.25em;
+  color: black;
+  background-color: #f4f4f4;
+  padding: 0.5em;
+  font-weight:normal; 
+  /* Border */
+  border: 0.10em solid black;
+  -webkit-border-radius: 0.19em; 
+     -moz-border-radius: 0.19em;
+          border-radius: 0.19em;
 }
  
+/* Setting the style for the submit button when hovered over */
 form input#submit:hover {
-  cursor: pointer;
-  background-color: #dbdbdb;
+  /* Background image */
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dbdbdb), color-stop(100%, #cccccc));
   background-image: -webkit-linear-gradient(top, #dbdbdb, #cccccc);
   background-image: -moz-linear-gradient(top, #dbdbdb, #cccccc);
   background-image: -ms-linear-gradient(top, #dbdbdb, #cccccc);
   background-image: -o-linear-gradient(top, #dbdbdb, #cccccc);
   background-image: linear-gradient(top, #dbdbdb, #cccccc);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#dbdbdb, endColorstr=#cccccc);
+  /* Styling the submit button when hovered over */
+  background-color: #dbdbdb;
+  cursor: pointer;
 }
 
-/* Message flashing */
+/* Setting the style for the message flashing */
 .flash {
+  /* Positioning the message flashing */
+  width: 60%;
+  /* Styling the message flashing */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.1em;
+  color: black;
   background-color: #FBB0B0;
   padding: 0.625em;
-  width: 60%;
-  font-size: 1.1em;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  color: black;
 }
 
-/* Thank you message */
+/* Setting the style for the thank you message */
 .thankYouMessage {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
-  font-weight: bold;
-  font-size: 1.5em;
-  margin-left: 15%;
+  /* Positioning the thank you message */
   margin-right: 15%;
+  margin-left: 15%;
+  /* Styling the thank you message */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 1.5em;
   color: black;
+  font-weight: bold;
 }
 
-#voiceBtn {
-  display: block;
-  position: fixed;
-  bottom: 1.25em;
-  left: 1.875em;
-  z-index: 99;
-  font-size: 1em;
-  border: none;
-  outline: none;
-  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
-  color: black;
-  cursor: pointer;
-  padding: 0.5em;
-  border-radius: 0.313em;
-}
-
-#voiceBtn:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-/*#voiceBtn:hover {
-  background-color: rgb(180, 175, 175);
-  background-image: none;
-}*/
-
-#voice2Btn {
-  display: block;
-  position: fixed;
-  bottom: 1.25em;
-  left: 1.875em;
-  z-index: 99;
-  font-size: 1em;
-  border: none;
-  outline: none;
-  background-image: url('https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-042.jpg');
-  color: black;
-  cursor: pointer;
-  padding: 0.5em;
-  border-radius: 0.313em;
-}
-
-#voice2Btn:active {
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-/*#voice2Btn:hover {
-  background-color: rgb(180, 175, 175);
-  background-image: none;
-}*/
-
+/* When the screen is less than 750px wide */
 @media screen and (max-width: 750px) {
+
+  /* Only display the home tab of the topnav */
   .topnav a:not(:first-child), .dropdown .dropbtn {
     display: none;
   }
+
+  /* Display the menu icon on the topnav */
   .topnav a.icon {
-    float: right;
     display: block;
+    float: right;
   }
+
+  /* Increasing the width of the boxed area */
+  .boxed {
+    width: 70%;
+  }
+
+  /* Decrease the size of the bonnieHeading */
   .bonnieHeading {
     font-size: 1em;
     line-height: 1.5em;
   }
+
+  /* Decrease the size of the textInput */
   #textInput {
     font-size: 1em;
     border-width: 0.15em 0.04em 0.15em 0.6em;
   }
+
+  /* Decrease the size of the botText */
   .botText {
     font-size: 1em;
     line-height: 1em;
   }
+
+  /* Decrease the size of the userText */
   .userText {
     font-size: 1em;
     line-height: 1em;
   }
-  #voiceBtn {
+
+  /* Decrease the size of the voice buttons */
+  #voiceBtn, #voice2Btn {
     bottom: 0.6em;
     left: 0.5em;
-    font-size: 0.7em;
-    padding: 0.4em;
-  }
-  #voice2Btn {
-    bottom: 0.6em;
-    left: 0.5em;
-    font-size: 0.7em;
-    padding: 0.4em;
-  }
-  #myBtn {
-    bottom: 0.6em;
-    right: 0.5em;
     font-size: 0.7em;
     padding: 0.4em;
   }
   
+  /* Decrease the size of the scroll to top button */
+  #myBtn {
+    right: 0.5em;
+    bottom: 0.6em;
+    font-size: 0.7em;
+    padding: 0.4em;
+  }
+  
+  /* Decrease the size of the aboutUsText */
   .aboutUsText {
     font-size: 1em;
-    padding: 1em 0em 1em 0em;
     line-height: 1.5em;
+    padding: 1em 0em 1em 0em;
   }
 
+  /* Decrease the size of the mainHeading */
   .mainHeading {
     font-size: 2em;
   }
+
+  /* Decrease the size of the heading */
   .heading {
     font-size: 1.5em;
   }
+
+  /* Decrease the size of the listBox */
   .listBox {
     margin-top: 1.5em;
     font-size: 1.25em;
@@ -691,17 +714,23 @@ form input#submit:hover {
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 750px) {
+  
+  /* Setting the style for the responsive topnav */
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
   }
+
+  /* Setting the style for the links of the responsive topnav */
   .topnav.responsive a {
-    float: none;
     display: block;
+    float: none;
     text-align: left;
   }
+
+  /* Setting the style for the dropdown of the responsive topnav */
   .topnav.responsive .dropdown {float: none;}
   .topnav.responsive .dropdown-content {position: relative;}
   .topnav.responsive .dropdown .dropbtn {
