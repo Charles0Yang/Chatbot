@@ -684,7 +684,14 @@ form input#submit:hover {
     right: 0.5em;
     bottom: 0.6em;
     font-size: 0.7em;
+    line-height: 1em;
     padding: 0.4em;
+  }
+
+  /* Decrease the size of the voice button */
+  #voiceBtn {
+    bottom: 0.6em;
+    left: 0.5em;
   }
   
   /* Decrease the size of the aboutUsText */
