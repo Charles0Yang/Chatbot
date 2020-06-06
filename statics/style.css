@@ -33,6 +33,7 @@ body {
   /* Positioning topnav links */
   display: block;
   float: left;
+  width: 16.666%;
   text-align: center;
   /* Styling topnav links */  
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;;
@@ -54,6 +55,7 @@ body {
 .dropdown {
   /* Positioning the dropdown button of the menu bar */
   float: left;
+  width: 16.666%;
   overflow: hidden;
   /* Border */
   border-right: solid 0.0625em black;
@@ -63,6 +65,7 @@ body {
 .dropdown .dropbtn {
   /* Positioning the dropdowns */
   margin: 0;
+  width: 100%;
   text-align: center;
   /* Styling the dropdowns */
   font-family: inherit;
@@ -81,6 +84,7 @@ body {
   /* Positioning the dropdown content */
   display: none;
   position: absolute;
+  width: 100%;
   min-width: 10em;
   /* Background image */
   background-image: url('https://www.sparklogix.com/wp-content/uploads/2012/05/Screen-Shot-2012-05-21-at-9.40.23-PM.png');
@@ -627,12 +631,47 @@ form input#submit:hover {
   font-weight: bold;
 }
 
-/* When the screen is less than 750px wide */
-@media screen and (max-width: 750px) {
+/* When the screen is less than 1165px wide */
+@media screen and (max-width: 1165px) {
+
+  /* Change the font size of the topnav smaller */
+  .topnav a, .dropdown .dropbtn {
+    font-size: 0.75em;
+    font-weight: bold;
+  }
+}
+
+/* When the screen is less than 900px wide */
+@media screen and (max-width: 900px) {
+  
+  /* Change the font size of the topnav smaller */
+  .topnav a, .dropdown .dropbtn {
+    font-size: 0.65em;
+  }
+}
+
+/* When the screen is less than 785px wide */
+@media screen and (max-width: 785px) {
 
   /* Only display the home tab of the topnav */
-  .topnav a:not(:first-child), .dropdown .dropbtn {
+  .topnav a:not(:first-child), .dropbtn, .dropdown-content {
     display: none;
+    width: auto;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  /* Changing the style of the dropdown */
+  .dropdown, .dropdown a {
+    width: auto;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  /* Make the width of the home tab to auto */
+  .topnav a:first-child {
+    font-size: 1em;
+    width: auto;
   }
 
   /* Display the menu icon on the topnav */
@@ -713,7 +752,7 @@ form input#submit:hover {
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 785px) {
   
   /* Setting the style for the responsive topnav */
   .topnav.responsive {position: relative;}
@@ -737,5 +776,7 @@ form input#submit:hover {
     display: block;
     width: 100%;
     text-align: left;
+    font-size: 1em;
+    font-weight: normal;
   }
 }
