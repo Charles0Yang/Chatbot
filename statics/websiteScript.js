@@ -32,13 +32,8 @@ function getBotResponse() {
 }
 
 function textToSpeech(msg) {
-<<<<<<< HEAD
-    //Get all voices that browser offers
-    var available_voices = window.speechSynthesis.getVoices();
-=======
     // Get all voices that browser offers
 	var available_voices = window.speechSynthesis.getVoices();
->>>>>>> f09d0eb0d0c2e090a19ced055e77661b0ffa8576
 
 	// This will hold an english voice
     var english_voice = '';
@@ -53,19 +48,11 @@ function textToSpeech(msg) {
     }
     if(english_voice === '') { // If an english voice isn't availabe, use any available voice
         english_voice = available_voices[0];
-<<<<<<< HEAD
-    }    
-    var message = new SpeechSynthesisUtterance(msg); //Creates a new object
-    message.pitch = 1.5 //Assigns pitch to message
-    message.rate = 1; //Assigns rate of speed of message
-    window.speechSynthesis.speak(message); //Outputs the message in audio format
-=======
 }    
     var message = new SpeechSynthesisUtterance(msg); // Creates a new object
     message.pitch = 1.5 // Assigns pitch to message
     message.rate = 1; // Assigns rate of speed of message
     window.speechSynthesis.speak(message); // Outputs the message in audio format
->>>>>>> f09d0eb0d0c2e090a19ced055e77661b0ffa8576
 }
 
 function toggleVoiceOn() {

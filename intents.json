@@ -160,11 +160,7 @@
          "context_set": [""]
         },
         {"tag": "how can I help long",
-<<<<<<< HEAD
          "patterns": ["How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against coronavirus", "How can I help", "What can I do to help?"],
-=======
-         "patterns": ["How can I help", "How can I help tackle coronavirus?", "Is there anything I can do to help?", "Are there any ways I can volunteer", "I'd like to volunteer to help fight against coronavirus", "How can I help", "What can I do to help"],
->>>>>>> f09d0eb0d0c2e090a19ced055e77661b0ffa8576
          "responses": ["The best way you can help is of course to stay at home!", "There are other ways you can help though", "If you would like to donate there are many great charities providing help to those particularly affected", "There are also other charities which provide ways for you to volunteer in your local area with vulnerable people or the NHS", "We would like to encourage you to research yourselves and find what suits you best!"],
          "context_set": [""]
         },
@@ -253,15 +249,13 @@
          "responses": ["The following are examples of how long COVID-19 survives on different surfaces", "Air : Half an hour", "A fine mist : 3 hours or more", "Copper surfaces : Up to 4 hours", "Cardboard surfaces : Up to 24 hours", "Plastic and Stainless Steel : At least 72 hours"],
          "context_set": [""]
         },
-<<<<<<< HEAD
         {"tag": "premier league return",
          "patterns": ["When is the premier league returning?", "When is football restarting?", "When can I watch premier league football", "On what date is the prem restarting"],
-         "responses": ["The Premier League is returning on the 17th June"],
-=======
+         "responses": ["The Premier League is returning on the 17th June"]
+        },
         {"tag": "corona probability long",
          "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
          "responses": ["There is not a recognised probability of catching coronavirus although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"],
->>>>>>> f09d0eb0d0c2e090a19ced055e77661b0ffa8576
          "context_set": [""]
         }
         
