@@ -114,6 +114,10 @@ When does the Premier League return?
 
 What is the probability of catching coronavirus?
 
+Can I visit my family?
+
+Can I go to the beach?
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
