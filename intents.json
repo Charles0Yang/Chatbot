@@ -1,6 +1,6 @@
 {"intents": [
         {"tag": "greeting",
-         "patterns": ["Hi", "Hullo", "Howdy", "Is anyone there", "Hello", "Good day", "Whats up", "Herrow", "Hey", "Sup", "Greetings"],
+         "patterns": ["Hi", "Hi Bonnie", "Hullo", "Howdy", "Is anyone there", "Hello", "Good day", "Whats up", "Herrow", "Hey", "Sup", "Greetings"],
          "responses": ["Hi!", "Hello there!", "Hey!"]
         },
 
@@ -31,7 +31,7 @@
 
 	{"tag": "what do you do",
          "patterns": ["what do you do", "what is your purpose", "What are you for", "why do you exist", "How can you help me", "What can you do"],
-         "responses": ["My purpose is to answer any questions you may have about Coronavirus", "I can provide you with information about COVID-19!"]
+         "responses": ["My purpose is to answer any questions you may have about COVID-19", "I can provide you with information about COVID-19!"]
         },
 
 	{"tag": "favourite football team",
@@ -51,12 +51,12 @@
 
         {"tag": "what is coronavirus long",
          "patterns": ["What is coronavirus", "What is covid-19", "What is coronavirus", "Define coronavirus", "Can you explain coronavirus"],
-         "responses": ["Coronavirus (or Covid-19) is in a family of viruses including the common cold and other respitory illnesses", "It affects your airways and lungs", "The effects are mild for many however it can be very severe"]
+         "responses": ["COVID-19 (or Covid-19) is in a family of viruses including the common cold and other respitory illnesses", "It affects your airways and lungs", "The effects are mild for many however it can be very severe"]
         },
 
         {"tag": "how does coronavirus spread long",
-         "patterns": ["How does Coronavirus spread?", "How is Coronavirus transmitted", "How can I catch coronavirus", "In what way does coronavirus spread"],
-         "responses": ["There are two ways in which Coronavirus can be spread:", "A person can touch a surface that an infected person has touched", "A person gets close to (less than 1-2 metres) to an infectious person"]
+         "patterns": ["How does one get coronavirus", "How can I get coronavirus", "How can I get COVID-19", "How does Coronavirus spread?", "How is Coronavirus transmitted", "How can I catch coronavirus", "In what way does coronavirus spread"],
+         "responses": ["There are two ways in which COVID-19 can be spread:", "A person can touch a surface that an infected person has touched", "A person gets close to (less than 1-2 metres) to an infectious person"]
         },
 
         {"tag": "incubation",
@@ -81,7 +81,7 @@
 
         {"tag": "can I be tested long",
          "patterns": ["Can I be tested", "Am I eligible to be tested?", "Can I get a test for Coronavirus", "Can I get tested", "Am I allowed to get a test"],
-         "responses": ["You are eligible for a test if any of the following apply to you:", "Aged 65 and over and displaying symptoms of Coronavirus", "Unable to work from home and displaying symptoms of Coronavirus", "All NHS and social care staff", "All care home residents and people being discharged from hospital into care homes"]
+         "responses": ["You are eligible for a test if any of the following apply to you:", "Aged 65 and over and displaying symptoms of COVID-19", "Unable to work from home and displaying symptoms of COVID-19", "All NHS and social care staff", "All care home residents and people being discharged from hospital into care homes"]
         },
 
         {"tag": "how can I get a test",
@@ -91,7 +91,7 @@
         },
 
         {"tag": "reduce coronavirus risk long",
-         "patterns": ["How can I reduce my risk of catching or spreading coronavirus", "How can I prevent getting coronavirus", "How do I not get coronavirus", "How do I stop myself from spreading coronavirus", "How to stop spreading covid", "How to prevent catching coronavirus", "How can i not get coronavirus"],
+         "patterns": ["What is the best way not to get coronavirus", "How can I reduce my risk of catching or spreading coronavirus", "How can I prevent getting coronavirus", "How do I not get coronavirus", "How do I stop myself from spreading coronavirus", "How to stop spreading covid", "How to prevent catching coronavirus", "How can i not get coronavirus"],
          "responses": ["Stay at least 2 metres away from other people when outside your house", "Wash your hands frequently and thoroughly", "Cover your face when using public transport or in a crowded shop", "Stay at home!"]
         },
 
@@ -147,7 +147,7 @@
 
         {"tag": "how many cases long",
          "patterns": ["How many cases", "How many cases of COVID-19 are there in ", "How many cases", "How many deaths", "How many coronavirus cases in", "How many coronavirus deaths in ", "How many cases in", "How many cases of coronavirus are there in", "How many deaths of coronavirus are there in", "How many cases of coronavirus", "How many deaths of coronavirus"],
-         "responses": ["Simply type the name of the country/UK area and Bonnie should reply with the number of coronavirus cases if you have typed in a valid location. A list of supported areas is available at the top of the page"]
+         "responses": ["Simply type the name of the country/UK area and Bonnie should reply with the number of COVID-19 cases if you have typed in a valid location. A list of supported areas is available at the top of the page"]
         },
 
         {"tag": "Who created you long",
@@ -262,7 +262,7 @@
 
         {"tag": "corona probability long",
          "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
-         "responses": ["There is not a recognised probability of catching coronavirus although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"]
+         "responses": ["There is not a recognised probability of catching COVID-19 although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"]
         }   
            
 ]}
