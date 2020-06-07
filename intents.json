@@ -272,7 +272,7 @@
            
         {"tag": "beach long",
          "patterns": ["Can I go to the beach", "When can I go to the beach", "Should I go to the beach"],
-         "responses": ["You can go to the beach as long as you social distance.", "However, be aware that you will probably have to use public toilets, increasing your risk of contamination."]
+         "responses": ["You can go to the beach as long as you social distance", "However be aware that you will probably have to use public toilets which can increase your risk of contamination."]
         }
                
 ]}
