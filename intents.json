@@ -263,6 +263,16 @@
         {"tag": "corona probability long",
          "patterns": ["What is the probability of catching coronavirus", "Will I get coronavirus", "Am i going to get coronavirus", "What is the probability"],
          "responses": ["There is not a recognised probability of catching COVID-19 although some people say that at the peak of the pandemic you have a 1 in 1300 chance of catching it.", "However, this risk is significantly reduced if you obey government guidlines and significantly increased if you don't!"]
-        }   
+        },
+        
+        {"tag": "visit family",
+         "patterns": ["Can I vist my family", "Can I visit my parents", "Can I vist my mother", "Can I visit my friends", "Can I visit my father", "Can I visit my children"],
+         "responses": ["People in England are now able to meet up with up to six friends and family members as long as they are in an outdoor space such as a park or private garden."]
+        },
            
+        {"tag": "beach long",
+         "patterns": ["Can I go to the beach", "When can I go to the beach", "Should I go to the beach"],
+         "responses": ["You can go to the beach as long as you social distance.", "However, be aware that you will probably have to use public toilets, increasing your risk of contamination."]
+        }
+               
 ]}
