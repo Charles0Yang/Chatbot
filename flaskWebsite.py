@@ -61,15 +61,15 @@ app.config["MAIL_PASSWORD"] = 'Chelseabest'
 mail.init_app(app)
 
 # Gets the live covid cases in cities in UK data and turn it into a json file
-LOCATIONS_URL = "https://api.covid19uk.live/"
-data = requests.get(LOCATIONS_URL)
-data_json = data.json()
+#LOCATIONS_URL = "https://api.covid19uk.live/"
+#data = requests.get(LOCATIONS_URL)
+#data_json = data.json()
 
 
 # Gets the live covid cases in countries and turn it into a json file
-COUNTRIES_URL = "https://corona.lmao.ninja/v2/countries"
-country_data = requests.get(COUNTRIES_URL)
-country_data_json = country_data.json()
+#COUNTRIES_URL = "https://corona.lmao.ninja/v2/countries"
+#country_data = requests.get(COUNTRIES_URL)
+#country_data_json = country_data.json()
 
 
 # Lists of possible locations and countries
@@ -218,13 +218,13 @@ def chatbot_response(input):
     intent_of_input = predict_class(input, model) # Gets the intent of the user input
     response = get_response(intent_of_input, intents) # Gets a response based off the intent of the user input
     
-    if contains_location(input.lower()) != "":  # Checks whether the input is a location so the correct response can be displayed
-        response_list.append(fetch_recent_cases(contains_location(input.lower()))) # Adds the correct statement if the location is valid and the api contains a number of cases for that area
+    #if contains_location(input.lower()) != "":  # Checks whether the input is a location so the correct response can be displayed
+        #response_list.append(fetch_recent_cases(contains_location(input.lower()))) # Adds the correct statement if the location is valid and the api contains a number of cases for that area
     
-    elif contains_country(input.lower()) != "": # Checks whether the input is a country so the correct response can be displayed
-        response_list.append(fetch_country_cases(contains_country(input.lower()))) # Adds the correct statement if the country is valid and the api contains a number of cases for that country
+    #elif contains_country(input.lower()) != "": # Checks whether the input is a country so the correct response can be displayed
+        #response_list.append(fetch_country_cases(contains_country(input.lower()))) # Adds the correct statement if the country is valid and the api contains a number of cases for that country
     
-    else: # If there is no country or city name in the input
+    if True: # If there is no country or city name in the input
 
         if "long" not in intent_of_input[0]["intent"]: # If long is not in the intent of the input there is need to add several sentences
             formatted_response = str(("{}".format(response))) # Creates the response
